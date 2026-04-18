@@ -1,0 +1,2049 @@
+2026-04-08 12:23:41.049322: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1775651021.445173     106 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1775651021.556383     106 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1775651022.569958     106 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1775651022.570025     106 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1775651022.570046     106 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1775651022.570059     106 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+100%|████████████████████████████████████████| 170M/170M [00:02<00:00, 81.9MB/s]
+/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py:424: UserWarning: This DataLoader will create 6 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+Train from scratch!!!
+/kaggle/working/FeatureRE/train_models/train_model.py:426: UserWarning: `nn.functional.upsample` is deprecated. Use `nn.functional.interpolate` instead.
+  F.upsample(ins, size=opt.input_height, mode="bicubic", align_corners=True)
+/usr/local/lib/python3.12/dist-packages/torch/functional.py:505: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4381.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Epoch 1:
+ Train:
+cifar10
+/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py:432: UserWarning: This DataLoader will create 6 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+0 743 CE Loss: 0.0370 | Clean Acc: 10.8696 | Bd Acc: 0.0000 | Cross Acc: 0.0000
+50 743 CE Loss: 0.0341 | Clean Acc: 18.0733 | Bd Acc: 31.6993 | Cross Acc: 19.2810
+100 743 CE Loss: 0.0320 | Clean Acc: 23.9346 | Bd Acc: 27.7228 | Cross Acc: 24.0924
+150 743 CE Loss: 0.0311 | Clean Acc: 26.5764 | Bd Acc: 24.7241 | Cross Acc: 26.5453
+200 743 CE Loss: 0.0303 | Clean Acc: 29.1694 | Bd Acc: 23.3831 | Cross Acc: 28.5655
+250 743 CE Loss: 0.0296 | Clean Acc: 31.2403 | Bd Acc: 22.2444 | Cross Acc: 29.9469
+300 743 CE Loss: 0.0293 | Clean Acc: 32.2404 | Bd Acc: 21.2625 | Cross Acc: 31.3400
+350 743 CE Loss: 0.0288 | Clean Acc: 33.5191 | Bd Acc: 21.2251 | Cross Acc: 32.8110
+400 743 CE Loss: 0.0284 | Clean Acc: 34.6959 | Bd Acc: 21.5295 | Cross Acc: 34.0399
+450 743 CE Loss: 0.0280 | Clean Acc: 35.6888 | Bd Acc: 21.0273 | Cross Acc: 34.9778
+500 743 CE Loss: 0.0277 | Clean Acc: 36.4922 | Bd Acc: 21.1910 | Cross Acc: 35.6620
+550 743 CE Loss: 0.0273 | Clean Acc: 37.4379 | Bd Acc: 21.1736 | Cross Acc: 36.4791
+600 743 CE Loss: 0.0271 | Clean Acc: 38.1212 | Bd Acc: 20.7987 | Cross Acc: 37.2712
+650 743 CE Loss: 0.0268 | Clean Acc: 38.9034 | Bd Acc: 20.7373 | Cross Acc: 37.7496
+700 743 CE Loss: 0.0265 | Clean Acc: 39.6917 | Bd Acc: 20.8036 | Cross Acc: 38.3381
+/kaggle/working/FeatureRE/train_models/train_model.py:233: UserWarning: `nn.functional.upsample` is deprecated. Use `nn.functional.interpolate` instead.
+  batch_img = F.upsample(batch_img, scale_factor=(4, 4))
+ Eval:
+156 157 Clean Acc: 50.1100 - Best: 0.0000 | Bd Acc: 13.5200 - Best: 0.0000 | Cross: 46.8200
+ Saving...
+Epoch 2:
+ Train:
+cifar10
+0 743 CE Loss: 0.0235 | Clean Acc: 41.3043 | Bd Acc: 0.0000 | Cross Acc: 41.6667
+50 743 CE Loss: 0.0230 | Clean Acc: 51.3640 | Bd Acc: 18.3007 | Cross Acc: 49.1830
+100 743 CE Loss: 0.0224 | Clean Acc: 52.3461 | Bd Acc: 17.6568 | Cross Acc: 48.7624
+150 743 CE Loss: 0.0224 | Clean Acc: 52.1739 | Bd Acc: 16.9978 | Cross Acc: 48.5651
+200 743 CE Loss: 0.0220 | Clean Acc: 53.0716 | Bd Acc: 16.7496 | Cross Acc: 49.4610
+250 743 CE Loss: 0.0219 | Clean Acc: 53.7329 | Bd Acc: 16.9323 | Cross Acc: 50.1660
+300 743 CE Loss: 0.0216 | Clean Acc: 54.3839 | Bd Acc: 17.4419 | Cross Acc: 51.4120
+350 743 CE Loss: 0.0214 | Clean Acc: 54.6885 | Bd Acc: 17.1890 | Cross Acc: 52.0180
+400 743 CE Loss: 0.0213 | Clean Acc: 55.1068 | Bd Acc: 16.8329 | Cross Acc: 52.5977
+450 743 CE Loss: 0.0211 | Clean Acc: 55.5625 | Bd Acc: 16.9993 | Cross Acc: 53.2705
+500 743 CE Loss: 0.0209 | Clean Acc: 56.0922 | Bd Acc: 16.7997 | Cross Acc: 53.2269
+550 743 CE Loss: 0.0208 | Clean Acc: 56.5651 | Bd Acc: 17.1204 | Cross Acc: 53.6449
+600 743 CE Loss: 0.0207 | Clean Acc: 56.8979 | Bd Acc: 17.4154 | Cross Acc: 53.8547
+650 743 CE Loss: 0.0205 | Clean Acc: 57.2564 | Bd Acc: 17.5371 | Cross Acc: 54.1219
+700 743 CE Loss: 0.0203 | Clean Acc: 57.7126 | Bd Acc: 17.6890 | Cross Acc: 54.6243
+ Eval:
+156 157 Clean Acc: 62.4100 - Best: 50.1100 | Bd Acc: 11.5100 - Best: 13.5200 | Cross: 59.1100
+ Saving...
+Epoch 3:
+ Train:
+cifar10
+0 743 CE Loss: 0.0189 | Clean Acc: 56.5217 | Bd Acc: 33.3333 | Cross Acc: 66.6667
+50 743 CE Loss: 0.0181 | Clean Acc: 61.9778 | Bd Acc: 18.3007 | Cross Acc: 60.6209
+100 743 CE Loss: 0.0182 | Clean Acc: 62.5700 | Bd Acc: 18.4818 | Cross Acc: 61.0561
+150 743 CE Loss: 0.0179 | Clean Acc: 63.3314 | Bd Acc: 20.1987 | Cross Acc: 60.7616
+200 743 CE Loss: 0.0179 | Clean Acc: 63.6383 | Bd Acc: 20.4809 | Cross Acc: 60.4892
+250 743 CE Loss: 0.0179 | Clean Acc: 63.9096 | Bd Acc: 20.5179 | Cross Acc: 59.9602
+300 743 CE Loss: 0.0177 | Clean Acc: 64.1557 | Bd Acc: 21.0963 | Cross Acc: 60.9081
+350 743 CE Loss: 0.0177 | Clean Acc: 64.3998 | Bd Acc: 21.0826 | Cross Acc: 61.1348
+400 743 CE Loss: 0.0177 | Clean Acc: 64.4693 | Bd Acc: 21.1970 | Cross Acc: 60.8063
+450 743 CE Loss: 0.0175 | Clean Acc: 64.9234 | Bd Acc: 21.5078 | Cross Acc: 61.3267
+500 743 CE Loss: 0.0174 | Clean Acc: 65.2781 | Bd Acc: 21.4904 | Cross Acc: 61.6267
+550 743 CE Loss: 0.0173 | Clean Acc: 65.4699 | Bd Acc: 21.7786 | Cross Acc: 61.8572
+600 743 CE Loss: 0.0172 | Clean Acc: 65.6478 | Bd Acc: 22.0189 | Cross Acc: 62.1880
+650 743 CE Loss: 0.0172 | Clean Acc: 65.9788 | Bd Acc: 21.9150 | Cross Acc: 62.3784
+700 743 CE Loss: 0.0171 | Clean Acc: 66.1943 | Bd Acc: 22.4204 | Cross Acc: 62.4941
+ Eval:
+156 157 Clean Acc: 71.2400 - Best: 62.4100 | Bd Acc: 19.8100 - Best: 11.5100 | Cross: 67.3800
+ Saving...
+Epoch 4:
+ Train:
+cifar10
+0 743 CE Loss: 0.0159 | Clean Acc: 76.0870 | Bd Acc: 50.0000 | Cross Acc: 50.0000
+50 743 CE Loss: 0.0155 | Clean Acc: 68.4143 | Bd Acc: 32.0261 | Cross Acc: 64.8693
+100 743 CE Loss: 0.0155 | Clean Acc: 69.0056 | Bd Acc: 26.5677 | Cross Acc: 66.1716
+150 743 CE Loss: 0.0155 | Clean Acc: 68.8310 | Bd Acc: 27.3731 | Cross Acc: 66.2803
+200 743 CE Loss: 0.0155 | Clean Acc: 68.9163 | Bd Acc: 27.6119 | Cross Acc: 66.0862
+250 743 CE Loss: 0.0154 | Clean Acc: 69.2621 | Bd Acc: 28.2205 | Cross Acc: 66.4011
+300 743 CE Loss: 0.0153 | Clean Acc: 69.5508 | Bd Acc: 28.4053 | Cross Acc: 67.5803
+350 743 CE Loss: 0.0152 | Clean Acc: 69.6643 | Bd Acc: 29.2498 | Cross Acc: 67.9250
+400 743 CE Loss: 0.0152 | Clean Acc: 69.7929 | Bd Acc: 29.0939 | Cross Acc: 67.8512
+450 743 CE Loss: 0.0152 | Clean Acc: 69.9267 | Bd Acc: 29.3422 | Cross Acc: 67.5166
+500 743 CE Loss: 0.0151 | Clean Acc: 70.0729 | Bd Acc: 30.1397 | Cross Acc: 67.3653
+550 743 CE Loss: 0.0151 | Clean Acc: 70.2359 | Bd Acc: 30.6110 | Cross Acc: 67.4229
+600 743 CE Loss: 0.0150 | Clean Acc: 70.2416 | Bd Acc: 31.6417 | Cross Acc: 67.5679
+650 743 CE Loss: 0.0149 | Clean Acc: 70.5069 | Bd Acc: 32.2581 | Cross Acc: 67.9595
+700 743 CE Loss: 0.0149 | Clean Acc: 70.6103 | Bd Acc: 32.6914 | Cross Acc: 67.8911
+ Eval:
+156 157 Clean Acc: 74.9100 - Best: 71.2400 | Bd Acc: 18.9100 - Best: 19.8100 | Cross: 69.0200
+ Saving...
+Epoch 5:
+ Train:
+cifar10
+0 743 CE Loss: 0.0129 | Clean Acc: 67.3913 | Bd Acc: 83.3333 | Cross Acc: 50.0000
+50 743 CE Loss: 0.0139 | Clean Acc: 71.9096 | Bd Acc: 47.3856 | Cross Acc: 68.6274
+100 743 CE Loss: 0.0138 | Clean Acc: 72.6001 | Bd Acc: 42.0792 | Cross Acc: 67.2442
+150 743 CE Loss: 0.0139 | Clean Acc: 72.3870 | Bd Acc: 41.1700 | Cross Acc: 68.6534
+200 743 CE Loss: 0.0138 | Clean Acc: 72.4097 | Bd Acc: 40.2985 | Cross Acc: 69.0713
+250 743 CE Loss: 0.0137 | Clean Acc: 72.4667 | Bd Acc: 42.5631 | Cross Acc: 69.5219
+300 743 CE Loss: 0.0137 | Clean Acc: 72.3386 | Bd Acc: 44.0199 | Cross Acc: 69.4075
+350 743 CE Loss: 0.0137 | Clean Acc: 72.2656 | Bd Acc: 44.2545 | Cross Acc: 69.4682
+400 743 CE Loss: 0.0136 | Clean Acc: 72.3626 | Bd Acc: 44.3059 | Cross Acc: 69.9501
+450 743 CE Loss: 0.0136 | Clean Acc: 72.2983 | Bd Acc: 44.1981 | Cross Acc: 69.8633
+500 743 CE Loss: 0.0135 | Clean Acc: 72.3162 | Bd Acc: 44.7438 | Cross Acc: 69.7605
+550 743 CE Loss: 0.0135 | Clean Acc: 72.4730 | Bd Acc: 45.2813 | Cross Acc: 69.9032
+600 743 CE Loss: 0.0134 | Clean Acc: 72.5096 | Bd Acc: 45.5907 | Cross Acc: 70.1054
+650 743 CE Loss: 0.0133 | Clean Acc: 72.6307 | Bd Acc: 46.2622 | Cross Acc: 70.2637
+700 743 CE Loss: 0.0133 | Clean Acc: 72.7749 | Bd Acc: 47.2183 | Cross Acc: 70.1854
+ Eval:
+156 157 Clean Acc: 71.1900 - Best: 74.9100 | Bd Acc: 73.9800 - Best: 18.9100 | Cross: 72.3800
+Epoch 6:
+ Train:
+cifar10
+0 743 CE Loss: 0.0134 | Clean Acc: 65.2174 | Bd Acc: 66.6667 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0125 | Clean Acc: 73.6147 | Bd Acc: 55.2288 | Cross Acc: 72.3856
+100 743 CE Loss: 0.0123 | Clean Acc: 74.3650 | Bd Acc: 55.2805 | Cross Acc: 72.3597
+150 743 CE Loss: 0.0120 | Clean Acc: 75.0072 | Bd Acc: 56.8433 | Cross Acc: 72.5166
+200 743 CE Loss: 0.0121 | Clean Acc: 74.7567 | Bd Acc: 58.8723 | Cross Acc: 71.6418
+250 743 CE Loss: 0.0121 | Clean Acc: 74.5453 | Bd Acc: 58.3665 | Cross Acc: 71.4143
+300 743 CE Loss: 0.0121 | Clean Acc: 74.5197 | Bd Acc: 58.9147 | Cross Acc: 71.5947
+350 743 CE Loss: 0.0121 | Clean Acc: 74.5943 | Bd Acc: 59.4492 | Cross Acc: 71.7949
+400 743 CE Loss: 0.0120 | Clean Acc: 74.6612 | Bd Acc: 59.8088 | Cross Acc: 71.8828
+450 743 CE Loss: 0.0120 | Clean Acc: 74.6457 | Bd Acc: 60.5691 | Cross Acc: 72.2099
+500 743 CE Loss: 0.0119 | Clean Acc: 74.8156 | Bd Acc: 60.8782 | Cross Acc: 72.3553
+550 743 CE Loss: 0.0118 | Clean Acc: 75.1124 | Bd Acc: 61.9480 | Cross Acc: 72.2172
+600 743 CE Loss: 0.0117 | Clean Acc: 75.2550 | Bd Acc: 62.0355 | Cross Acc: 72.4071
+650 743 CE Loss: 0.0117 | Clean Acc: 75.2254 | Bd Acc: 62.5448 | Cross Acc: 72.3630
+700 743 CE Loss: 0.0117 | Clean Acc: 75.3303 | Bd Acc: 62.9577 | Cross Acc: 72.5036
+ Eval:
+156 157 Clean Acc: 75.9200 - Best: 74.9100 | Bd Acc: 86.6400 - Best: 18.9100 | Cross: 75.3100
+ Saving...
+Epoch 7:
+ Train:
+cifar10
+0 743 CE Loss: 0.0159 | Clean Acc: 60.8696 | Bd Acc: 83.3333 | Cross Acc: 75.0000
+50 743 CE Loss: 0.0107 | Clean Acc: 77.1526 | Bd Acc: 67.9739 | Cross Acc: 72.8758
+100 743 CE Loss: 0.0107 | Clean Acc: 77.5291 | Bd Acc: 68.9769 | Cross Acc: 74.0099
+150 743 CE Loss: 0.0107 | Clean Acc: 77.1667 | Bd Acc: 69.4260 | Cross Acc: 73.3444
+200 743 CE Loss: 0.0106 | Clean Acc: 77.4605 | Bd Acc: 69.8176 | Cross Acc: 73.5075
+250 743 CE Loss: 0.0105 | Clean Acc: 77.4814 | Bd Acc: 70.7171 | Cross Acc: 74.2032
+300 743 CE Loss: 0.0106 | Clean Acc: 77.3436 | Bd Acc: 70.2658 | Cross Acc: 73.8095
+350 743 CE Loss: 0.0107 | Clean Acc: 77.2018 | Bd Acc: 70.6553 | Cross Acc: 73.6942
+400 743 CE Loss: 0.0107 | Clean Acc: 77.1441 | Bd Acc: 70.9061 | Cross Acc: 73.7323
+450 743 CE Loss: 0.0106 | Clean Acc: 77.3306 | Bd Acc: 70.8795 | Cross Acc: 74.1316
+500 743 CE Loss: 0.0106 | Clean Acc: 77.3540 | Bd Acc: 71.2907 | Cross Acc: 74.1517
+550 743 CE Loss: 0.0106 | Clean Acc: 77.5546 | Bd Acc: 71.8088 | Cross Acc: 74.1077
+600 743 CE Loss: 0.0105 | Clean Acc: 77.6894 | Bd Acc: 72.3516 | Cross Acc: 74.2374
+650 743 CE Loss: 0.0105 | Clean Acc: 77.6564 | Bd Acc: 72.7087 | Cross Acc: 74.3856
+700 743 CE Loss: 0.0105 | Clean Acc: 77.6965 | Bd Acc: 72.8959 | Cross Acc: 74.4294
+ Eval:
+156 157 Clean Acc: 79.9100 - Best: 75.9200 | Bd Acc: 51.3300 - Best: 86.6400 | Cross: 74.6600
+ Saving...
+Epoch 8:
+ Train:
+cifar10
+0 743 CE Loss: 0.0119 | Clean Acc: 82.6087 | Bd Acc: 66.6667 | Cross Acc: 58.3333
+50 743 CE Loss: 0.0105 | Clean Acc: 79.2839 | Bd Acc: 73.5294 | Cross Acc: 71.8954
+100 743 CE Loss: 0.0101 | Clean Acc: 79.1003 | Bd Acc: 73.7624 | Cross Acc: 74.1749
+150 743 CE Loss: 0.0100 | Clean Acc: 78.8943 | Bd Acc: 73.3996 | Cross Acc: 75.9934
+200 743 CE Loss: 0.0100 | Clean Acc: 78.8773 | Bd Acc: 73.9635 | Cross Acc: 75.9950
+250 743 CE Loss: 0.0099 | Clean Acc: 79.1876 | Bd Acc: 74.2364 | Cross Acc: 75.5976
+300 743 CE Loss: 0.0098 | Clean Acc: 79.2720 | Bd Acc: 75.1938 | Cross Acc: 75.9690
+350 743 CE Loss: 0.0098 | Clean Acc: 79.0722 | Bd Acc: 75.6885 | Cross Acc: 75.9497
+400 743 CE Loss: 0.0098 | Clean Acc: 79.1283 | Bd Acc: 75.3949 | Cross Acc: 75.7897
+450 743 CE Loss: 0.0098 | Clean Acc: 79.2297 | Bd Acc: 75.1663 | Cross Acc: 75.7945
+500 743 CE Loss: 0.0098 | Clean Acc: 79.2242 | Bd Acc: 75.6487 | Cross Acc: 75.8982
+550 743 CE Loss: 0.0097 | Clean Acc: 79.3182 | Bd Acc: 75.6503 | Cross Acc: 75.9982
+600 743 CE Loss: 0.0097 | Clean Acc: 79.4654 | Bd Acc: 76.1231 | Cross Acc: 76.2063
+650 743 CE Loss: 0.0096 | Clean Acc: 79.5599 | Bd Acc: 76.6001 | Cross Acc: 76.2545
+700 743 CE Loss: 0.0096 | Clean Acc: 79.6626 | Bd Acc: 76.9139 | Cross Acc: 76.0580
+ Eval:
+156 157 Clean Acc: 80.2200 - Best: 79.9100 | Bd Acc: 88.9100 - Best: 51.3300 | Cross: 78.2100
+ Saving...
+Epoch 9:
+ Train:
+cifar10
+0 743 CE Loss: 0.0070 | Clean Acc: 86.9565 | Bd Acc: 83.3333 | Cross Acc: 75.0000
+50 743 CE Loss: 0.0089 | Clean Acc: 81.5431 | Bd Acc: 80.0654 | Cross Acc: 77.4510
+100 743 CE Loss: 0.0086 | Clean Acc: 81.9630 | Bd Acc: 80.8581 | Cross Acc: 77.8053
+150 743 CE Loss: 0.0088 | Clean Acc: 80.9963 | Bd Acc: 80.7947 | Cross Acc: 77.8146
+200 743 CE Loss: 0.0088 | Clean Acc: 80.6727 | Bd Acc: 81.6750 | Cross Acc: 77.8607
+250 743 CE Loss: 0.0088 | Clean Acc: 80.6686 | Bd Acc: 81.7397 | Cross Acc: 77.2576
+300 743 CE Loss: 0.0089 | Clean Acc: 80.6876 | Bd Acc: 81.5615 | Cross Acc: 76.9380
+350 743 CE Loss: 0.0088 | Clean Acc: 80.7630 | Bd Acc: 81.9088 | Cross Acc: 76.9231
+400 743 CE Loss: 0.0088 | Clean Acc: 80.8305 | Bd Acc: 81.9202 | Cross Acc: 76.9327
+450 743 CE Loss: 0.0088 | Clean Acc: 80.8638 | Bd Acc: 82.1508 | Cross Acc: 77.0140
+500 743 CE Loss: 0.0088 | Clean Acc: 80.8557 | Bd Acc: 82.0027 | Cross Acc: 76.9461
+550 743 CE Loss: 0.0088 | Clean Acc: 81.0582 | Bd Acc: 82.1234 | Cross Acc: 76.7544
+600 743 CE Loss: 0.0088 | Clean Acc: 81.0063 | Bd Acc: 82.2795 | Cross Acc: 76.9551
+650 743 CE Loss: 0.0088 | Clean Acc: 80.9424 | Bd Acc: 81.9764 | Cross Acc: 77.0097
+700 743 CE Loss: 0.0087 | Clean Acc: 81.0550 | Bd Acc: 82.1683 | Cross Acc: 77.0447
+ Eval:
+156 157 Clean Acc: 82.3600 - Best: 80.2200 | Bd Acc: 69.3800 - Best: 88.9100 | Cross: 77.0500
+ Saving...
+Epoch 10:
+ Train:
+cifar10
+0 743 CE Loss: 0.0094 | Clean Acc: 82.6087 | Bd Acc: 83.3333 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0080 | Clean Acc: 83.0350 | Bd Acc: 81.3726 | Cross Acc: 76.1438
+100 743 CE Loss: 0.0084 | Clean Acc: 81.9415 | Bd Acc: 81.8482 | Cross Acc: 77.0627
+150 743 CE Loss: 0.0085 | Clean Acc: 81.5433 | Bd Acc: 81.4570 | Cross Acc: 77.8698
+200 743 CE Loss: 0.0085 | Clean Acc: 81.4298 | Bd Acc: 81.9237 | Cross Acc: 78.1924
+250 743 CE Loss: 0.0085 | Clean Acc: 81.8379 | Bd Acc: 81.8061 | Cross Acc: 78.1873
+300 743 CE Loss: 0.0085 | Clean Acc: 81.7492 | Bd Acc: 81.6168 | Cross Acc: 77.9347
+350 743 CE Loss: 0.0085 | Clean Acc: 81.8717 | Bd Acc: 81.7189 | Cross Acc: 78.1339
+400 743 CE Loss: 0.0085 | Clean Acc: 81.8985 | Bd Acc: 81.7124 | Cross Acc: 78.2211
+450 743 CE Loss: 0.0085 | Clean Acc: 81.8519 | Bd Acc: 82.2616 | Cross Acc: 78.1042
+500 743 CE Loss: 0.0084 | Clean Acc: 81.8841 | Bd Acc: 82.5017 | Cross Acc: 78.1104
+550 743 CE Loss: 0.0084 | Clean Acc: 82.0051 | Bd Acc: 82.4864 | Cross Acc: 78.1458
+600 743 CE Loss: 0.0084 | Clean Acc: 82.0987 | Bd Acc: 82.7510 | Cross Acc: 78.3278
+650 743 CE Loss: 0.0083 | Clean Acc: 82.1245 | Bd Acc: 82.9749 | Cross Acc: 78.2386
+700 743 CE Loss: 0.0083 | Clean Acc: 82.1993 | Bd Acc: 83.2620 | Cross Acc: 78.2454
+ Eval:
+156 157 Clean Acc: 82.3900 - Best: 82.3600 | Bd Acc: 87.6700 - Best: 69.3800 | Cross: 78.0500
+ Saving...
+Epoch 11:
+ Train:
+cifar10
+0 743 CE Loss: 0.0045 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0077 | Clean Acc: 83.8022 | Bd Acc: 86.9281 | Cross Acc: 78.9216
+100 743 CE Loss: 0.0077 | Clean Acc: 83.2329 | Bd Acc: 87.1287 | Cross Acc: 79.7030
+150 743 CE Loss: 0.0077 | Clean Acc: 83.2422 | Bd Acc: 86.2031 | Cross Acc: 79.4150
+200 743 CE Loss: 0.0077 | Clean Acc: 83.3009 | Bd Acc: 85.9867 | Cross Acc: 79.4361
+250 743 CE Loss: 0.0077 | Clean Acc: 83.3709 | Bd Acc: 86.1222 | Cross Acc: 79.0505
+300 743 CE Loss: 0.0077 | Clean Acc: 83.5115 | Bd Acc: 86.2126 | Cross Acc: 78.5714
+350 743 CE Loss: 0.0077 | Clean Acc: 83.4510 | Bd Acc: 86.0874 | Cross Acc: 78.1814
+400 743 CE Loss: 0.0077 | Clean Acc: 83.6279 | Bd Acc: 86.0349 | Cross Acc: 78.2835
+450 743 CE Loss: 0.0076 | Clean Acc: 83.7752 | Bd Acc: 86.2158 | Cross Acc: 78.1781
+500 743 CE Loss: 0.0077 | Clean Acc: 83.6284 | Bd Acc: 86.1610 | Cross Acc: 78.1936
+550 743 CE Loss: 0.0077 | Clean Acc: 83.6345 | Bd Acc: 86.2371 | Cross Acc: 78.2517
+600 743 CE Loss: 0.0077 | Clean Acc: 83.7228 | Bd Acc: 86.6334 | Cross Acc: 78.3555
+650 743 CE Loss: 0.0077 | Clean Acc: 83.6239 | Bd Acc: 86.7896 | Cross Acc: 78.3794
+700 743 CE Loss: 0.0077 | Clean Acc: 83.5825 | Bd Acc: 86.6144 | Cross Acc: 78.4356
+ Eval:
+156 157 Clean Acc: 84.1400 - Best: 82.3900 | Bd Acc: 83.3500 - Best: 87.6700 | Cross: 79.8300
+ Saving...
+Epoch 12:
+ Train:
+cifar10
+0 743 CE Loss: 0.0080 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0077 | Clean Acc: 83.1202 | Bd Acc: 88.5621 | Cross Acc: 80.0654
+100 743 CE Loss: 0.0075 | Clean Acc: 83.5557 | Bd Acc: 88.7789 | Cross Acc: 79.6205
+150 743 CE Loss: 0.0075 | Clean Acc: 83.7317 | Bd Acc: 88.5210 | Cross Acc: 79.9669
+200 743 CE Loss: 0.0074 | Clean Acc: 83.9714 | Bd Acc: 88.3914 | Cross Acc: 80.0580
+250 743 CE Loss: 0.0073 | Clean Acc: 83.9511 | Bd Acc: 87.9150 | Cross Acc: 80.6109
+300 743 CE Loss: 0.0073 | Clean Acc: 83.8509 | Bd Acc: 88.2060 | Cross Acc: 80.6202
+350 743 CE Loss: 0.0073 | Clean Acc: 83.8164 | Bd Acc: 88.2716 | Cross Acc: 80.4368
+400 743 CE Loss: 0.0073 | Clean Acc: 83.9044 | Bd Acc: 88.4456 | Cross Acc: 80.5694
+450 743 CE Loss: 0.0072 | Clean Acc: 84.1222 | Bd Acc: 88.1375 | Cross Acc: 80.6911
+500 743 CE Loss: 0.0073 | Clean Acc: 84.0927 | Bd Acc: 88.0572 | Cross Acc: 80.2063
+550 743 CE Loss: 0.0073 | Clean Acc: 84.2105 | Bd Acc: 87.9008 | Cross Acc: 80.1270
+600 743 CE Loss: 0.0073 | Clean Acc: 84.1279 | Bd Acc: 87.8258 | Cross Acc: 80.0887
+650 743 CE Loss: 0.0073 | Clean Acc: 84.1581 | Bd Acc: 88.1464 | Cross Acc: 80.0563
+700 743 CE Loss: 0.0073 | Clean Acc: 84.1810 | Bd Acc: 87.9458 | Cross Acc: 80.2425
+ Eval:
+156 157 Clean Acc: 83.3300 - Best: 84.1400 | Bd Acc: 93.7800 - Best: 83.3500 | Cross: 78.9500
+Epoch 13:
+ Train:
+cifar10
+0 743 CE Loss: 0.0056 | Clean Acc: 89.1304 | Bd Acc: 83.3333 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0066 | Clean Acc: 86.1040 | Bd Acc: 87.5817 | Cross Acc: 80.3922
+100 743 CE Loss: 0.0070 | Clean Acc: 84.8257 | Bd Acc: 87.7888 | Cross Acc: 80.1155
+150 743 CE Loss: 0.0070 | Clean Acc: 84.9842 | Bd Acc: 88.0795 | Cross Acc: 80.6843
+200 743 CE Loss: 0.0070 | Clean Acc: 85.0638 | Bd Acc: 88.4743 | Cross Acc: 80.9701
+250 743 CE Loss: 0.0070 | Clean Acc: 84.9472 | Bd Acc: 88.9774 | Cross Acc: 80.8433
+300 743 CE Loss: 0.0070 | Clean Acc: 84.9921 | Bd Acc: 89.2580 | Cross Acc: 80.3710
+350 743 CE Loss: 0.0069 | Clean Acc: 85.0613 | Bd Acc: 88.9364 | Cross Acc: 80.5318
+400 743 CE Loss: 0.0069 | Clean Acc: 85.1567 | Bd Acc: 88.8196 | Cross Acc: 80.5071
+450 743 CE Loss: 0.0069 | Clean Acc: 85.1779 | Bd Acc: 88.8027 | Cross Acc: 80.2846
+500 743 CE Loss: 0.0069 | Clean Acc: 85.1905 | Bd Acc: 89.1550 | Cross Acc: 80.5722
+550 743 CE Loss: 0.0069 | Clean Acc: 85.1693 | Bd Acc: 89.2014 | Cross Acc: 80.6261
+600 743 CE Loss: 0.0069 | Clean Acc: 85.1299 | Bd Acc: 89.0460 | Cross Acc: 80.5186
+650 743 CE Loss: 0.0069 | Clean Acc: 85.1232 | Bd Acc: 89.1449 | Cross Acc: 80.5684
+700 743 CE Loss: 0.0069 | Clean Acc: 85.1547 | Bd Acc: 89.3248 | Cross Acc: 80.5278
+ Eval:
+156 157 Clean Acc: 83.6800 - Best: 84.1400 | Bd Acc: 93.6800 - Best: 83.3500 | Cross: 77.1900
+Epoch 14:
+ Train:
+cifar10
+0 743 CE Loss: 0.0066 | Clean Acc: 78.2609 | Bd Acc: 100.0000 | Cross Acc: 75.0000
+50 743 CE Loss: 0.0065 | Clean Acc: 85.8056 | Bd Acc: 88.8889 | Cross Acc: 83.4967
+100 743 CE Loss: 0.0065 | Clean Acc: 85.8373 | Bd Acc: 89.1089 | Cross Acc: 82.3432
+150 743 CE Loss: 0.0065 | Clean Acc: 85.6752 | Bd Acc: 90.0662 | Cross Acc: 82.2848
+200 743 CE Loss: 0.0066 | Clean Acc: 85.4640 | Bd Acc: 89.8010 | Cross Acc: 82.3383
+250 743 CE Loss: 0.0066 | Clean Acc: 85.3369 | Bd Acc: 89.9734 | Cross Acc: 82.5365
+300 743 CE Loss: 0.0066 | Clean Acc: 85.5121 | Bd Acc: 89.8671 | Cross Acc: 82.7519
+350 743 CE Loss: 0.0065 | Clean Acc: 85.6683 | Bd Acc: 90.2659 | Cross Acc: 82.5024
+400 743 CE Loss: 0.0065 | Clean Acc: 85.5362 | Bd Acc: 90.1912 | Cross Acc: 82.4605
+450 743 CE Loss: 0.0065 | Clean Acc: 85.5297 | Bd Acc: 90.0222 | Cross Acc: 82.6681
+500 743 CE Loss: 0.0065 | Clean Acc: 85.5072 | Bd Acc: 90.1530 | Cross Acc: 82.6846
+550 743 CE Loss: 0.0065 | Clean Acc: 85.4888 | Bd Acc: 90.2904 | Cross Acc: 82.5166
+600 743 CE Loss: 0.0065 | Clean Acc: 85.4771 | Bd Acc: 89.9612 | Cross Acc: 82.6400
+650 743 CE Loss: 0.0065 | Clean Acc: 85.4972 | Bd Acc: 90.1946 | Cross Acc: 82.7829
+700 743 CE Loss: 0.0065 | Clean Acc: 85.4680 | Bd Acc: 90.4184 | Cross Acc: 82.5844
+ Eval:
+156 157 Clean Acc: 82.6400 - Best: 84.1400 | Bd Acc: 96.1100 - Best: 83.3500 | Cross: 78.9200
+Epoch 15:
+ Train:
+cifar10
+0 743 CE Loss: 0.0037 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0058 | Clean Acc: 88.0222 | Bd Acc: 90.8497 | Cross Acc: 79.7386
+100 743 CE Loss: 0.0060 | Clean Acc: 87.3440 | Bd Acc: 90.5941 | Cross Acc: 81.3531
+150 743 CE Loss: 0.0060 | Clean Acc: 87.2589 | Bd Acc: 90.3974 | Cross Acc: 81.8433
+200 743 CE Loss: 0.0061 | Clean Acc: 86.9133 | Bd Acc: 90.3814 | Cross Acc: 82.1725
+250 743 CE Loss: 0.0062 | Clean Acc: 86.7833 | Bd Acc: 90.4382 | Cross Acc: 82.3373
+300 743 CE Loss: 0.0063 | Clean Acc: 86.5376 | Bd Acc: 90.3654 | Cross Acc: 82.0598
+350 743 CE Loss: 0.0062 | Clean Acc: 86.5601 | Bd Acc: 90.2659 | Cross Acc: 82.3599
+400 743 CE Loss: 0.0062 | Clean Acc: 86.5391 | Bd Acc: 90.3574 | Cross Acc: 82.4397
+450 743 CE Loss: 0.0062 | Clean Acc: 86.6384 | Bd Acc: 90.5765 | Cross Acc: 82.4464
+500 743 CE Loss: 0.0062 | Clean Acc: 86.5834 | Bd Acc: 90.9182 | Cross Acc: 82.3187
+550 743 CE Loss: 0.0062 | Clean Acc: 86.6291 | Bd Acc: 90.7743 | Cross Acc: 82.2444
+600 743 CE Loss: 0.0062 | Clean Acc: 86.5984 | Bd Acc: 90.9318 | Cross Acc: 82.2934
+650 743 CE Loss: 0.0063 | Clean Acc: 86.6192 | Bd Acc: 91.0394 | Cross Acc: 82.1301
+700 743 CE Loss: 0.0063 | Clean Acc: 86.6092 | Bd Acc: 90.7513 | Cross Acc: 82.0495
+ Eval:
+156 157 Clean Acc: 84.2600 - Best: 84.1400 | Bd Acc: 91.9900 - Best: 83.3500 | Cross: 76.5800
+ Saving...
+Epoch 16:
+ Train:
+cifar10
+0 743 CE Loss: 0.0053 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 75.0000
+50 743 CE Loss: 0.0062 | Clean Acc: 86.7434 | Bd Acc: 91.8301 | Cross Acc: 82.5163
+100 743 CE Loss: 0.0060 | Clean Acc: 87.3009 | Bd Acc: 91.2541 | Cross Acc: 82.2607
+150 743 CE Loss: 0.0060 | Clean Acc: 87.5036 | Bd Acc: 90.8389 | Cross Acc: 82.3400
+200 743 CE Loss: 0.0060 | Clean Acc: 87.4649 | Bd Acc: 91.2106 | Cross Acc: 82.3383
+250 743 CE Loss: 0.0060 | Clean Acc: 87.3549 | Bd Acc: 91.3679 | Cross Acc: 82.7357
+300 743 CE Loss: 0.0060 | Clean Acc: 87.1660 | Bd Acc: 91.3068 | Cross Acc: 82.9181
+350 743 CE Loss: 0.0061 | Clean Acc: 86.9813 | Bd Acc: 91.2156 | Cross Acc: 82.5499
+400 743 CE Loss: 0.0061 | Clean Acc: 86.8806 | Bd Acc: 91.1056 | Cross Acc: 82.8346
+450 743 CE Loss: 0.0061 | Clean Acc: 86.8601 | Bd Acc: 91.2786 | Cross Acc: 82.7051
+500 743 CE Loss: 0.0060 | Clean Acc: 86.9001 | Bd Acc: 91.4504 | Cross Acc: 82.8842
+550 743 CE Loss: 0.0060 | Clean Acc: 86.9644 | Bd Acc: 91.6213 | Cross Acc: 83.0309
+600 743 CE Loss: 0.0060 | Clean Acc: 86.9963 | Bd Acc: 91.5419 | Cross Acc: 83.0976
+650 743 CE Loss: 0.0060 | Clean Acc: 86.9632 | Bd Acc: 91.6539 | Cross Acc: 82.9109
+700 743 CE Loss: 0.0060 | Clean Acc: 86.9441 | Bd Acc: 91.8212 | Cross Acc: 82.9529
+ Eval:
+156 157 Clean Acc: 85.5500 - Best: 84.2600 | Bd Acc: 96.7400 - Best: 91.9900 | Cross: 81.1700
+ Saving...
+Epoch 17:
+ Train:
+cifar10
+0 743 CE Loss: 0.0057 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0061 | Clean Acc: 87.0418 | Bd Acc: 88.2353 | Cross Acc: 81.5359
+100 743 CE Loss: 0.0060 | Clean Acc: 87.3440 | Bd Acc: 89.6040 | Cross Acc: 82.0957
+150 743 CE Loss: 0.0058 | Clean Acc: 87.7484 | Bd Acc: 90.3974 | Cross Acc: 83.0574
+200 743 CE Loss: 0.0058 | Clean Acc: 87.7244 | Bd Acc: 89.9668 | Cross Acc: 83.0431
+250 743 CE Loss: 0.0059 | Clean Acc: 87.4675 | Bd Acc: 90.5711 | Cross Acc: 82.2709
+300 743 CE Loss: 0.0059 | Clean Acc: 87.4621 | Bd Acc: 90.8084 | Cross Acc: 82.7519
+350 743 CE Loss: 0.0059 | Clean Acc: 87.5139 | Bd Acc: 91.1206 | Cross Acc: 82.4074
+400 743 CE Loss: 0.0059 | Clean Acc: 87.4444 | Bd Acc: 91.3965 | Cross Acc: 82.5852
+450 743 CE Loss: 0.0059 | Clean Acc: 87.5108 | Bd Acc: 91.3525 | Cross Acc: 82.4649
+500 743 CE Loss: 0.0058 | Clean Acc: 87.5727 | Bd Acc: 91.5835 | Cross Acc: 82.8011
+550 743 CE Loss: 0.0058 | Clean Acc: 87.5957 | Bd Acc: 91.7120 | Cross Acc: 82.8947
+600 743 CE Loss: 0.0058 | Clean Acc: 87.6257 | Bd Acc: 91.6805 | Cross Acc: 82.8203
+650 743 CE Loss: 0.0058 | Clean Acc: 87.5776 | Bd Acc: 91.5515 | Cross Acc: 82.9109
+700 743 CE Loss: 0.0058 | Clean Acc: 87.5736 | Bd Acc: 91.7261 | Cross Acc: 83.0599
+ Eval:
+156 157 Clean Acc: 84.0900 - Best: 85.5500 | Bd Acc: 86.0300 - Best: 96.7400 | Cross: 80.0500
+Epoch 18:
+ Train:
+cifar10
+0 743 CE Loss: 0.0045 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0058 | Clean Acc: 86.9565 | Bd Acc: 93.7908 | Cross Acc: 84.8039
+100 743 CE Loss: 0.0056 | Clean Acc: 87.8820 | Bd Acc: 94.0594 | Cross Acc: 84.1584
+150 743 CE Loss: 0.0055 | Clean Acc: 87.7771 | Bd Acc: 92.9360 | Cross Acc: 83.9404
+200 743 CE Loss: 0.0055 | Clean Acc: 87.9407 | Bd Acc: 93.0348 | Cross Acc: 84.3284
+250 743 CE Loss: 0.0055 | Clean Acc: 87.9699 | Bd Acc: 92.7623 | Cross Acc: 84.5618
+300 743 CE Loss: 0.0055 | Clean Acc: 87.9388 | Bd Acc: 92.3588 | Cross Acc: 84.6899
+350 743 CE Loss: 0.0055 | Clean Acc: 87.8917 | Bd Acc: 92.4976 | Cross Acc: 84.5916
+400 743 CE Loss: 0.0055 | Clean Acc: 87.8619 | Bd Acc: 92.5187 | Cross Acc: 84.0815
+450 743 CE Loss: 0.0055 | Clean Acc: 87.9832 | Bd Acc: 92.6829 | Cross Acc: 83.8322
+500 743 CE Loss: 0.0056 | Clean Acc: 87.9155 | Bd Acc: 92.6148 | Cross Acc: 83.4498
+550 743 CE Loss: 0.0056 | Clean Acc: 87.9271 | Bd Acc: 92.4077 | Cross Acc: 83.3031
+600 743 CE Loss: 0.0056 | Clean Acc: 87.9404 | Bd Acc: 92.4570 | Cross Acc: 83.1808
+650 743 CE Loss: 0.0056 | Clean Acc: 87.9082 | Bd Acc: 92.4731 | Cross Acc: 83.2053
+700 743 CE Loss: 0.0056 | Clean Acc: 87.8714 | Bd Acc: 92.2016 | Cross Acc: 83.2263
+ Eval:
+156 157 Clean Acc: 85.1300 - Best: 85.5500 | Bd Acc: 93.2600 - Best: 96.7400 | Cross: 79.3700
+Epoch 19:
+ Train:
+cifar10
+0 743 CE Loss: 0.0021 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0052 | Clean Acc: 88.7894 | Bd Acc: 91.5033 | Cross Acc: 86.4379
+100 743 CE Loss: 0.0050 | Clean Acc: 89.3242 | Bd Acc: 92.5743 | Cross Acc: 85.8911
+150 743 CE Loss: 0.0051 | Clean Acc: 89.2024 | Bd Acc: 92.2737 | Cross Acc: 85.0993
+200 743 CE Loss: 0.0052 | Clean Acc: 89.0655 | Bd Acc: 91.2935 | Cross Acc: 84.9502
+250 743 CE Loss: 0.0052 | Clean Acc: 89.2084 | Bd Acc: 91.8991 | Cross Acc: 84.1633
+300 743 CE Loss: 0.0052 | Clean Acc: 89.0727 | Bd Acc: 92.1927 | Cross Acc: 84.2470
+350 743 CE Loss: 0.0053 | Clean Acc: 89.0375 | Bd Acc: 91.9753 | Cross Acc: 84.0931
+400 743 CE Loss: 0.0053 | Clean Acc: 88.9244 | Bd Acc: 92.1446 | Cross Acc: 83.7905
+450 743 CE Loss: 0.0054 | Clean Acc: 88.6870 | Bd Acc: 92.0547 | Cross Acc: 83.9061
+500 743 CE Loss: 0.0054 | Clean Acc: 88.6922 | Bd Acc: 91.9162 | Cross Acc: 83.7991
+550 743 CE Loss: 0.0054 | Clean Acc: 88.7043 | Bd Acc: 92.0448 | Cross Acc: 83.9080
+600 743 CE Loss: 0.0054 | Clean Acc: 88.6674 | Bd Acc: 92.0410 | Cross Acc: 83.9573
+650 743 CE Loss: 0.0054 | Clean Acc: 88.5961 | Bd Acc: 92.1915 | Cross Acc: 83.8838
+700 743 CE Loss: 0.0054 | Clean Acc: 88.6249 | Bd Acc: 92.2967 | Cross Acc: 83.8088
+ Eval:
+156 157 Clean Acc: 87.0200 - Best: 85.5500 | Bd Acc: 96.5800 - Best: 96.7400 | Cross: 82.1200
+ Saving...
+Epoch 20:
+ Train:
+cifar10
+0 743 CE Loss: 0.0032 | Clean Acc: 91.3044 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0054 | Clean Acc: 88.3205 | Bd Acc: 92.4837 | Cross Acc: 84.9673
+100 743 CE Loss: 0.0053 | Clean Acc: 88.7861 | Bd Acc: 92.9043 | Cross Acc: 84.7360
+150 743 CE Loss: 0.0053 | Clean Acc: 88.7561 | Bd Acc: 92.8256 | Cross Acc: 84.6578
+200 743 CE Loss: 0.0052 | Clean Acc: 88.9466 | Bd Acc: 93.3665 | Cross Acc: 84.2454
+250 743 CE Loss: 0.0052 | Clean Acc: 88.8966 | Bd Acc: 93.0943 | Cross Acc: 84.2298
+300 743 CE Loss: 0.0053 | Clean Acc: 88.9065 | Bd Acc: 93.0786 | Cross Acc: 83.9701
+350 743 CE Loss: 0.0053 | Clean Acc: 88.8393 | Bd Acc: 93.3048 | Cross Acc: 83.4995
+400 743 CE Loss: 0.0053 | Clean Acc: 88.7564 | Bd Acc: 93.3500 | Cross Acc: 83.5412
+450 743 CE Loss: 0.0053 | Clean Acc: 88.8894 | Bd Acc: 93.4220 | Cross Acc: 83.5551
+500 743 CE Loss: 0.0052 | Clean Acc: 88.9308 | Bd Acc: 93.2468 | Cross Acc: 83.6993
+550 743 CE Loss: 0.0052 | Clean Acc: 88.9647 | Bd Acc: 93.1942 | Cross Acc: 83.9534
+600 743 CE Loss: 0.0052 | Clean Acc: 88.9025 | Bd Acc: 93.2335 | Cross Acc: 83.6800
+650 743 CE Loss: 0.0052 | Clean Acc: 88.9434 | Bd Acc: 93.2412 | Cross Acc: 83.7942
+700 743 CE Loss: 0.0052 | Clean Acc: 88.9506 | Bd Acc: 93.1764 | Cross Acc: 83.7613
+ Eval:
+156 157 Clean Acc: 88.0300 - Best: 87.0200 | Bd Acc: 90.0400 - Best: 96.5800 | Cross: 83.1400
+ Saving...
+Epoch 21:
+ Train:
+cifar10
+0 743 CE Loss: 0.0047 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0046 | Clean Acc: 91.3896 | Bd Acc: 93.7908 | Cross Acc: 82.6797
+100 743 CE Loss: 0.0048 | Clean Acc: 90.1851 | Bd Acc: 94.8845 | Cross Acc: 82.5083
+150 743 CE Loss: 0.0049 | Clean Acc: 89.9079 | Bd Acc: 94.5916 | Cross Acc: 82.8366
+200 743 CE Loss: 0.0049 | Clean Acc: 89.6928 | Bd Acc: 94.1128 | Cross Acc: 83.4577
+250 743 CE Loss: 0.0050 | Clean Acc: 89.5635 | Bd Acc: 94.0903 | Cross Acc: 83.8977
+300 743 CE Loss: 0.0050 | Clean Acc: 89.6360 | Bd Acc: 94.1307 | Cross Acc: 84.2193
+350 743 CE Loss: 0.0050 | Clean Acc: 89.5888 | Bd Acc: 94.2070 | Cross Acc: 84.1643
+400 743 CE Loss: 0.0050 | Clean Acc: 89.4666 | Bd Acc: 94.0981 | Cross Acc: 83.9776
+450 743 CE Loss: 0.0050 | Clean Acc: 89.3570 | Bd Acc: 94.0133 | Cross Acc: 84.1094
+500 743 CE Loss: 0.0050 | Clean Acc: 89.2476 | Bd Acc: 93.8456 | Cross Acc: 84.1816
+550 743 CE Loss: 0.0050 | Clean Acc: 89.2764 | Bd Acc: 93.9504 | Cross Acc: 84.1349
+600 743 CE Loss: 0.0050 | Clean Acc: 89.3583 | Bd Acc: 93.7604 | Cross Acc: 84.1791
+650 743 CE Loss: 0.0050 | Clean Acc: 89.3642 | Bd Acc: 93.8300 | Cross Acc: 84.2550
+700 743 CE Loss: 0.0050 | Clean Acc: 89.3909 | Bd Acc: 93.7470 | Cross Acc: 84.2487
+ Eval:
+156 157 Clean Acc: 86.6700 - Best: 88.0300 | Bd Acc: 97.5600 - Best: 90.0400 | Cross: 81.0300
+Epoch 22:
+ Train:
+cifar10
+0 743 CE Loss: 0.0062 | Clean Acc: 84.7826 | Bd Acc: 83.3333 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0051 | Clean Acc: 89.8977 | Bd Acc: 91.5033 | Cross Acc: 82.1895
+100 743 CE Loss: 0.0049 | Clean Acc: 89.9699 | Bd Acc: 93.7294 | Cross Acc: 83.3333
+150 743 CE Loss: 0.0048 | Clean Acc: 89.9079 | Bd Acc: 94.0397 | Cross Acc: 84.3819
+200 743 CE Loss: 0.0048 | Clean Acc: 90.1146 | Bd Acc: 93.8640 | Cross Acc: 84.6186
+250 743 CE Loss: 0.0049 | Clean Acc: 89.8147 | Bd Acc: 93.7583 | Cross Acc: 83.9973
+300 743 CE Loss: 0.0049 | Clean Acc: 89.9177 | Bd Acc: 94.0199 | Cross Acc: 83.9701
+350 743 CE Loss: 0.0049 | Clean Acc: 89.8365 | Bd Acc: 93.9696 | Cross Acc: 84.1643
+400 743 CE Loss: 0.0048 | Clean Acc: 89.8677 | Bd Acc: 93.9734 | Cross Acc: 84.3724
+450 743 CE Loss: 0.0048 | Clean Acc: 89.8776 | Bd Acc: 94.0872 | Cross Acc: 84.7746
+500 743 CE Loss: 0.0048 | Clean Acc: 89.9592 | Bd Acc: 94.0785 | Cross Acc: 84.5975
+550 743 CE Loss: 0.0048 | Clean Acc: 89.9945 | Bd Acc: 94.1621 | Cross Acc: 84.6642
+600 743 CE Loss: 0.0048 | Clean Acc: 89.9841 | Bd Acc: 94.0654 | Cross Acc: 84.7476
+650 743 CE Loss: 0.0048 | Clean Acc: 89.8918 | Bd Acc: 94.1116 | Cross Acc: 84.7158
+700 743 CE Loss: 0.0049 | Clean Acc: 89.7879 | Bd Acc: 94.0323 | Cross Acc: 84.6172
+ Eval:
+156 157 Clean Acc: 86.1600 - Best: 88.0300 | Bd Acc: 95.8200 - Best: 90.0400 | Cross: 81.7200
+Epoch 23:
+ Train:
+cifar10
+0 743 CE Loss: 0.0042 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0048 | Clean Acc: 89.3862 | Bd Acc: 93.7908 | Cross Acc: 87.0915
+100 743 CE Loss: 0.0047 | Clean Acc: 90.1636 | Bd Acc: 93.8944 | Cross Acc: 86.3036
+150 743 CE Loss: 0.0047 | Clean Acc: 90.5269 | Bd Acc: 94.1501 | Cross Acc: 86.2031
+200 743 CE Loss: 0.0046 | Clean Acc: 90.3201 | Bd Acc: 94.6932 | Cross Acc: 85.8209
+250 743 CE Loss: 0.0046 | Clean Acc: 90.2823 | Bd Acc: 94.6879 | Cross Acc: 85.9230
+300 743 CE Loss: 0.0046 | Clean Acc: 90.3799 | Bd Acc: 94.4629 | Cross Acc: 85.8250
+350 743 CE Loss: 0.0046 | Clean Acc: 90.4620 | Bd Acc: 94.3970 | Cross Acc: 85.6600
+400 743 CE Loss: 0.0047 | Clean Acc: 90.2364 | Bd Acc: 94.4306 | Cross Acc: 85.6816
+450 743 CE Loss: 0.0047 | Clean Acc: 90.2150 | Bd Acc: 94.3089 | Cross Acc: 85.3843
+500 743 CE Loss: 0.0047 | Clean Acc: 90.1415 | Bd Acc: 94.2448 | Cross Acc: 85.3959
+550 743 CE Loss: 0.0047 | Clean Acc: 90.0615 | Bd Acc: 94.2529 | Cross Acc: 85.4961
+600 743 CE Loss: 0.0047 | Clean Acc: 90.0203 | Bd Acc: 94.1486 | Cross Acc: 85.4548
+650 743 CE Loss: 0.0047 | Clean Acc: 89.9886 | Bd Acc: 94.2140 | Cross Acc: 85.5351
+700 743 CE Loss: 0.0048 | Clean Acc: 89.9646 | Bd Acc: 94.1274 | Cross Acc: 85.4137
+ Eval:
+156 157 Clean Acc: 85.0700 - Best: 88.0300 | Bd Acc: 90.6700 - Best: 90.0400 | Cross: 78.7900
+Epoch 24:
+ Train:
+cifar10
+0 743 CE Loss: 0.0044 | Clean Acc: 93.4783 | Bd Acc: 83.3333 | Cross Acc: 75.0000
+50 743 CE Loss: 0.0049 | Clean Acc: 89.4288 | Bd Acc: 93.4641 | Cross Acc: 84.1503
+100 743 CE Loss: 0.0049 | Clean Acc: 90.0344 | Bd Acc: 92.9043 | Cross Acc: 83.1683
+150 743 CE Loss: 0.0046 | Clean Acc: 90.6853 | Bd Acc: 92.8256 | Cross Acc: 83.9404
+200 743 CE Loss: 0.0047 | Clean Acc: 90.6987 | Bd Acc: 93.2836 | Cross Acc: 83.8723
+250 743 CE Loss: 0.0046 | Clean Acc: 90.6981 | Bd Acc: 93.7583 | Cross Acc: 84.3625
+300 743 CE Loss: 0.0047 | Clean Acc: 90.6255 | Bd Acc: 93.7985 | Cross Acc: 84.0808
+350 743 CE Loss: 0.0047 | Clean Acc: 90.5673 | Bd Acc: 93.4948 | Cross Acc: 84.2593
+400 743 CE Loss: 0.0047 | Clean Acc: 90.4966 | Bd Acc: 93.6409 | Cross Acc: 84.4140
+450 743 CE Loss: 0.0046 | Clean Acc: 90.5187 | Bd Acc: 93.9763 | Cross Acc: 84.4420
+500 743 CE Loss: 0.0046 | Clean Acc: 90.4973 | Bd Acc: 93.7791 | Cross Acc: 84.5143
+550 743 CE Loss: 0.0047 | Clean Acc: 90.5153 | Bd Acc: 93.8899 | Cross Acc: 84.3466
+600 743 CE Loss: 0.0047 | Clean Acc: 90.4688 | Bd Acc: 93.7327 | Cross Acc: 84.5535
+650 743 CE Loss: 0.0047 | Clean Acc: 90.4395 | Bd Acc: 93.5740 | Cross Acc: 84.6006
+700 743 CE Loss: 0.0047 | Clean Acc: 90.4794 | Bd Acc: 93.7233 | Cross Acc: 84.6172
+ Eval:
+156 157 Clean Acc: 85.8900 - Best: 88.0300 | Bd Acc: 85.8600 - Best: 90.0400 | Cross: 79.6900
+Epoch 25:
+ Train:
+cifar10
+0 743 CE Loss: 0.0036 | Clean Acc: 93.4783 | Bd Acc: 83.3333 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0041 | Clean Acc: 92.1569 | Bd Acc: 93.4641 | Cross Acc: 86.2745
+100 743 CE Loss: 0.0042 | Clean Acc: 91.5626 | Bd Acc: 92.5743 | Cross Acc: 85.8086
+150 743 CE Loss: 0.0044 | Clean Acc: 91.1892 | Bd Acc: 93.3775 | Cross Acc: 84.6578
+200 743 CE Loss: 0.0044 | Clean Acc: 91.1097 | Bd Acc: 93.5323 | Cross Acc: 85.4892
+250 743 CE Loss: 0.0044 | Clean Acc: 91.1918 | Bd Acc: 93.6255 | Cross Acc: 85.4250
+300 743 CE Loss: 0.0044 | Clean Acc: 91.0299 | Bd Acc: 94.0753 | Cross Acc: 85.4928
+350 743 CE Loss: 0.0044 | Clean Acc: 90.9637 | Bd Acc: 94.0646 | Cross Acc: 85.4701
+400 743 CE Loss: 0.0045 | Clean Acc: 90.8923 | Bd Acc: 94.0150 | Cross Acc: 85.5362
+450 743 CE Loss: 0.0045 | Clean Acc: 90.7982 | Bd Acc: 94.0503 | Cross Acc: 85.5876
+500 743 CE Loss: 0.0045 | Clean Acc: 90.6882 | Bd Acc: 94.0785 | Cross Acc: 85.3792
+550 743 CE Loss: 0.0045 | Clean Acc: 90.6928 | Bd Acc: 93.9806 | Cross Acc: 85.4961
+600 743 CE Loss: 0.0045 | Clean Acc: 90.6171 | Bd Acc: 93.9268 | Cross Acc: 85.4687
+650 743 CE Loss: 0.0045 | Clean Acc: 90.6331 | Bd Acc: 93.8812 | Cross Acc: 85.4071
+700 743 CE Loss: 0.0045 | Clean Acc: 90.6965 | Bd Acc: 93.9610 | Cross Acc: 85.5564
+ Eval:
+156 157 Clean Acc: 88.3400 - Best: 88.0300 | Bd Acc: 95.2600 - Best: 90.0400 | Cross: 83.3500
+ Saving...
+Epoch 26:
+ Train:
+cifar10
+0 743 CE Loss: 0.0046 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0043 | Clean Acc: 90.4092 | Bd Acc: 95.0980 | Cross Acc: 86.6013
+100 743 CE Loss: 0.0041 | Clean Acc: 91.3689 | Bd Acc: 96.3696 | Cross Acc: 87.3762
+150 743 CE Loss: 0.0041 | Clean Acc: 91.3763 | Bd Acc: 95.9161 | Cross Acc: 87.5276
+200 743 CE Loss: 0.0041 | Clean Acc: 91.7586 | Bd Acc: 95.5224 | Cross Acc: 86.8574
+250 743 CE Loss: 0.0042 | Clean Acc: 91.5555 | Bd Acc: 95.2855 | Cross Acc: 86.3546
+300 743 CE Loss: 0.0041 | Clean Acc: 91.6366 | Bd Acc: 95.2935 | Cross Acc: 86.7940
+350 743 CE Loss: 0.0041 | Clean Acc: 91.5211 | Bd Acc: 95.0142 | Cross Acc: 86.5859
+400 743 CE Loss: 0.0041 | Clean Acc: 91.3748 | Bd Acc: 94.8878 | Cross Acc: 86.6584
+450 743 CE Loss: 0.0042 | Clean Acc: 91.3236 | Bd Acc: 94.6785 | Cross Acc: 86.6593
+500 743 CE Loss: 0.0043 | Clean Acc: 91.1481 | Bd Acc: 94.4444 | Cross Acc: 86.6600
+550 743 CE Loss: 0.0043 | Clean Acc: 91.0716 | Bd Acc: 94.4949 | Cross Acc: 86.7362
+600 743 CE Loss: 0.0043 | Clean Acc: 91.0511 | Bd Acc: 94.2318 | Cross Acc: 86.7305
+650 743 CE Loss: 0.0043 | Clean Acc: 90.9604 | Bd Acc: 94.2908 | Cross Acc: 86.5591
+700 743 CE Loss: 0.0043 | Clean Acc: 90.9508 | Bd Acc: 94.1512 | Cross Acc: 86.5312
+ Eval:
+156 157 Clean Acc: 87.4800 - Best: 88.3400 | Bd Acc: 95.2700 - Best: 95.2600 | Cross: 83.3200
+Epoch 27:
+ Train:
+cifar10
+0 743 CE Loss: 0.0052 | Clean Acc: 84.7826 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0042 | Clean Acc: 91.0060 | Bd Acc: 95.7516 | Cross Acc: 86.6013
+100 743 CE Loss: 0.0041 | Clean Acc: 91.3904 | Bd Acc: 95.8746 | Cross Acc: 86.7162
+150 743 CE Loss: 0.0041 | Clean Acc: 91.4195 | Bd Acc: 95.8057 | Cross Acc: 86.5894
+200 743 CE Loss: 0.0042 | Clean Acc: 91.2827 | Bd Acc: 95.1907 | Cross Acc: 86.5257
+250 743 CE Loss: 0.0043 | Clean Acc: 91.0445 | Bd Acc: 94.7543 | Cross Acc: 86.2882
+300 743 CE Loss: 0.0043 | Clean Acc: 90.8782 | Bd Acc: 94.9612 | Cross Acc: 86.3234
+350 743 CE Loss: 0.0043 | Clean Acc: 90.8027 | Bd Acc: 94.6344 | Cross Acc: 86.4435
+400 743 CE Loss: 0.0043 | Clean Acc: 90.8598 | Bd Acc: 94.8462 | Cross Acc: 86.5752
+450 743 CE Loss: 0.0043 | Clean Acc: 90.9718 | Bd Acc: 94.9741 | Cross Acc: 86.8995
+500 743 CE Loss: 0.0043 | Clean Acc: 90.9616 | Bd Acc: 94.7438 | Cross Acc: 86.8430
+550 743 CE Loss: 0.0043 | Clean Acc: 90.8191 | Bd Acc: 94.6158 | Cross Acc: 86.6455
+600 743 CE Loss: 0.0043 | Clean Acc: 90.8920 | Bd Acc: 94.5369 | Cross Acc: 86.5086
+650 743 CE Loss: 0.0043 | Clean Acc: 90.9404 | Bd Acc: 94.4957 | Cross Acc: 86.2647
+700 743 CE Loss: 0.0043 | Clean Acc: 90.9415 | Bd Acc: 94.2463 | Cross Acc: 86.3053
+ Eval:
+156 157 Clean Acc: 87.5100 - Best: 88.3400 | Bd Acc: 95.3000 - Best: 95.2600 | Cross: 82.1600
+Epoch 28:
+ Train:
+cifar10
+0 743 CE Loss: 0.0026 | Clean Acc: 100.0000 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0044 | Clean Acc: 90.3666 | Bd Acc: 94.7712 | Cross Acc: 85.7843
+100 743 CE Loss: 0.0043 | Clean Acc: 90.6586 | Bd Acc: 94.8845 | Cross Acc: 85.8086
+150 743 CE Loss: 0.0043 | Clean Acc: 90.8581 | Bd Acc: 93.8190 | Cross Acc: 85.8720
+200 743 CE Loss: 0.0042 | Clean Acc: 91.2286 | Bd Acc: 93.9469 | Cross Acc: 85.9038
+250 743 CE Loss: 0.0044 | Clean Acc: 91.0099 | Bd Acc: 93.7583 | Cross Acc: 85.6574
+300 743 CE Loss: 0.0043 | Clean Acc: 91.1599 | Bd Acc: 93.8538 | Cross Acc: 85.7420
+350 743 CE Loss: 0.0043 | Clean Acc: 91.2672 | Bd Acc: 94.0171 | Cross Acc: 86.2536
+400 743 CE Loss: 0.0042 | Clean Acc: 91.3152 | Bd Acc: 94.2228 | Cross Acc: 86.5545
+450 743 CE Loss: 0.0042 | Clean Acc: 91.3429 | Bd Acc: 94.0503 | Cross Acc: 86.8625
+500 743 CE Loss: 0.0042 | Clean Acc: 91.2436 | Bd Acc: 94.0120 | Cross Acc: 86.8097
+550 743 CE Loss: 0.0043 | Clean Acc: 91.0952 | Bd Acc: 93.9201 | Cross Acc: 86.7514
+600 743 CE Loss: 0.0043 | Clean Acc: 91.1018 | Bd Acc: 94.0377 | Cross Acc: 86.5779
+650 743 CE Loss: 0.0043 | Clean Acc: 91.1808 | Bd Acc: 94.1372 | Cross Acc: 86.5719
+700 743 CE Loss: 0.0043 | Clean Acc: 91.0966 | Bd Acc: 94.0799 | Cross Acc: 86.4717
+ Eval:
+156 157 Clean Acc: 88.3800 - Best: 88.3400 | Bd Acc: 96.1100 - Best: 95.2600 | Cross: 84.5700
+ Saving...
+Epoch 29:
+ Train:
+cifar10
+0 743 CE Loss: 0.0047 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 75.0000
+50 743 CE Loss: 0.0046 | Clean Acc: 90.7076 | Bd Acc: 94.1176 | Cross Acc: 86.6013
+100 743 CE Loss: 0.0043 | Clean Acc: 91.3259 | Bd Acc: 94.5545 | Cross Acc: 87.0462
+150 743 CE Loss: 0.0042 | Clean Acc: 91.2180 | Bd Acc: 94.4812 | Cross Acc: 87.2517
+200 743 CE Loss: 0.0041 | Clean Acc: 91.6072 | Bd Acc: 94.1957 | Cross Acc: 87.2720
+250 743 CE Loss: 0.0041 | Clean Acc: 91.7547 | Bd Acc: 94.4887 | Cross Acc: 87.1846
+300 743 CE Loss: 0.0041 | Clean Acc: 91.7449 | Bd Acc: 94.5183 | Cross Acc: 87.1262
+350 743 CE Loss: 0.0041 | Clean Acc: 91.7255 | Bd Acc: 94.5394 | Cross Acc: 86.7521
+400 743 CE Loss: 0.0041 | Clean Acc: 91.6784 | Bd Acc: 94.6800 | Cross Acc: 86.8454
+450 743 CE Loss: 0.0041 | Clean Acc: 91.6177 | Bd Acc: 94.7154 | Cross Acc: 86.8256
+500 743 CE Loss: 0.0042 | Clean Acc: 91.5734 | Bd Acc: 94.6440 | Cross Acc: 86.8596
+550 743 CE Loss: 0.0042 | Clean Acc: 91.4977 | Bd Acc: 94.6158 | Cross Acc: 87.0085
+600 743 CE Loss: 0.0042 | Clean Acc: 91.5033 | Bd Acc: 94.6478 | Cross Acc: 86.9246
+650 743 CE Loss: 0.0042 | Clean Acc: 91.5114 | Bd Acc: 94.5725 | Cross Acc: 86.7768
+700 743 CE Loss: 0.0042 | Clean Acc: 91.4656 | Bd Acc: 94.5554 | Cross Acc: 86.6738
+ Eval:
+156 157 Clean Acc: 88.3100 - Best: 88.3800 | Bd Acc: 92.4700 - Best: 96.1100 | Cross: 84.7600
+Epoch 30:
+ Train:
+cifar10
+0 743 CE Loss: 0.0029 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0041 | Clean Acc: 90.9207 | Bd Acc: 96.0784 | Cross Acc: 86.2745
+100 743 CE Loss: 0.0039 | Clean Acc: 91.9931 | Bd Acc: 95.7096 | Cross Acc: 88.2013
+150 743 CE Loss: 0.0039 | Clean Acc: 91.6211 | Bd Acc: 95.2539 | Cross Acc: 87.6380
+200 743 CE Loss: 0.0039 | Clean Acc: 91.7370 | Bd Acc: 95.4395 | Cross Acc: 87.4378
+250 743 CE Loss: 0.0039 | Clean Acc: 91.9539 | Bd Acc: 95.2191 | Cross Acc: 87.5498
+300 743 CE Loss: 0.0039 | Clean Acc: 91.8605 | Bd Acc: 95.0720 | Cross Acc: 87.3754
+350 743 CE Loss: 0.0040 | Clean Acc: 91.7812 | Bd Acc: 95.1567 | Cross Acc: 87.4169
+400 743 CE Loss: 0.0040 | Clean Acc: 91.6947 | Bd Acc: 95.1372 | Cross Acc: 87.4065
+450 743 CE Loss: 0.0040 | Clean Acc: 91.6321 | Bd Acc: 94.8633 | Cross Acc: 87.4353
+500 743 CE Loss: 0.0040 | Clean Acc: 91.6515 | Bd Acc: 94.7771 | Cross Acc: 87.1756
+550 743 CE Loss: 0.0041 | Clean Acc: 91.6239 | Bd Acc: 94.6461 | Cross Acc: 87.2202
+600 743 CE Loss: 0.0041 | Clean Acc: 91.5358 | Bd Acc: 94.7033 | Cross Acc: 86.9246
+650 743 CE Loss: 0.0041 | Clean Acc: 91.5314 | Bd Acc: 94.5981 | Cross Acc: 86.9944
+700 743 CE Loss: 0.0041 | Clean Acc: 91.5741 | Bd Acc: 94.7218 | Cross Acc: 87.2325
+ Eval:
+156 157 Clean Acc: 88.5800 - Best: 88.3800 | Bd Acc: 95.6000 - Best: 96.1100 | Cross: 84.0200
+ Saving...
+Epoch 31:
+ Train:
+cifar10
+0 743 CE Loss: 0.0050 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0041 | Clean Acc: 91.9437 | Bd Acc: 93.4641 | Cross Acc: 86.1111
+100 743 CE Loss: 0.0038 | Clean Acc: 92.2514 | Bd Acc: 93.3993 | Cross Acc: 87.7063
+150 743 CE Loss: 0.0038 | Clean Acc: 92.2545 | Bd Acc: 94.0397 | Cross Acc: 87.2517
+200 743 CE Loss: 0.0039 | Clean Acc: 92.1912 | Bd Acc: 93.5323 | Cross Acc: 87.2305
+250 743 CE Loss: 0.0039 | Clean Acc: 92.0752 | Bd Acc: 93.8911 | Cross Acc: 87.4502
+300 743 CE Loss: 0.0039 | Clean Acc: 92.0771 | Bd Acc: 94.4629 | Cross Acc: 87.0986
+350 743 CE Loss: 0.0039 | Clean Acc: 92.0476 | Bd Acc: 94.5869 | Cross Acc: 86.9421
+400 743 CE Loss: 0.0038 | Clean Acc: 92.2043 | Bd Acc: 94.8047 | Cross Acc: 86.9493
+450 743 CE Loss: 0.0039 | Clean Acc: 92.2057 | Bd Acc: 94.6046 | Cross Acc: 87.2136
+500 743 CE Loss: 0.0039 | Clean Acc: 92.2156 | Bd Acc: 94.6440 | Cross Acc: 87.0093
+550 743 CE Loss: 0.0039 | Clean Acc: 92.2394 | Bd Acc: 94.7066 | Cross Acc: 86.9782
+600 743 CE Loss: 0.0039 | Clean Acc: 92.2014 | Bd Acc: 94.8419 | Cross Acc: 86.8136
+650 743 CE Loss: 0.0039 | Clean Acc: 92.0958 | Bd Acc: 94.7261 | Cross Acc: 86.7512
+700 743 CE Loss: 0.0039 | Clean Acc: 92.0610 | Bd Acc: 94.5079 | Cross Acc: 86.9353
+ Eval:
+156 157 Clean Acc: 88.4500 - Best: 88.5800 | Bd Acc: 91.6800 - Best: 95.6000 | Cross: 84.7800
+Epoch 32:
+ Train:
+cifar10
+0 743 CE Loss: 0.0032 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0039 | Clean Acc: 92.1569 | Bd Acc: 96.0784 | Cross Acc: 84.6405
+100 743 CE Loss: 0.0038 | Clean Acc: 91.7994 | Bd Acc: 95.2145 | Cross Acc: 87.2937
+150 743 CE Loss: 0.0038 | Clean Acc: 91.8370 | Bd Acc: 95.2539 | Cross Acc: 87.7483
+200 743 CE Loss: 0.0037 | Clean Acc: 91.9100 | Bd Acc: 95.2736 | Cross Acc: 88.6816
+250 743 CE Loss: 0.0038 | Clean Acc: 91.9799 | Bd Acc: 95.0863 | Cross Acc: 88.5126
+300 743 CE Loss: 0.0038 | Clean Acc: 92.0049 | Bd Acc: 95.0720 | Cross Acc: 88.4275
+350 743 CE Loss: 0.0038 | Clean Acc: 92.0538 | Bd Acc: 95.0142 | Cross Acc: 88.1766
+400 743 CE Loss: 0.0038 | Clean Acc: 91.9603 | Bd Acc: 94.9293 | Cross Acc: 88.2170
+450 743 CE Loss: 0.0039 | Clean Acc: 91.8056 | Bd Acc: 94.5676 | Cross Acc: 88.3592
+500 743 CE Loss: 0.0039 | Clean Acc: 91.6732 | Bd Acc: 94.4444 | Cross Acc: 88.3733
+550 743 CE Loss: 0.0040 | Clean Acc: 91.5569 | Bd Acc: 94.3134 | Cross Acc: 88.2638
+600 743 CE Loss: 0.0040 | Clean Acc: 91.5793 | Bd Acc: 94.4537 | Cross Acc: 88.0754
+650 743 CE Loss: 0.0040 | Clean Acc: 91.5915 | Bd Acc: 94.5212 | Cross Acc: 87.9544
+700 743 CE Loss: 0.0040 | Clean Acc: 91.6424 | Bd Acc: 94.4841 | Cross Acc: 87.7199
+ Eval:
+156 157 Clean Acc: 87.0100 - Best: 88.5800 | Bd Acc: 99.0600 - Best: 95.6000 | Cross: 84.3400
+Epoch 33:
+ Train:
+cifar10
+0 743 CE Loss: 0.0055 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0039 | Clean Acc: 92.7962 | Bd Acc: 94.7712 | Cross Acc: 86.9281
+100 743 CE Loss: 0.0039 | Clean Acc: 92.1007 | Bd Acc: 94.8845 | Cross Acc: 87.7063
+150 743 CE Loss: 0.0039 | Clean Acc: 92.1826 | Bd Acc: 94.2605 | Cross Acc: 88.1898
+200 743 CE Loss: 0.0039 | Clean Acc: 92.2020 | Bd Acc: 94.5274 | Cross Acc: 88.2670
+250 743 CE Loss: 0.0038 | Clean Acc: 92.3177 | Bd Acc: 94.7543 | Cross Acc: 88.0478
+300 743 CE Loss: 0.0038 | Clean Acc: 92.3877 | Bd Acc: 94.4075 | Cross Acc: 88.0122
+350 743 CE Loss: 0.0038 | Clean Acc: 92.3263 | Bd Acc: 94.2070 | Cross Acc: 88.0342
+400 743 CE Loss: 0.0039 | Clean Acc: 92.2639 | Bd Acc: 94.0981 | Cross Acc: 88.0091
+450 743 CE Loss: 0.0038 | Clean Acc: 92.3214 | Bd Acc: 94.2720 | Cross Acc: 87.7679
+500 743 CE Loss: 0.0038 | Clean Acc: 92.3588 | Bd Acc: 94.3114 | Cross Acc: 87.7079
+550 743 CE Loss: 0.0038 | Clean Acc: 92.3578 | Bd Acc: 94.4344 | Cross Acc: 87.7647
+600 743 CE Loss: 0.0038 | Clean Acc: 92.2484 | Bd Acc: 94.3705 | Cross Acc: 87.7427
+650 743 CE Loss: 0.0038 | Clean Acc: 92.2594 | Bd Acc: 94.4444 | Cross Acc: 87.6856
+700 743 CE Loss: 0.0039 | Clean Acc: 92.1882 | Bd Acc: 94.4127 | Cross Acc: 87.6724
+ Eval:
+156 157 Clean Acc: 87.4400 - Best: 88.5800 | Bd Acc: 96.2600 - Best: 95.6000 | Cross: 83.3100
+Epoch 34:
+ Train:
+cifar10
+0 743 CE Loss: 0.0047 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0037 | Clean Acc: 92.1995 | Bd Acc: 96.4052 | Cross Acc: 87.7451
+100 743 CE Loss: 0.0038 | Clean Acc: 92.0146 | Bd Acc: 95.3795 | Cross Acc: 87.7888
+150 743 CE Loss: 0.0039 | Clean Acc: 92.2545 | Bd Acc: 94.0397 | Cross Acc: 87.2517
+200 743 CE Loss: 0.0040 | Clean Acc: 91.8343 | Bd Acc: 93.6982 | Cross Acc: 87.5622
+250 743 CE Loss: 0.0039 | Clean Acc: 92.0838 | Bd Acc: 93.4927 | Cross Acc: 87.7158
+300 743 CE Loss: 0.0038 | Clean Acc: 92.1927 | Bd Acc: 93.6323 | Cross Acc: 87.8461
+350 743 CE Loss: 0.0038 | Clean Acc: 92.1281 | Bd Acc: 93.9696 | Cross Acc: 87.7018
+400 743 CE Loss: 0.0038 | Clean Acc: 92.2747 | Bd Acc: 93.9318 | Cross Acc: 87.7390
+450 743 CE Loss: 0.0039 | Clean Acc: 92.1479 | Bd Acc: 93.9024 | Cross Acc: 87.7679
+500 743 CE Loss: 0.0039 | Clean Acc: 92.1939 | Bd Acc: 93.7458 | Cross Acc: 87.8077
+550 743 CE Loss: 0.0038 | Clean Acc: 92.2039 | Bd Acc: 93.9201 | Cross Acc: 87.8100
+600 743 CE Loss: 0.0038 | Clean Acc: 92.3063 | Bd Acc: 94.0932 | Cross Acc: 87.7704
+650 743 CE Loss: 0.0038 | Clean Acc: 92.3362 | Bd Acc: 94.1116 | Cross Acc: 87.7752
+700 743 CE Loss: 0.0038 | Clean Acc: 92.2502 | Bd Acc: 94.2701 | Cross Acc: 87.6248
+ Eval:
+156 157 Clean Acc: 88.5500 - Best: 88.5800 | Bd Acc: 94.6300 - Best: 95.6000 | Cross: 84.6600
+Epoch 35:
+ Train:
+cifar10
+0 743 CE Loss: 0.0016 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0037 | Clean Acc: 92.8389 | Bd Acc: 94.1176 | Cross Acc: 89.2157
+100 743 CE Loss: 0.0035 | Clean Acc: 93.2200 | Bd Acc: 94.8845 | Cross Acc: 90.7591
+150 743 CE Loss: 0.0036 | Clean Acc: 92.8592 | Bd Acc: 94.1501 | Cross Acc: 89.0177
+200 743 CE Loss: 0.0036 | Clean Acc: 92.9159 | Bd Acc: 94.6103 | Cross Acc: 88.3914
+250 743 CE Loss: 0.0037 | Clean Acc: 92.8200 | Bd Acc: 94.7543 | Cross Acc: 87.9482
+300 743 CE Loss: 0.0037 | Clean Acc: 92.7055 | Bd Acc: 94.8505 | Cross Acc: 87.7630
+350 743 CE Loss: 0.0038 | Clean Acc: 92.5183 | Bd Acc: 94.4444 | Cross Acc: 87.7968
+400 743 CE Loss: 0.0038 | Clean Acc: 92.3940 | Bd Acc: 94.5553 | Cross Acc: 87.8845
+450 743 CE Loss: 0.0038 | Clean Acc: 92.4130 | Bd Acc: 94.3089 | Cross Acc: 87.6386
+500 743 CE Loss: 0.0038 | Clean Acc: 92.3327 | Bd Acc: 94.2448 | Cross Acc: 87.4750
+550 743 CE Loss: 0.0039 | Clean Acc: 92.3144 | Bd Acc: 94.0109 | Cross Acc: 87.4471
+600 743 CE Loss: 0.0039 | Clean Acc: 92.3533 | Bd Acc: 94.0654 | Cross Acc: 87.4376
+650 743 CE Loss: 0.0038 | Clean Acc: 92.4264 | Bd Acc: 94.1628 | Cross Acc: 87.6088
+700 743 CE Loss: 0.0038 | Clean Acc: 92.4239 | Bd Acc: 94.4365 | Cross Acc: 87.5892
+ Eval:
+156 157 Clean Acc: 88.9600 - Best: 88.5800 | Bd Acc: 86.4300 - Best: 95.6000 | Cross: 84.7700
+ Saving...
+Epoch 36:
+ Train:
+cifar10
+0 743 CE Loss: 0.0039 | Clean Acc: 86.9565 | Bd Acc: 83.3333 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0035 | Clean Acc: 92.3700 | Bd Acc: 94.4444 | Cross Acc: 90.1961
+100 743 CE Loss: 0.0035 | Clean Acc: 92.7680 | Bd Acc: 95.5446 | Cross Acc: 89.1914
+150 743 CE Loss: 0.0035 | Clean Acc: 92.7728 | Bd Acc: 95.0331 | Cross Acc: 88.2450
+200 743 CE Loss: 0.0035 | Clean Acc: 92.7969 | Bd Acc: 95.6882 | Cross Acc: 88.5158
+250 743 CE Loss: 0.0035 | Clean Acc: 92.8633 | Bd Acc: 95.8831 | Cross Acc: 88.7450
+300 743 CE Loss: 0.0036 | Clean Acc: 92.7777 | Bd Acc: 95.4042 | Cross Acc: 88.6766
+350 743 CE Loss: 0.0036 | Clean Acc: 92.6917 | Bd Acc: 95.3466 | Cross Acc: 88.5565
+400 743 CE Loss: 0.0036 | Clean Acc: 92.7084 | Bd Acc: 95.2203 | Cross Acc: 88.2170
+450 743 CE Loss: 0.0036 | Clean Acc: 92.7022 | Bd Acc: 95.1589 | Cross Acc: 88.1929
+500 743 CE Loss: 0.0036 | Clean Acc: 92.5757 | Bd Acc: 95.1763 | Cross Acc: 88.0073
+550 743 CE Loss: 0.0037 | Clean Acc: 92.4801 | Bd Acc: 95.0393 | Cross Acc: 87.7193
+600 743 CE Loss: 0.0037 | Clean Acc: 92.4944 | Bd Acc: 94.9529 | Cross Acc: 87.6456
+650 743 CE Loss: 0.0037 | Clean Acc: 92.4965 | Bd Acc: 95.0845 | Cross Acc: 87.6984
+700 743 CE Loss: 0.0037 | Clean Acc: 92.4177 | Bd Acc: 95.0547 | Cross Acc: 87.7794
+ Eval:
+156 157 Clean Acc: 88.1800 - Best: 88.9600 | Bd Acc: 95.5500 - Best: 86.4300 | Cross: 82.3800
+Epoch 37:
+ Train:
+cifar10
+0 743 CE Loss: 0.0034 | Clean Acc: 93.4783 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0035 | Clean Acc: 93.8619 | Bd Acc: 94.4444 | Cross Acc: 88.7255
+100 743 CE Loss: 0.0035 | Clean Acc: 93.1339 | Bd Acc: 94.8845 | Cross Acc: 89.0264
+150 743 CE Loss: 0.0034 | Clean Acc: 93.3631 | Bd Acc: 95.9161 | Cross Acc: 89.0177
+200 743 CE Loss: 0.0034 | Clean Acc: 93.2728 | Bd Acc: 95.5224 | Cross Acc: 88.7645
+250 743 CE Loss: 0.0034 | Clean Acc: 93.3483 | Bd Acc: 95.2855 | Cross Acc: 88.4462
+300 743 CE Loss: 0.0035 | Clean Acc: 93.0594 | Bd Acc: 95.3488 | Cross Acc: 88.1506
+350 743 CE Loss: 0.0035 | Clean Acc: 93.0323 | Bd Acc: 95.3466 | Cross Acc: 87.8443
+400 743 CE Loss: 0.0036 | Clean Acc: 93.0554 | Bd Acc: 95.0540 | Cross Acc: 87.7598
+450 743 CE Loss: 0.0036 | Clean Acc: 92.9818 | Bd Acc: 95.0480 | Cross Acc: 87.6386
+500 743 CE Loss: 0.0036 | Clean Acc: 92.8578 | Bd Acc: 94.8769 | Cross Acc: 87.4251
+550 743 CE Loss: 0.0036 | Clean Acc: 92.8943 | Bd Acc: 94.8881 | Cross Acc: 87.4319
+600 743 CE Loss: 0.0037 | Clean Acc: 92.7982 | Bd Acc: 94.9806 | Cross Acc: 87.4376
+650 743 CE Loss: 0.0037 | Clean Acc: 92.7236 | Bd Acc: 95.0077 | Cross Acc: 87.4040
+700 743 CE Loss: 0.0037 | Clean Acc: 92.7278 | Bd Acc: 95.1260 | Cross Acc: 87.4108
+ Eval:
+156 157 Clean Acc: 86.7500 - Best: 88.9600 | Bd Acc: 97.0200 - Best: 86.4300 | Cross: 82.4100
+Epoch 38:
+ Train:
+cifar10
+0 743 CE Loss: 0.0024 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0036 | Clean Acc: 92.4126 | Bd Acc: 95.4248 | Cross Acc: 89.3791
+100 743 CE Loss: 0.0035 | Clean Acc: 92.7034 | Bd Acc: 94.8845 | Cross Acc: 89.3564
+150 743 CE Loss: 0.0034 | Clean Acc: 92.8736 | Bd Acc: 95.5850 | Cross Acc: 88.5762
+200 743 CE Loss: 0.0036 | Clean Acc: 92.6671 | Bd Acc: 95.5224 | Cross Acc: 88.2255
+250 743 CE Loss: 0.0036 | Clean Acc: 92.5775 | Bd Acc: 95.2191 | Cross Acc: 88.3466
+300 743 CE Loss: 0.0036 | Clean Acc: 92.5105 | Bd Acc: 95.1274 | Cross Acc: 88.3444
+350 743 CE Loss: 0.0037 | Clean Acc: 92.5245 | Bd Acc: 95.0617 | Cross Acc: 88.2004
+400 743 CE Loss: 0.0037 | Clean Acc: 92.5838 | Bd Acc: 95.1372 | Cross Acc: 87.9676
+450 743 CE Loss: 0.0036 | Clean Acc: 92.6926 | Bd Acc: 95.1589 | Cross Acc: 88.1005
+500 743 CE Loss: 0.0037 | Clean Acc: 92.6755 | Bd Acc: 95.0432 | Cross Acc: 87.8909
+550 743 CE Loss: 0.0037 | Clean Acc: 92.6142 | Bd Acc: 94.9486 | Cross Acc: 88.0671
+600 743 CE Loss: 0.0037 | Clean Acc: 92.5993 | Bd Acc: 94.8697 | Cross Acc: 88.0338
+650 743 CE Loss: 0.0037 | Clean Acc: 92.5833 | Bd Acc: 94.9053 | Cross Acc: 87.9800
+700 743 CE Loss: 0.0037 | Clean Acc: 92.6223 | Bd Acc: 95.0071 | Cross Acc: 87.9458
+ Eval:
+156 157 Clean Acc: 88.8000 - Best: 88.9600 | Bd Acc: 98.2600 - Best: 86.4300 | Cross: 85.0700
+Epoch 39:
+ Train:
+cifar10
+0 743 CE Loss: 0.0040 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0034 | Clean Acc: 93.3078 | Bd Acc: 95.7516 | Cross Acc: 88.2353
+100 743 CE Loss: 0.0034 | Clean Acc: 93.3061 | Bd Acc: 95.8746 | Cross Acc: 88.3663
+150 743 CE Loss: 0.0034 | Clean Acc: 93.1327 | Bd Acc: 95.9161 | Cross Acc: 88.4658
+200 743 CE Loss: 0.0033 | Clean Acc: 93.4025 | Bd Acc: 95.9370 | Cross Acc: 88.6401
+250 743 CE Loss: 0.0034 | Clean Acc: 93.0972 | Bd Acc: 95.5511 | Cross Acc: 88.1474
+300 743 CE Loss: 0.0035 | Clean Acc: 92.8571 | Bd Acc: 95.2935 | Cross Acc: 87.9845
+350 743 CE Loss: 0.0035 | Clean Acc: 92.8837 | Bd Acc: 95.1567 | Cross Acc: 87.7968
+400 743 CE Loss: 0.0035 | Clean Acc: 92.9090 | Bd Acc: 95.2618 | Cross Acc: 87.6143
+450 743 CE Loss: 0.0036 | Clean Acc: 92.9143 | Bd Acc: 95.2698 | Cross Acc: 87.3984
+500 743 CE Loss: 0.0035 | Clean Acc: 92.9489 | Bd Acc: 95.2096 | Cross Acc: 87.6580
+550 743 CE Loss: 0.0036 | Clean Acc: 92.9338 | Bd Acc: 95.2208 | Cross Acc: 87.7798
+600 743 CE Loss: 0.0036 | Clean Acc: 92.9285 | Bd Acc: 95.0915 | Cross Acc: 87.7011
+650 743 CE Loss: 0.0036 | Clean Acc: 92.8271 | Bd Acc: 95.0333 | Cross Acc: 87.5832
+700 743 CE Loss: 0.0036 | Clean Acc: 92.7867 | Bd Acc: 95.0547 | Cross Acc: 87.6011
+ Eval:
+156 157 Clean Acc: 89.1700 - Best: 88.9600 | Bd Acc: 89.5700 - Best: 86.4300 | Cross: 84.3800
+ Saving...
+Epoch 40:
+ Train:
+cifar10
+0 743 CE Loss: 0.0037 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0031 | Clean Acc: 93.4783 | Bd Acc: 95.7516 | Cross Acc: 89.8693
+100 743 CE Loss: 0.0034 | Clean Acc: 92.8326 | Bd Acc: 95.2145 | Cross Acc: 89.1914
+150 743 CE Loss: 0.0035 | Clean Acc: 92.9024 | Bd Acc: 95.2539 | Cross Acc: 88.7417
+200 743 CE Loss: 0.0034 | Clean Acc: 93.1754 | Bd Acc: 95.1907 | Cross Acc: 89.0133
+250 743 CE Loss: 0.0034 | Clean Acc: 93.2444 | Bd Acc: 94.8207 | Cross Acc: 89.1434
+300 743 CE Loss: 0.0034 | Clean Acc: 93.2977 | Bd Acc: 94.8505 | Cross Acc: 88.5936
+350 743 CE Loss: 0.0035 | Clean Acc: 93.2305 | Bd Acc: 94.9193 | Cross Acc: 88.5090
+400 743 CE Loss: 0.0034 | Clean Acc: 93.3210 | Bd Acc: 95.1372 | Cross Acc: 88.4456
+450 743 CE Loss: 0.0035 | Clean Acc: 93.2565 | Bd Acc: 95.0111 | Cross Acc: 88.3407
+500 743 CE Loss: 0.0035 | Clean Acc: 93.2006 | Bd Acc: 95.0432 | Cross Acc: 88.2069
+550 743 CE Loss: 0.0035 | Clean Acc: 93.1508 | Bd Acc: 95.0091 | Cross Acc: 88.0520
+600 743 CE Loss: 0.0035 | Clean Acc: 93.0587 | Bd Acc: 95.0083 | Cross Acc: 87.8813
+650 743 CE Loss: 0.0035 | Clean Acc: 93.0241 | Bd Acc: 94.7261 | Cross Acc: 87.8776
+700 743 CE Loss: 0.0035 | Clean Acc: 92.9976 | Bd Acc: 94.7218 | Cross Acc: 87.9577
+ Eval:
+156 157 Clean Acc: 89.8700 - Best: 89.1700 | Bd Acc: 94.0500 - Best: 89.5700 | Cross: 85.1900
+ Saving...
+Epoch 41:
+ Train:
+cifar10
+0 743 CE Loss: 0.0048 | Clean Acc: 86.9565 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0036 | Clean Acc: 93.3930 | Bd Acc: 94.1176 | Cross Acc: 88.5621
+100 743 CE Loss: 0.0034 | Clean Acc: 93.4352 | Bd Acc: 94.2244 | Cross Acc: 88.8614
+150 743 CE Loss: 0.0034 | Clean Acc: 93.3055 | Bd Acc: 94.8124 | Cross Acc: 88.6313
+200 743 CE Loss: 0.0034 | Clean Acc: 93.5540 | Bd Acc: 94.9420 | Cross Acc: 88.3499
+250 743 CE Loss: 0.0034 | Clean Acc: 93.4609 | Bd Acc: 94.4887 | Cross Acc: 88.2802
+300 743 CE Loss: 0.0034 | Clean Acc: 93.5866 | Bd Acc: 94.5183 | Cross Acc: 88.0952
+350 743 CE Loss: 0.0034 | Clean Acc: 93.5464 | Bd Acc: 94.6819 | Cross Acc: 87.7730
+400 743 CE Loss: 0.0034 | Clean Acc: 93.5108 | Bd Acc: 94.8462 | Cross Acc: 87.9468
+450 743 CE Loss: 0.0034 | Clean Acc: 93.6036 | Bd Acc: 94.8633 | Cross Acc: 87.9712
+500 743 CE Loss: 0.0034 | Clean Acc: 93.5911 | Bd Acc: 94.8104 | Cross Acc: 88.0073
+550 743 CE Loss: 0.0034 | Clean Acc: 93.5611 | Bd Acc: 94.8578 | Cross Acc: 88.0067
+600 743 CE Loss: 0.0034 | Clean Acc: 93.5904 | Bd Acc: 95.0638 | Cross Acc: 87.8813
+650 743 CE Loss: 0.0034 | Clean Acc: 93.5317 | Bd Acc: 95.1869 | Cross Acc: 87.9544
+700 743 CE Loss: 0.0034 | Clean Acc: 93.4566 | Bd Acc: 95.2211 | Cross Acc: 88.0171
+ Eval:
+156 157 Clean Acc: 90.0600 - Best: 89.8700 | Bd Acc: 95.6200 - Best: 94.0500 | Cross: 86.7500
+ Saving...
+Epoch 42:
+ Train:
+cifar10
+0 743 CE Loss: 0.0013 | Clean Acc: 100.0000 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0033 | Clean Acc: 93.2225 | Bd Acc: 97.7124 | Cross Acc: 88.8889
+100 743 CE Loss: 0.0033 | Clean Acc: 93.6505 | Bd Acc: 96.5347 | Cross Acc: 87.6238
+150 743 CE Loss: 0.0035 | Clean Acc: 93.3199 | Bd Acc: 94.9227 | Cross Acc: 87.7483
+200 743 CE Loss: 0.0035 | Clean Acc: 93.1862 | Bd Acc: 95.3566 | Cross Acc: 87.7280
+250 743 CE Loss: 0.0035 | Clean Acc: 93.1491 | Bd Acc: 95.2855 | Cross Acc: 88.1142
+300 743 CE Loss: 0.0035 | Clean Acc: 93.1533 | Bd Acc: 95.1274 | Cross Acc: 88.0676
+350 743 CE Loss: 0.0035 | Clean Acc: 93.1748 | Bd Acc: 95.1567 | Cross Acc: 87.9630
+400 743 CE Loss: 0.0035 | Clean Acc: 93.0662 | Bd Acc: 95.1787 | Cross Acc: 87.8221
+450 743 CE Loss: 0.0035 | Clean Acc: 93.0107 | Bd Acc: 94.8633 | Cross Acc: 88.0820
+500 743 CE Loss: 0.0035 | Clean Acc: 93.1008 | Bd Acc: 94.9434 | Cross Acc: 87.9241
+550 743 CE Loss: 0.0035 | Clean Acc: 93.1153 | Bd Acc: 94.9486 | Cross Acc: 87.9613
+600 743 CE Loss: 0.0035 | Clean Acc: 93.0514 | Bd Acc: 95.0083 | Cross Acc: 88.1309
+650 743 CE Loss: 0.0035 | Clean Acc: 93.0642 | Bd Acc: 95.1357 | Cross Acc: 88.0952
+700 743 CE Loss: 0.0035 | Clean Acc: 93.0162 | Bd Acc: 95.1260 | Cross Acc: 88.2073
+ Eval:
+156 157 Clean Acc: 90.2800 - Best: 90.0600 | Bd Acc: 97.3900 - Best: 95.6200 | Cross: 85.9900
+ Saving...
+Epoch 43:
+ Train:
+cifar10
+0 743 CE Loss: 0.0034 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0029 | Clean Acc: 93.9045 | Bd Acc: 96.7320 | Cross Acc: 90.1961
+100 743 CE Loss: 0.0030 | Clean Acc: 93.9733 | Bd Acc: 95.3795 | Cross Acc: 89.7690
+150 743 CE Loss: 0.0033 | Clean Acc: 93.1903 | Bd Acc: 94.3709 | Cross Acc: 90.0110
+200 743 CE Loss: 0.0033 | Clean Acc: 93.3052 | Bd Acc: 94.3615 | Cross Acc: 89.8425
+250 743 CE Loss: 0.0033 | Clean Acc: 93.3397 | Bd Acc: 94.7543 | Cross Acc: 90.1726
+300 743 CE Loss: 0.0033 | Clean Acc: 93.2977 | Bd Acc: 94.4629 | Cross Acc: 90.1993
+350 743 CE Loss: 0.0034 | Clean Acc: 93.2057 | Bd Acc: 94.5394 | Cross Acc: 89.5537
+400 743 CE Loss: 0.0034 | Clean Acc: 93.1909 | Bd Acc: 94.6800 | Cross Acc: 89.3807
+450 743 CE Loss: 0.0034 | Clean Acc: 93.1457 | Bd Acc: 94.8263 | Cross Acc: 89.4124
+500 743 CE Loss: 0.0035 | Clean Acc: 92.9662 | Bd Acc: 94.5775 | Cross Acc: 89.0219
+550 743 CE Loss: 0.0035 | Clean Acc: 92.9022 | Bd Acc: 94.2831 | Cross Acc: 88.9443
+600 743 CE Loss: 0.0035 | Clean Acc: 92.9176 | Bd Acc: 94.4260 | Cross Acc: 88.8242
+650 743 CE Loss: 0.0035 | Clean Acc: 92.8772 | Bd Acc: 94.5725 | Cross Acc: 88.8249
+700 743 CE Loss: 0.0035 | Clean Acc: 92.8177 | Bd Acc: 94.5554 | Cross Acc: 88.8730
+ Eval:
+156 157 Clean Acc: 89.1600 - Best: 90.2800 | Bd Acc: 98.5300 - Best: 97.3900 | Cross: 85.0800
+Epoch 44:
+ Train:
+cifar10
+0 743 CE Loss: 0.0055 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0037 | Clean Acc: 92.7110 | Bd Acc: 95.4248 | Cross Acc: 87.9085
+100 743 CE Loss: 0.0037 | Clean Acc: 92.4021 | Bd Acc: 95.5446 | Cross Acc: 88.6139
+150 743 CE Loss: 0.0037 | Clean Acc: 92.4417 | Bd Acc: 95.3642 | Cross Acc: 88.0795
+200 743 CE Loss: 0.0036 | Clean Acc: 92.6671 | Bd Acc: 95.2736 | Cross Acc: 88.2255
+250 743 CE Loss: 0.0035 | Clean Acc: 92.8893 | Bd Acc: 95.4183 | Cross Acc: 88.0478
+300 743 CE Loss: 0.0036 | Clean Acc: 92.8283 | Bd Acc: 95.4596 | Cross Acc: 88.1506
+350 743 CE Loss: 0.0035 | Clean Acc: 92.9394 | Bd Acc: 95.6790 | Cross Acc: 88.2953
+400 743 CE Loss: 0.0035 | Clean Acc: 93.0446 | Bd Acc: 95.7190 | Cross Acc: 88.2793
+450 743 CE Loss: 0.0035 | Clean Acc: 92.9721 | Bd Acc: 95.4915 | Cross Acc: 88.2483
+500 743 CE Loss: 0.0035 | Clean Acc: 92.9662 | Bd Acc: 95.3426 | Cross Acc: 88.3067
+550 743 CE Loss: 0.0035 | Clean Acc: 92.9772 | Bd Acc: 95.3418 | Cross Acc: 88.1579
+600 743 CE Loss: 0.0035 | Clean Acc: 93.0261 | Bd Acc: 95.3134 | Cross Acc: 88.1864
+650 743 CE Loss: 0.0035 | Clean Acc: 93.0341 | Bd Acc: 95.3661 | Cross Acc: 88.0568
+700 743 CE Loss: 0.0035 | Clean Acc: 93.0007 | Bd Acc: 95.3400 | Cross Acc: 88.1122
+ Eval:
+156 157 Clean Acc: 89.5000 - Best: 90.2800 | Bd Acc: 97.7800 - Best: 97.3900 | Cross: 85.6800
+Epoch 45:
+ Train:
+cifar10
+0 743 CE Loss: 0.0039 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0032 | Clean Acc: 93.6914 | Bd Acc: 95.7516 | Cross Acc: 88.5621
+100 743 CE Loss: 0.0033 | Clean Acc: 93.4998 | Bd Acc: 95.2145 | Cross Acc: 88.6964
+150 743 CE Loss: 0.0033 | Clean Acc: 93.3199 | Bd Acc: 94.7020 | Cross Acc: 89.1280
+200 743 CE Loss: 0.0033 | Clean Acc: 93.3701 | Bd Acc: 95.2736 | Cross Acc: 89.3035
+250 743 CE Loss: 0.0033 | Clean Acc: 93.2617 | Bd Acc: 95.3519 | Cross Acc: 89.2098
+300 743 CE Loss: 0.0033 | Clean Acc: 93.4133 | Bd Acc: 95.1827 | Cross Acc: 89.2580
+350 743 CE Loss: 0.0033 | Clean Acc: 93.3977 | Bd Acc: 95.2517 | Cross Acc: 89.5299
+400 743 CE Loss: 0.0033 | Clean Acc: 93.3048 | Bd Acc: 95.2618 | Cross Acc: 89.2145
+450 743 CE Loss: 0.0033 | Clean Acc: 93.1939 | Bd Acc: 95.3067 | Cross Acc: 89.3939
+500 743 CE Loss: 0.0033 | Clean Acc: 93.1355 | Bd Acc: 95.4092 | Cross Acc: 89.3047
+550 743 CE Loss: 0.0033 | Clean Acc: 93.1350 | Bd Acc: 95.4325 | Cross Acc: 89.2619
+600 743 CE Loss: 0.0033 | Clean Acc: 93.1491 | Bd Acc: 95.3966 | Cross Acc: 89.1154
+650 743 CE Loss: 0.0034 | Clean Acc: 93.1143 | Bd Acc: 95.3149 | Cross Acc: 88.9529
+700 743 CE Loss: 0.0034 | Clean Acc: 93.1340 | Bd Acc: 95.2211 | Cross Acc: 88.9325
+ Eval:
+156 157 Clean Acc: 88.8100 - Best: 90.2800 | Bd Acc: 96.7300 - Best: 97.3900 | Cross: 84.1500
+Epoch 46:
+ Train:
+cifar10
+0 743 CE Loss: 0.0042 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0032 | Clean Acc: 94.0750 | Bd Acc: 95.4248 | Cross Acc: 88.8889
+100 743 CE Loss: 0.0031 | Clean Acc: 94.1025 | Bd Acc: 95.5446 | Cross Acc: 89.2739
+150 743 CE Loss: 0.0032 | Clean Acc: 93.7518 | Bd Acc: 95.1435 | Cross Acc: 89.0177
+200 743 CE Loss: 0.0032 | Clean Acc: 93.4891 | Bd Acc: 95.6053 | Cross Acc: 89.1376
+250 743 CE Loss: 0.0032 | Clean Acc: 93.5216 | Bd Acc: 96.0823 | Cross Acc: 89.2430
+300 743 CE Loss: 0.0032 | Clean Acc: 93.5505 | Bd Acc: 96.0133 | Cross Acc: 89.1196
+350 743 CE Loss: 0.0032 | Clean Acc: 93.5959 | Bd Acc: 96.1538 | Cross Acc: 89.3400
+400 743 CE Loss: 0.0032 | Clean Acc: 93.5704 | Bd Acc: 96.1762 | Cross Acc: 89.3184
+450 743 CE Loss: 0.0032 | Clean Acc: 93.5409 | Bd Acc: 96.0089 | Cross Acc: 89.4494
+500 743 CE Loss: 0.0032 | Clean Acc: 93.5000 | Bd Acc: 96.0412 | Cross Acc: 89.4212
+550 743 CE Loss: 0.0032 | Clean Acc: 93.5335 | Bd Acc: 95.9770 | Cross Acc: 89.3073
+600 743 CE Loss: 0.0033 | Clean Acc: 93.4385 | Bd Acc: 96.0344 | Cross Acc: 89.1708
+650 743 CE Loss: 0.0033 | Clean Acc: 93.4048 | Bd Acc: 95.9037 | Cross Acc: 89.1833
+700 743 CE Loss: 0.0033 | Clean Acc: 93.3697 | Bd Acc: 95.7917 | Cross Acc: 89.3248
+ Eval:
+156 157 Clean Acc: 89.2700 - Best: 90.2800 | Bd Acc: 95.6200 - Best: 97.3900 | Cross: 86.5800
+Epoch 47:
+ Train:
+cifar10
+0 743 CE Loss: 0.0030 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0034 | Clean Acc: 93.3930 | Bd Acc: 93.7908 | Cross Acc: 87.7451
+100 743 CE Loss: 0.0031 | Clean Acc: 94.0164 | Bd Acc: 95.3795 | Cross Acc: 89.0264
+150 743 CE Loss: 0.0031 | Clean Acc: 94.1261 | Bd Acc: 95.4746 | Cross Acc: 89.6799
+200 743 CE Loss: 0.0031 | Clean Acc: 94.0623 | Bd Acc: 95.2736 | Cross Acc: 89.5522
+250 743 CE Loss: 0.0031 | Clean Acc: 94.0152 | Bd Acc: 95.2855 | Cross Acc: 89.5086
+300 743 CE Loss: 0.0031 | Clean Acc: 93.9044 | Bd Acc: 95.6257 | Cross Acc: 89.5626
+350 743 CE Loss: 0.0031 | Clean Acc: 93.8808 | Bd Acc: 95.3941 | Cross Acc: 89.4112
+400 743 CE Loss: 0.0032 | Clean Acc: 93.6897 | Bd Acc: 95.2203 | Cross Acc: 89.2560
+450 743 CE Loss: 0.0032 | Clean Acc: 93.7241 | Bd Acc: 95.2698 | Cross Acc: 89.2092
+500 743 CE Loss: 0.0032 | Clean Acc: 93.6432 | Bd Acc: 95.3759 | Cross Acc: 89.0219
+550 743 CE Loss: 0.0033 | Clean Acc: 93.5177 | Bd Acc: 95.2511 | Cross Acc: 88.8990
+600 743 CE Loss: 0.0033 | Clean Acc: 93.4783 | Bd Acc: 95.3688 | Cross Acc: 88.7133
+650 743 CE Loss: 0.0033 | Clean Acc: 93.4315 | Bd Acc: 95.1357 | Cross Acc: 88.6585
+700 743 CE Loss: 0.0033 | Clean Acc: 93.4690 | Bd Acc: 95.1973 | Cross Acc: 88.6591
+ Eval:
+156 157 Clean Acc: 88.6800 - Best: 90.2800 | Bd Acc: 97.4000 - Best: 97.3900 | Cross: 84.2900
+Epoch 48:
+ Train:
+cifar10
+0 743 CE Loss: 0.0033 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0033 | Clean Acc: 93.7766 | Bd Acc: 95.0980 | Cross Acc: 88.2353
+100 743 CE Loss: 0.0032 | Clean Acc: 93.9733 | Bd Acc: 94.8845 | Cross Acc: 88.1188
+150 743 CE Loss: 0.0033 | Clean Acc: 93.6654 | Bd Acc: 94.5916 | Cross Acc: 88.5210
+200 743 CE Loss: 0.0033 | Clean Acc: 93.5540 | Bd Acc: 95.2736 | Cross Acc: 89.2620
+250 743 CE Loss: 0.0032 | Clean Acc: 93.5735 | Bd Acc: 95.4847 | Cross Acc: 89.4090
+300 743 CE Loss: 0.0032 | Clean Acc: 93.3555 | Bd Acc: 95.4596 | Cross Acc: 89.5349
+350 743 CE Loss: 0.0033 | Clean Acc: 93.2739 | Bd Acc: 95.3466 | Cross Acc: 89.1975
+400 743 CE Loss: 0.0033 | Clean Acc: 93.3102 | Bd Acc: 95.1787 | Cross Acc: 89.3392
+450 743 CE Loss: 0.0033 | Clean Acc: 93.2710 | Bd Acc: 95.2328 | Cross Acc: 89.2276
+500 743 CE Loss: 0.0034 | Clean Acc: 93.1615 | Bd Acc: 95.3426 | Cross Acc: 88.9388
+550 743 CE Loss: 0.0034 | Clean Acc: 93.0837 | Bd Acc: 95.1906 | Cross Acc: 88.9746
+600 743 CE Loss: 0.0034 | Clean Acc: 93.1238 | Bd Acc: 95.1747 | Cross Acc: 88.8242
+650 743 CE Loss: 0.0034 | Clean Acc: 93.1710 | Bd Acc: 95.1613 | Cross Acc: 88.7481
+700 743 CE Loss: 0.0034 | Clean Acc: 93.1464 | Bd Acc: 94.9834 | Cross Acc: 88.7542
+ Eval:
+156 157 Clean Acc: 88.7100 - Best: 90.2800 | Bd Acc: 91.3700 - Best: 97.3900 | Cross: 83.2500
+Epoch 49:
+ Train:
+cifar10
+0 743 CE Loss: 0.0032 | Clean Acc: 93.4783 | Bd Acc: 83.3333 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0040 | Clean Acc: 92.0290 | Bd Acc: 97.0588 | Cross Acc: 85.4575
+100 743 CE Loss: 0.0036 | Clean Acc: 93.0478 | Bd Acc: 96.8647 | Cross Acc: 87.2112
+150 743 CE Loss: 0.0036 | Clean Acc: 93.1615 | Bd Acc: 96.2472 | Cross Acc: 87.1965
+200 743 CE Loss: 0.0034 | Clean Acc: 93.3052 | Bd Acc: 95.9370 | Cross Acc: 87.9768
+250 743 CE Loss: 0.0034 | Clean Acc: 93.4436 | Bd Acc: 95.7503 | Cross Acc: 88.1474
+300 743 CE Loss: 0.0034 | Clean Acc: 93.4927 | Bd Acc: 95.7918 | Cross Acc: 88.0952
+350 743 CE Loss: 0.0034 | Clean Acc: 93.5588 | Bd Acc: 95.7740 | Cross Acc: 88.0579
+400 743 CE Loss: 0.0034 | Clean Acc: 93.4945 | Bd Acc: 95.6775 | Cross Acc: 87.7805
+450 743 CE Loss: 0.0034 | Clean Acc: 93.5554 | Bd Acc: 95.5285 | Cross Acc: 87.9897
+500 743 CE Loss: 0.0034 | Clean Acc: 93.5477 | Bd Acc: 95.5755 | Cross Acc: 88.0073
+550 743 CE Loss: 0.0034 | Clean Acc: 93.4585 | Bd Acc: 95.4930 | Cross Acc: 87.9613
+600 743 CE Loss: 0.0034 | Clean Acc: 93.4457 | Bd Acc: 95.5630 | Cross Acc: 87.9922
+650 743 CE Loss: 0.0034 | Clean Acc: 93.4415 | Bd Acc: 95.5453 | Cross Acc: 87.9288
+700 743 CE Loss: 0.0034 | Clean Acc: 93.4007 | Bd Acc: 95.4351 | Cross Acc: 88.1479
+ Eval:
+156 157 Clean Acc: 89.0900 - Best: 90.2800 | Bd Acc: 97.4700 - Best: 97.3900 | Cross: 85.4100
+Epoch 50:
+ Train:
+cifar10
+0 743 CE Loss: 0.0046 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0030 | Clean Acc: 93.9045 | Bd Acc: 95.0980 | Cross Acc: 89.3791
+100 743 CE Loss: 0.0031 | Clean Acc: 94.2316 | Bd Acc: 95.2145 | Cross Acc: 88.7789
+150 743 CE Loss: 0.0030 | Clean Acc: 94.2413 | Bd Acc: 95.0331 | Cross Acc: 89.2936
+200 743 CE Loss: 0.0031 | Clean Acc: 94.0515 | Bd Acc: 94.7761 | Cross Acc: 89.3864
+250 743 CE Loss: 0.0030 | Clean Acc: 94.1019 | Bd Acc: 94.8207 | Cross Acc: 89.4422
+300 743 CE Loss: 0.0031 | Clean Acc: 94.0560 | Bd Acc: 94.9612 | Cross Acc: 89.1750
+350 743 CE Loss: 0.0031 | Clean Acc: 93.9180 | Bd Acc: 95.0617 | Cross Acc: 89.3400
+400 743 CE Loss: 0.0032 | Clean Acc: 93.7981 | Bd Acc: 95.1787 | Cross Acc: 89.1106
+450 743 CE Loss: 0.0032 | Clean Acc: 93.7241 | Bd Acc: 95.3437 | Cross Acc: 89.0983
+500 743 CE Loss: 0.0032 | Clean Acc: 93.6779 | Bd Acc: 95.2428 | Cross Acc: 89.2382
+550 743 CE Loss: 0.0032 | Clean Acc: 93.7071 | Bd Acc: 95.2813 | Cross Acc: 89.1561
+600 743 CE Loss: 0.0032 | Clean Acc: 93.6772 | Bd Acc: 95.2024 | Cross Acc: 89.2679
+650 743 CE Loss: 0.0032 | Clean Acc: 93.6118 | Bd Acc: 95.2893 | Cross Acc: 89.1961
+700 743 CE Loss: 0.0032 | Clean Acc: 93.6054 | Bd Acc: 95.2211 | Cross Acc: 88.9919
+ Eval:
+156 157 Clean Acc: 90.4800 - Best: 90.2800 | Bd Acc: 93.0800 - Best: 97.3900 | Cross: 86.5600
+ Saving...
+Epoch 51:
+ Train:
+cifar10
+0 743 CE Loss: 0.0031 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0032 | Clean Acc: 93.5635 | Bd Acc: 96.7320 | Cross Acc: 89.0523
+100 743 CE Loss: 0.0031 | Clean Acc: 94.1455 | Bd Acc: 95.3795 | Cross Acc: 88.6964
+150 743 CE Loss: 0.0031 | Clean Acc: 94.1981 | Bd Acc: 95.6954 | Cross Acc: 89.0728
+200 743 CE Loss: 0.0031 | Clean Acc: 94.1488 | Bd Acc: 95.5224 | Cross Acc: 89.3449
+250 743 CE Loss: 0.0030 | Clean Acc: 94.2751 | Bd Acc: 95.6839 | Cross Acc: 89.4090
+300 743 CE Loss: 0.0031 | Clean Acc: 94.0633 | Bd Acc: 95.6257 | Cross Acc: 89.3688
+350 743 CE Loss: 0.0031 | Clean Acc: 93.9923 | Bd Acc: 95.7265 | Cross Acc: 89.5537
+400 743 CE Loss: 0.0031 | Clean Acc: 93.8198 | Bd Acc: 95.5112 | Cross Acc: 89.6509
+450 743 CE Loss: 0.0032 | Clean Acc: 93.7626 | Bd Acc: 95.5285 | Cross Acc: 89.5233
+500 743 CE Loss: 0.0032 | Clean Acc: 93.7690 | Bd Acc: 95.4424 | Cross Acc: 89.3214
+550 743 CE Loss: 0.0032 | Clean Acc: 93.7663 | Bd Acc: 95.5535 | Cross Acc: 89.1712
+600 743 CE Loss: 0.0032 | Clean Acc: 93.7098 | Bd Acc: 95.5907 | Cross Acc: 89.1708
+650 743 CE Loss: 0.0032 | Clean Acc: 93.6519 | Bd Acc: 95.6733 | Cross Acc: 88.9529
+700 743 CE Loss: 0.0032 | Clean Acc: 93.5868 | Bd Acc: 95.5778 | Cross Acc: 88.8730
+ Eval:
+156 157 Clean Acc: 89.5800 - Best: 90.4800 | Bd Acc: 93.0100 - Best: 93.0800 | Cross: 84.7100
+Epoch 52:
+ Train:
+cifar10
+0 743 CE Loss: 0.0054 | Clean Acc: 80.4348 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0033 | Clean Acc: 93.9471 | Bd Acc: 95.7516 | Cross Acc: 90.1961
+100 743 CE Loss: 0.0031 | Clean Acc: 94.2747 | Bd Acc: 96.3696 | Cross Acc: 89.9340
+150 743 CE Loss: 0.0030 | Clean Acc: 94.2269 | Bd Acc: 96.0265 | Cross Acc: 90.2318
+200 743 CE Loss: 0.0030 | Clean Acc: 94.2353 | Bd Acc: 95.9370 | Cross Acc: 89.6352
+250 743 CE Loss: 0.0030 | Clean Acc: 94.2404 | Bd Acc: 95.6839 | Cross Acc: 89.5086
+300 743 CE Loss: 0.0030 | Clean Acc: 94.1066 | Bd Acc: 95.4596 | Cross Acc: 89.5626
+350 743 CE Loss: 0.0030 | Clean Acc: 94.1410 | Bd Acc: 95.6790 | Cross Acc: 89.5537
+400 743 CE Loss: 0.0031 | Clean Acc: 94.0258 | Bd Acc: 95.5528 | Cross Acc: 89.3807
+450 743 CE Loss: 0.0031 | Clean Acc: 93.9410 | Bd Acc: 95.5285 | Cross Acc: 89.2461
+500 743 CE Loss: 0.0031 | Clean Acc: 93.8905 | Bd Acc: 95.2761 | Cross Acc: 89.2715
+550 743 CE Loss: 0.0032 | Clean Acc: 93.7268 | Bd Acc: 95.3116 | Cross Acc: 89.1863
+600 743 CE Loss: 0.0032 | Clean Acc: 93.7206 | Bd Acc: 95.3966 | Cross Acc: 89.1708
+650 743 CE Loss: 0.0032 | Clean Acc: 93.7187 | Bd Acc: 95.4173 | Cross Acc: 89.4393
+700 743 CE Loss: 0.0032 | Clean Acc: 93.6891 | Bd Acc: 95.4113 | Cross Acc: 89.3129
+ Eval:
+156 157 Clean Acc: 89.5800 - Best: 90.4800 | Bd Acc: 95.6900 - Best: 93.0800 | Cross: 86.1200
+Epoch 53:
+ Train:
+cifar10
+0 743 CE Loss: 0.0015 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0029 | Clean Acc: 93.9045 | Bd Acc: 95.0980 | Cross Acc: 90.3595
+100 743 CE Loss: 0.0032 | Clean Acc: 93.4783 | Bd Acc: 95.0495 | Cross Acc: 89.2739
+150 743 CE Loss: 0.0031 | Clean Acc: 93.5215 | Bd Acc: 95.1435 | Cross Acc: 89.3488
+200 743 CE Loss: 0.0031 | Clean Acc: 93.4999 | Bd Acc: 94.8590 | Cross Acc: 89.3035
+250 743 CE Loss: 0.0031 | Clean Acc: 93.7381 | Bd Acc: 94.7543 | Cross Acc: 89.4754
+300 743 CE Loss: 0.0031 | Clean Acc: 93.8177 | Bd Acc: 95.0166 | Cross Acc: 89.3688
+350 743 CE Loss: 0.0030 | Clean Acc: 93.9490 | Bd Acc: 95.2042 | Cross Acc: 89.4349
+400 743 CE Loss: 0.0030 | Clean Acc: 93.9987 | Bd Acc: 95.3865 | Cross Acc: 89.4846
+450 743 CE Loss: 0.0031 | Clean Acc: 93.8687 | Bd Acc: 95.2698 | Cross Acc: 89.1168
+500 743 CE Loss: 0.0031 | Clean Acc: 93.8948 | Bd Acc: 95.2428 | Cross Acc: 89.1883
+550 743 CE Loss: 0.0031 | Clean Acc: 93.9162 | Bd Acc: 95.3116 | Cross Acc: 89.2922
+600 743 CE Loss: 0.0030 | Clean Acc: 93.9557 | Bd Acc: 95.5075 | Cross Acc: 89.2818
+650 743 CE Loss: 0.0031 | Clean Acc: 93.9324 | Bd Acc: 95.4685 | Cross Acc: 89.1065
+700 743 CE Loss: 0.0031 | Clean Acc: 93.9062 | Bd Acc: 95.5064 | Cross Acc: 89.1821
+ Eval:
+156 157 Clean Acc: 89.3500 - Best: 90.4800 | Bd Acc: 95.2800 - Best: 93.0800 | Cross: 85.0600
+Epoch 54:
+ Train:
+cifar10
+0 743 CE Loss: 0.0022 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0031 | Clean Acc: 94.4160 | Bd Acc: 94.7712 | Cross Acc: 89.3791
+100 743 CE Loss: 0.0030 | Clean Acc: 94.2316 | Bd Acc: 95.2145 | Cross Acc: 90.1815
+150 743 CE Loss: 0.0031 | Clean Acc: 94.1837 | Bd Acc: 94.7020 | Cross Acc: 89.3488
+200 743 CE Loss: 0.0031 | Clean Acc: 93.9758 | Bd Acc: 94.9420 | Cross Acc: 89.5522
+250 743 CE Loss: 0.0031 | Clean Acc: 93.9026 | Bd Acc: 95.1527 | Cross Acc: 89.5086
+300 743 CE Loss: 0.0031 | Clean Acc: 94.0488 | Bd Acc: 95.1827 | Cross Acc: 89.7287
+350 743 CE Loss: 0.0031 | Clean Acc: 93.8870 | Bd Acc: 95.2042 | Cross Acc: 89.4587
+400 743 CE Loss: 0.0031 | Clean Acc: 93.9120 | Bd Acc: 95.1787 | Cross Acc: 88.9859
+450 743 CE Loss: 0.0032 | Clean Acc: 93.8253 | Bd Acc: 95.1959 | Cross Acc: 88.9320
+500 743 CE Loss: 0.0032 | Clean Acc: 93.8297 | Bd Acc: 95.1763 | Cross Acc: 88.6893
+550 743 CE Loss: 0.0032 | Clean Acc: 93.8097 | Bd Acc: 95.1906 | Cross Acc: 88.7477
+600 743 CE Loss: 0.0032 | Clean Acc: 93.7568 | Bd Acc: 95.2302 | Cross Acc: 88.6855
+650 743 CE Loss: 0.0032 | Clean Acc: 93.7521 | Bd Acc: 95.2381 | Cross Acc: 88.6969
+700 743 CE Loss: 0.0032 | Clean Acc: 93.7108 | Bd Acc: 95.2924 | Cross Acc: 88.6947
+ Eval:
+156 157 Clean Acc: 89.3000 - Best: 90.4800 | Bd Acc: 93.4800 - Best: 93.0800 | Cross: 84.5600
+Epoch 55:
+ Train:
+cifar10
+0 743 CE Loss: 0.0025 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0031 | Clean Acc: 93.8619 | Bd Acc: 96.0784 | Cross Acc: 89.3791
+100 743 CE Loss: 0.0031 | Clean Acc: 94.1455 | Bd Acc: 96.5347 | Cross Acc: 88.6964
+150 743 CE Loss: 0.0032 | Clean Acc: 93.9102 | Bd Acc: 96.1369 | Cross Acc: 87.5828
+200 743 CE Loss: 0.0031 | Clean Acc: 94.0731 | Bd Acc: 96.1857 | Cross Acc: 88.6816
+250 743 CE Loss: 0.0030 | Clean Acc: 94.1192 | Bd Acc: 96.0823 | Cross Acc: 89.2098
+300 743 CE Loss: 0.0030 | Clean Acc: 94.1644 | Bd Acc: 95.8472 | Cross Acc: 89.3965
+350 743 CE Loss: 0.0030 | Clean Acc: 94.0790 | Bd Acc: 95.8215 | Cross Acc: 89.3637
+400 743 CE Loss: 0.0031 | Clean Acc: 93.8903 | Bd Acc: 95.6775 | Cross Acc: 89.1729
+450 743 CE Loss: 0.0031 | Clean Acc: 93.7626 | Bd Acc: 95.6393 | Cross Acc: 89.0798
+500 743 CE Loss: 0.0031 | Clean Acc: 93.7430 | Bd Acc: 95.5422 | Cross Acc: 89.1883
+550 743 CE Loss: 0.0031 | Clean Acc: 93.8176 | Bd Acc: 95.3720 | Cross Acc: 89.2619
+600 743 CE Loss: 0.0031 | Clean Acc: 93.8219 | Bd Acc: 95.3688 | Cross Acc: 89.2540
+650 743 CE Loss: 0.0031 | Clean Acc: 93.8857 | Bd Acc: 95.5197 | Cross Acc: 89.3113
+700 743 CE Loss: 0.0031 | Clean Acc: 93.9496 | Bd Acc: 95.4113 | Cross Acc: 89.2891
+ Eval:
+156 157 Clean Acc: 90.1700 - Best: 90.4800 | Bd Acc: 95.4400 - Best: 93.0800 | Cross: 85.5900
+Epoch 56:
+ Train:
+cifar10
+0 743 CE Loss: 0.0036 | Clean Acc: 93.4783 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0028 | Clean Acc: 94.6718 | Bd Acc: 94.4444 | Cross Acc: 91.5033
+100 743 CE Loss: 0.0027 | Clean Acc: 94.5545 | Bd Acc: 96.0396 | Cross Acc: 91.5842
+150 743 CE Loss: 0.0028 | Clean Acc: 94.3421 | Bd Acc: 95.8057 | Cross Acc: 91.3355
+200 743 CE Loss: 0.0029 | Clean Acc: 94.2353 | Bd Acc: 96.0199 | Cross Acc: 90.5058
+250 743 CE Loss: 0.0029 | Clean Acc: 94.1452 | Bd Acc: 95.8831 | Cross Acc: 90.7371
+300 743 CE Loss: 0.0030 | Clean Acc: 94.0922 | Bd Acc: 96.0133 | Cross Acc: 90.0609
+350 743 CE Loss: 0.0031 | Clean Acc: 93.8684 | Bd Acc: 95.9164 | Cross Acc: 89.6249
+400 743 CE Loss: 0.0030 | Clean Acc: 93.9499 | Bd Acc: 96.0931 | Cross Acc: 89.6301
+450 743 CE Loss: 0.0030 | Clean Acc: 93.9699 | Bd Acc: 96.0089 | Cross Acc: 89.8374
+500 743 CE Loss: 0.0030 | Clean Acc: 94.0076 | Bd Acc: 95.6420 | Cross Acc: 89.9202
+550 743 CE Loss: 0.0030 | Clean Acc: 93.9517 | Bd Acc: 95.7350 | Cross Acc: 89.9879
+600 743 CE Loss: 0.0030 | Clean Acc: 93.9123 | Bd Acc: 95.8125 | Cross Acc: 89.9889
+650 743 CE Loss: 0.0030 | Clean Acc: 93.9224 | Bd Acc: 96.0061 | Cross Acc: 89.8490
+700 743 CE Loss: 0.0030 | Clean Acc: 93.8690 | Bd Acc: 95.9344 | Cross Acc: 89.9429
+ Eval:
+156 157 Clean Acc: 90.1300 - Best: 90.4800 | Bd Acc: 97.4300 - Best: 93.0800 | Cross: 86.0600
+Epoch 57:
+ Train:
+cifar10
+0 743 CE Loss: 0.0017 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0030 | Clean Acc: 94.2455 | Bd Acc: 95.4248 | Cross Acc: 90.1961
+100 743 CE Loss: 0.0031 | Clean Acc: 94.1670 | Bd Acc: 95.2145 | Cross Acc: 89.8515
+150 743 CE Loss: 0.0030 | Clean Acc: 94.1405 | Bd Acc: 95.5850 | Cross Acc: 89.5695
+200 743 CE Loss: 0.0031 | Clean Acc: 94.0190 | Bd Acc: 95.7711 | Cross Acc: 89.1376
+250 743 CE Loss: 0.0030 | Clean Acc: 94.0585 | Bd Acc: 95.8167 | Cross Acc: 89.4090
+300 743 CE Loss: 0.0030 | Clean Acc: 94.0849 | Bd Acc: 95.5703 | Cross Acc: 89.3688
+350 743 CE Loss: 0.0030 | Clean Acc: 94.1100 | Bd Acc: 95.6315 | Cross Acc: 89.5537
+400 743 CE Loss: 0.0031 | Clean Acc: 94.1505 | Bd Acc: 95.4281 | Cross Acc: 89.3392
+450 743 CE Loss: 0.0031 | Clean Acc: 94.1627 | Bd Acc: 95.3806 | Cross Acc: 89.3200
+500 743 CE Loss: 0.0030 | Clean Acc: 94.1812 | Bd Acc: 95.5090 | Cross Acc: 89.4045
+550 743 CE Loss: 0.0031 | Clean Acc: 93.9793 | Bd Acc: 95.3720 | Cross Acc: 89.1863
+600 743 CE Loss: 0.0031 | Clean Acc: 93.9847 | Bd Acc: 95.3966 | Cross Acc: 89.1154
+650 743 CE Loss: 0.0031 | Clean Acc: 93.9858 | Bd Acc: 95.4429 | Cross Acc: 89.2729
+700 743 CE Loss: 0.0031 | Clean Acc: 94.0334 | Bd Acc: 95.5778 | Cross Acc: 89.1702
+ Eval:
+156 157 Clean Acc: 90.0000 - Best: 90.4800 | Bd Acc: 95.4300 - Best: 93.0800 | Cross: 85.4600
+Epoch 58:
+ Train:
+cifar10
+0 743 CE Loss: 0.0027 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0033 | Clean Acc: 93.3930 | Bd Acc: 96.7320 | Cross Acc: 89.0523
+100 743 CE Loss: 0.0033 | Clean Acc: 93.1985 | Bd Acc: 95.7096 | Cross Acc: 89.4389
+150 743 CE Loss: 0.0033 | Clean Acc: 93.2047 | Bd Acc: 95.4746 | Cross Acc: 89.5695
+200 743 CE Loss: 0.0033 | Clean Acc: 93.3485 | Bd Acc: 95.4395 | Cross Acc: 89.0547
+250 743 CE Loss: 0.0032 | Clean Acc: 93.4869 | Bd Acc: 95.5511 | Cross Acc: 89.4422
+300 743 CE Loss: 0.0032 | Clean Acc: 93.5866 | Bd Acc: 95.6257 | Cross Acc: 89.4795
+350 743 CE Loss: 0.0032 | Clean Acc: 93.6703 | Bd Acc: 95.7265 | Cross Acc: 89.6486
+400 743 CE Loss: 0.0032 | Clean Acc: 93.7222 | Bd Acc: 95.7190 | Cross Acc: 89.6301
+450 743 CE Loss: 0.0032 | Clean Acc: 93.6711 | Bd Acc: 95.7132 | Cross Acc: 89.5602
+500 743 CE Loss: 0.0032 | Clean Acc: 93.7039 | Bd Acc: 95.7751 | Cross Acc: 89.6374
+550 743 CE Loss: 0.0031 | Clean Acc: 93.7702 | Bd Acc: 95.8258 | Cross Acc: 89.5644
+600 743 CE Loss: 0.0031 | Clean Acc: 93.7749 | Bd Acc: 95.8957 | Cross Acc: 89.4759
+650 743 CE Loss: 0.0031 | Clean Acc: 93.7721 | Bd Acc: 95.9549 | Cross Acc: 89.4009
+700 743 CE Loss: 0.0031 | Clean Acc: 93.7729 | Bd Acc: 95.7680 | Cross Acc: 89.3842
+ Eval:
+156 157 Clean Acc: 89.2000 - Best: 90.4800 | Bd Acc: 97.6700 - Best: 93.0800 | Cross: 85.2500
+Epoch 59:
+ Train:
+cifar10
+0 743 CE Loss: 0.0030 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0031 | Clean Acc: 94.4587 | Bd Acc: 96.7320 | Cross Acc: 89.0523
+100 743 CE Loss: 0.0030 | Clean Acc: 94.4253 | Bd Acc: 95.8746 | Cross Acc: 90.1815
+150 743 CE Loss: 0.0030 | Clean Acc: 94.4428 | Bd Acc: 95.0331 | Cross Acc: 89.9007
+200 743 CE Loss: 0.0030 | Clean Acc: 94.5057 | Bd Acc: 95.5224 | Cross Acc: 89.3449
+250 743 CE Loss: 0.0029 | Clean Acc: 94.5609 | Bd Acc: 95.5511 | Cross Acc: 89.6082
+300 743 CE Loss: 0.0029 | Clean Acc: 94.6266 | Bd Acc: 95.5703 | Cross Acc: 90.0055
+350 743 CE Loss: 0.0029 | Clean Acc: 94.6302 | Bd Acc: 95.5366 | Cross Acc: 90.1235
+400 743 CE Loss: 0.0029 | Clean Acc: 94.6276 | Bd Acc: 95.5944 | Cross Acc: 90.2951
+450 743 CE Loss: 0.0029 | Clean Acc: 94.4809 | Bd Acc: 95.6763 | Cross Acc: 89.8928
+500 743 CE Loss: 0.0029 | Clean Acc: 94.4068 | Bd Acc: 95.5422 | Cross Acc: 89.7538
+550 743 CE Loss: 0.0030 | Clean Acc: 94.2871 | Bd Acc: 95.4628 | Cross Acc: 89.6249
+600 743 CE Loss: 0.0030 | Clean Acc: 94.2234 | Bd Acc: 95.5907 | Cross Acc: 89.5729
+650 743 CE Loss: 0.0030 | Clean Acc: 94.1127 | Bd Acc: 95.6221 | Cross Acc: 89.4905
+700 743 CE Loss: 0.0030 | Clean Acc: 94.1450 | Bd Acc: 95.7204 | Cross Acc: 89.6220
+ Eval:
+156 157 Clean Acc: 89.8000 - Best: 90.4800 | Bd Acc: 98.7000 - Best: 93.0800 | Cross: 86.6800
+Epoch 60:
+ Train:
+cifar10
+0 743 CE Loss: 0.0040 | Clean Acc: 84.7826 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0033 | Clean Acc: 94.2455 | Bd Acc: 97.3856 | Cross Acc: 85.6209
+100 743 CE Loss: 0.0031 | Clean Acc: 95.0065 | Bd Acc: 96.5347 | Cross Acc: 87.6238
+150 743 CE Loss: 0.0029 | Clean Acc: 95.0619 | Bd Acc: 95.5850 | Cross Acc: 89.3488
+200 743 CE Loss: 0.0029 | Clean Acc: 94.8302 | Bd Acc: 95.4395 | Cross Acc: 90.0083
+250 743 CE Loss: 0.0030 | Clean Acc: 94.6388 | Bd Acc: 95.2855 | Cross Acc: 89.4090
+300 743 CE Loss: 0.0030 | Clean Acc: 94.3955 | Bd Acc: 95.2935 | Cross Acc: 89.1196
+350 743 CE Loss: 0.0030 | Clean Acc: 94.3701 | Bd Acc: 95.7265 | Cross Acc: 88.8889
+400 743 CE Loss: 0.0030 | Clean Acc: 94.3457 | Bd Acc: 95.8437 | Cross Acc: 89.0274
+450 743 CE Loss: 0.0031 | Clean Acc: 94.3604 | Bd Acc: 95.7502 | Cross Acc: 88.6733
+500 743 CE Loss: 0.0031 | Clean Acc: 94.2897 | Bd Acc: 95.5755 | Cross Acc: 88.6394
+550 743 CE Loss: 0.0031 | Clean Acc: 94.2042 | Bd Acc: 95.7350 | Cross Acc: 88.7780
+600 743 CE Loss: 0.0031 | Clean Acc: 94.1474 | Bd Acc: 95.7016 | Cross Acc: 88.8796
+650 743 CE Loss: 0.0031 | Clean Acc: 94.1528 | Bd Acc: 95.5965 | Cross Acc: 88.9401
+700 743 CE Loss: 0.0031 | Clean Acc: 94.1512 | Bd Acc: 95.7204 | Cross Acc: 89.0395
+ Eval:
+156 157 Clean Acc: 90.4900 - Best: 90.4800 | Bd Acc: 98.0300 - Best: 93.0800 | Cross: 86.6800
+ Saving...
+Epoch 61:
+ Train:
+cifar10
+0 743 CE Loss: 0.0021 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0029 | Clean Acc: 94.4160 | Bd Acc: 96.7320 | Cross Acc: 87.5817
+100 743 CE Loss: 0.0029 | Clean Acc: 94.4253 | Bd Acc: 96.2046 | Cross Acc: 88.7789
+150 743 CE Loss: 0.0028 | Clean Acc: 94.6732 | Bd Acc: 96.3576 | Cross Acc: 89.9007
+200 743 CE Loss: 0.0027 | Clean Acc: 94.9059 | Bd Acc: 96.2687 | Cross Acc: 89.8839
+250 743 CE Loss: 0.0028 | Clean Acc: 94.9680 | Bd Acc: 96.2815 | Cross Acc: 89.5418
+300 743 CE Loss: 0.0028 | Clean Acc: 94.8072 | Bd Acc: 96.2348 | Cross Acc: 89.6179
+350 743 CE Loss: 0.0028 | Clean Acc: 94.6736 | Bd Acc: 96.1538 | Cross Acc: 89.7436
+400 743 CE Loss: 0.0029 | Clean Acc: 94.5679 | Bd Acc: 96.0931 | Cross Acc: 89.7756
+450 743 CE Loss: 0.0029 | Clean Acc: 94.5146 | Bd Acc: 95.9350 | Cross Acc: 89.7635
+500 743 CE Loss: 0.0029 | Clean Acc: 94.4676 | Bd Acc: 95.8749 | Cross Acc: 89.5043
+550 743 CE Loss: 0.0029 | Clean Acc: 94.4607 | Bd Acc: 95.9770 | Cross Acc: 89.6400
+600 743 CE Loss: 0.0029 | Clean Acc: 94.4151 | Bd Acc: 96.0067 | Cross Acc: 89.5868
+650 743 CE Loss: 0.0030 | Clean Acc: 94.3532 | Bd Acc: 95.8781 | Cross Acc: 89.4137
+700 743 CE Loss: 0.0030 | Clean Acc: 94.3404 | Bd Acc: 95.9344 | Cross Acc: 89.3129
+ Eval:
+156 157 Clean Acc: 89.5800 - Best: 90.4900 | Bd Acc: 94.3200 - Best: 98.0300 | Cross: 85.6400
+Epoch 62:
+ Train:
+cifar10
+0 743 CE Loss: 0.0008 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0024 | Clean Acc: 95.5243 | Bd Acc: 97.3856 | Cross Acc: 90.6863
+100 743 CE Loss: 0.0027 | Clean Acc: 94.5760 | Bd Acc: 95.5446 | Cross Acc: 90.2640
+150 743 CE Loss: 0.0029 | Clean Acc: 94.5004 | Bd Acc: 95.2539 | Cross Acc: 89.9007
+200 743 CE Loss: 0.0029 | Clean Acc: 94.4625 | Bd Acc: 95.2736 | Cross Acc: 89.2206
+250 743 CE Loss: 0.0029 | Clean Acc: 94.3184 | Bd Acc: 95.5511 | Cross Acc: 89.4090
+300 743 CE Loss: 0.0029 | Clean Acc: 94.2655 | Bd Acc: 95.5150 | Cross Acc: 89.5349
+350 743 CE Loss: 0.0029 | Clean Acc: 94.3825 | Bd Acc: 95.6790 | Cross Acc: 89.8148
+400 743 CE Loss: 0.0029 | Clean Acc: 94.3836 | Bd Acc: 95.7606 | Cross Acc: 90.1912
+450 743 CE Loss: 0.0029 | Clean Acc: 94.2254 | Bd Acc: 95.6393 | Cross Acc: 90.0406
+500 743 CE Loss: 0.0029 | Clean Acc: 94.1899 | Bd Acc: 95.7751 | Cross Acc: 89.9534
+550 743 CE Loss: 0.0029 | Clean Acc: 94.1726 | Bd Acc: 95.6745 | Cross Acc: 90.0181
+600 743 CE Loss: 0.0030 | Clean Acc: 94.1583 | Bd Acc: 95.7571 | Cross Acc: 90.0028
+650 743 CE Loss: 0.0030 | Clean Acc: 94.1528 | Bd Acc: 95.8269 | Cross Acc: 89.9386
+700 743 CE Loss: 0.0030 | Clean Acc: 94.0830 | Bd Acc: 95.6966 | Cross Acc: 89.8954
+ Eval:
+156 157 Clean Acc: 89.9500 - Best: 90.4900 | Bd Acc: 97.9200 - Best: 98.0300 | Cross: 86.7100
+Epoch 63:
+ Train:
+cifar10
+0 743 CE Loss: 0.0032 | Clean Acc: 95.6522 | Bd Acc: 83.3333 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0031 | Clean Acc: 94.1603 | Bd Acc: 95.7516 | Cross Acc: 90.1961
+100 743 CE Loss: 0.0029 | Clean Acc: 94.2962 | Bd Acc: 95.3795 | Cross Acc: 91.2541
+150 743 CE Loss: 0.0029 | Clean Acc: 94.0973 | Bd Acc: 95.5850 | Cross Acc: 90.7837
+200 743 CE Loss: 0.0028 | Clean Acc: 94.3651 | Bd Acc: 95.7711 | Cross Acc: 90.6302
+250 743 CE Loss: 0.0028 | Clean Acc: 94.3011 | Bd Acc: 95.6839 | Cross Acc: 90.6043
+300 743 CE Loss: 0.0029 | Clean Acc: 94.2077 | Bd Acc: 95.5703 | Cross Acc: 90.2824
+350 743 CE Loss: 0.0029 | Clean Acc: 94.1162 | Bd Acc: 95.7740 | Cross Acc: 90.3134
+400 743 CE Loss: 0.0029 | Clean Acc: 94.1830 | Bd Acc: 95.8853 | Cross Acc: 90.2743
+450 743 CE Loss: 0.0029 | Clean Acc: 94.0229 | Bd Acc: 95.8610 | Cross Acc: 90.3548
+500 743 CE Loss: 0.0030 | Clean Acc: 93.8601 | Bd Acc: 95.8084 | Cross Acc: 90.3194
+550 743 CE Loss: 0.0030 | Clean Acc: 93.9557 | Bd Acc: 95.7048 | Cross Acc: 90.3055
+600 743 CE Loss: 0.0030 | Clean Acc: 93.9159 | Bd Acc: 95.7293 | Cross Acc: 90.3494
+650 743 CE Loss: 0.0030 | Clean Acc: 93.9191 | Bd Acc: 95.8781 | Cross Acc: 90.2458
+700 743 CE Loss: 0.0030 | Clean Acc: 93.9589 | Bd Acc: 95.9106 | Cross Acc: 90.0856
+ Eval:
+156 157 Clean Acc: 90.3700 - Best: 90.4900 | Bd Acc: 95.2500 - Best: 98.0300 | Cross: 87.3900
+Epoch 64:
+ Train:
+cifar10
+0 743 CE Loss: 0.0027 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0028 | Clean Acc: 94.7144 | Bd Acc: 95.4248 | Cross Acc: 90.5229
+100 743 CE Loss: 0.0027 | Clean Acc: 94.9849 | Bd Acc: 96.3696 | Cross Acc: 90.9241
+150 743 CE Loss: 0.0028 | Clean Acc: 94.6876 | Bd Acc: 96.0265 | Cross Acc: 90.3422
+200 743 CE Loss: 0.0028 | Clean Acc: 94.5382 | Bd Acc: 95.9370 | Cross Acc: 90.2570
+250 743 CE Loss: 0.0028 | Clean Acc: 94.5176 | Bd Acc: 96.2151 | Cross Acc: 90.2390
+300 743 CE Loss: 0.0028 | Clean Acc: 94.4966 | Bd Acc: 96.0687 | Cross Acc: 90.3654
+350 743 CE Loss: 0.0028 | Clean Acc: 94.3763 | Bd Acc: 95.8689 | Cross Acc: 90.4321
+400 743 CE Loss: 0.0029 | Clean Acc: 94.2318 | Bd Acc: 95.9268 | Cross Acc: 90.2743
+450 743 CE Loss: 0.0029 | Clean Acc: 94.1675 | Bd Acc: 96.0458 | Cross Acc: 90.2069
+500 743 CE Loss: 0.0029 | Clean Acc: 94.1508 | Bd Acc: 95.9747 | Cross Acc: 90.0699
+550 743 CE Loss: 0.0029 | Clean Acc: 94.1687 | Bd Acc: 95.9770 | Cross Acc: 89.9425
+600 743 CE Loss: 0.0030 | Clean Acc: 94.1149 | Bd Acc: 95.8680 | Cross Acc: 89.6977
+650 743 CE Loss: 0.0030 | Clean Acc: 94.0626 | Bd Acc: 95.8269 | Cross Acc: 89.5417
+700 743 CE Loss: 0.0030 | Clean Acc: 94.0985 | Bd Acc: 95.8393 | Cross Acc: 89.6101
+ Eval:
+156 157 Clean Acc: 90.3500 - Best: 90.4900 | Bd Acc: 95.5200 - Best: 98.0300 | Cross: 85.6200
+Epoch 65:
+ Train:
+cifar10
+0 743 CE Loss: 0.0023 | Clean Acc: 97.8261 | Bd Acc: 83.3333 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0030 | Clean Acc: 94.3734 | Bd Acc: 96.0784 | Cross Acc: 90.6863
+100 743 CE Loss: 0.0029 | Clean Acc: 94.4684 | Bd Acc: 96.3696 | Cross Acc: 90.0990
+150 743 CE Loss: 0.0028 | Clean Acc: 94.6588 | Bd Acc: 96.3576 | Cross Acc: 90.2318
+200 743 CE Loss: 0.0029 | Clean Acc: 94.7978 | Bd Acc: 95.9370 | Cross Acc: 90.3814
+250 743 CE Loss: 0.0029 | Clean Acc: 94.6302 | Bd Acc: 95.9495 | Cross Acc: 90.1726
+300 743 CE Loss: 0.0029 | Clean Acc: 94.5399 | Bd Acc: 95.8472 | Cross Acc: 90.1163
+350 743 CE Loss: 0.0028 | Clean Acc: 94.6426 | Bd Acc: 95.9164 | Cross Acc: 90.1472
+400 743 CE Loss: 0.0029 | Clean Acc: 94.5083 | Bd Acc: 96.0515 | Cross Acc: 90.1704
+450 743 CE Loss: 0.0029 | Clean Acc: 94.4953 | Bd Acc: 95.8610 | Cross Acc: 90.1146
+500 743 CE Loss: 0.0029 | Clean Acc: 94.3721 | Bd Acc: 95.7751 | Cross Acc: 89.9035
+550 743 CE Loss: 0.0029 | Clean Acc: 94.3384 | Bd Acc: 95.7955 | Cross Acc: 90.0030
+600 743 CE Loss: 0.0029 | Clean Acc: 94.3934 | Bd Acc: 95.7016 | Cross Acc: 90.0028
+650 743 CE Loss: 0.0029 | Clean Acc: 94.3832 | Bd Acc: 95.6989 | Cross Acc: 89.9386
+700 743 CE Loss: 0.0029 | Clean Acc: 94.3962 | Bd Acc: 95.7442 | Cross Acc: 90.0618
+ Eval:
+156 157 Clean Acc: 90.4000 - Best: 90.4900 | Bd Acc: 87.3800 - Best: 98.0300 | Cross: 86.0300
+Epoch 66:
+ Train:
+cifar10
+0 743 CE Loss: 0.0020 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0035 | Clean Acc: 93.4356 | Bd Acc: 94.7712 | Cross Acc: 86.9281
+100 743 CE Loss: 0.0033 | Clean Acc: 93.8657 | Bd Acc: 94.3894 | Cross Acc: 87.0462
+150 743 CE Loss: 0.0031 | Clean Acc: 94.3421 | Bd Acc: 94.8124 | Cross Acc: 88.2450
+200 743 CE Loss: 0.0031 | Clean Acc: 94.3111 | Bd Acc: 95.1078 | Cross Acc: 88.5572
+250 743 CE Loss: 0.0031 | Clean Acc: 94.2924 | Bd Acc: 95.4183 | Cross Acc: 88.4462
+300 743 CE Loss: 0.0030 | Clean Acc: 94.2510 | Bd Acc: 95.3488 | Cross Acc: 89.1196
+350 743 CE Loss: 0.0030 | Clean Acc: 94.2401 | Bd Acc: 95.3941 | Cross Acc: 89.2450
+400 743 CE Loss: 0.0030 | Clean Acc: 94.2806 | Bd Acc: 95.5112 | Cross Acc: 89.2352
+450 743 CE Loss: 0.0030 | Clean Acc: 94.2399 | Bd Acc: 95.6763 | Cross Acc: 89.4863
+500 743 CE Loss: 0.0030 | Clean Acc: 94.2940 | Bd Acc: 95.6420 | Cross Acc: 89.3546
+550 743 CE Loss: 0.0030 | Clean Acc: 94.2950 | Bd Acc: 95.7048 | Cross Acc: 89.4737
+600 743 CE Loss: 0.0029 | Clean Acc: 94.3898 | Bd Acc: 95.8957 | Cross Acc: 89.5591
+650 743 CE Loss: 0.0029 | Clean Acc: 94.3665 | Bd Acc: 95.7757 | Cross Acc: 89.5801
+700 743 CE Loss: 0.0029 | Clean Acc: 94.2815 | Bd Acc: 95.7917 | Cross Acc: 89.4555
+ Eval:
+156 157 Clean Acc: 89.8100 - Best: 90.4900 | Bd Acc: 93.8500 - Best: 98.0300 | Cross: 84.6000
+Epoch 67:
+ Train:
+cifar10
+0 743 CE Loss: 0.0026 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0027 | Clean Acc: 94.8849 | Bd Acc: 96.0784 | Cross Acc: 89.5425
+100 743 CE Loss: 0.0029 | Clean Acc: 94.3823 | Bd Acc: 96.0396 | Cross Acc: 89.7690
+150 743 CE Loss: 0.0027 | Clean Acc: 94.6588 | Bd Acc: 96.1369 | Cross Acc: 89.9007
+200 743 CE Loss: 0.0027 | Clean Acc: 94.7978 | Bd Acc: 96.1857 | Cross Acc: 90.1741
+250 743 CE Loss: 0.0026 | Clean Acc: 94.9160 | Bd Acc: 96.2151 | Cross Acc: 89.9734
+300 743 CE Loss: 0.0027 | Clean Acc: 94.9444 | Bd Acc: 96.2348 | Cross Acc: 89.8394
+350 743 CE Loss: 0.0027 | Clean Acc: 94.8284 | Bd Acc: 95.9639 | Cross Acc: 89.7911
+400 743 CE Loss: 0.0028 | Clean Acc: 94.5788 | Bd Acc: 95.8022 | Cross Acc: 89.9003
+450 743 CE Loss: 0.0028 | Clean Acc: 94.5483 | Bd Acc: 95.8241 | Cross Acc: 89.8928
+500 743 CE Loss: 0.0028 | Clean Acc: 94.5891 | Bd Acc: 95.8749 | Cross Acc: 90.0033
+550 743 CE Loss: 0.0028 | Clean Acc: 94.6027 | Bd Acc: 95.8560 | Cross Acc: 89.9274
+600 743 CE Loss: 0.0028 | Clean Acc: 94.5345 | Bd Acc: 95.8125 | Cross Acc: 89.8918
+650 743 CE Loss: 0.0029 | Clean Acc: 94.4867 | Bd Acc: 95.8013 | Cross Acc: 89.9002
+700 743 CE Loss: 0.0029 | Clean Acc: 94.4179 | Bd Acc: 95.7917 | Cross Acc: 90.0499
+ Eval:
+156 157 Clean Acc: 89.4300 - Best: 90.4900 | Bd Acc: 99.0200 - Best: 98.0300 | Cross: 86.3900
+Epoch 68:
+ Train:
+cifar10
+0 743 CE Loss: 0.0034 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0028 | Clean Acc: 94.3308 | Bd Acc: 94.7712 | Cross Acc: 92.6471
+100 743 CE Loss: 0.0029 | Clean Acc: 94.2101 | Bd Acc: 95.3795 | Cross Acc: 91.7492
+150 743 CE Loss: 0.0029 | Clean Acc: 94.2557 | Bd Acc: 95.2539 | Cross Acc: 91.3355
+200 743 CE Loss: 0.0029 | Clean Acc: 94.1380 | Bd Acc: 95.6053 | Cross Acc: 91.7496
+250 743 CE Loss: 0.0029 | Clean Acc: 94.1538 | Bd Acc: 95.6839 | Cross Acc: 91.6667
+300 743 CE Loss: 0.0029 | Clean Acc: 94.1283 | Bd Acc: 95.5150 | Cross Acc: 91.5282
+350 743 CE Loss: 0.0029 | Clean Acc: 94.2029 | Bd Acc: 95.4891 | Cross Acc: 91.0019
+400 743 CE Loss: 0.0029 | Clean Acc: 94.2535 | Bd Acc: 95.6359 | Cross Acc: 90.9809
+450 743 CE Loss: 0.0029 | Clean Acc: 94.2784 | Bd Acc: 95.8610 | Cross Acc: 90.8721
+500 743 CE Loss: 0.0029 | Clean Acc: 94.3678 | Bd Acc: 95.9747 | Cross Acc: 90.8516
+550 743 CE Loss: 0.0029 | Clean Acc: 94.3660 | Bd Acc: 96.0375 | Cross Acc: 90.8651
+600 743 CE Loss: 0.0029 | Clean Acc: 94.3500 | Bd Acc: 95.9512 | Cross Acc: 90.6406
+650 743 CE Loss: 0.0029 | Clean Acc: 94.3765 | Bd Acc: 95.9037 | Cross Acc: 90.7834
+700 743 CE Loss: 0.0029 | Clean Acc: 94.4055 | Bd Acc: 95.7917 | Cross Acc: 90.7870
+ Eval:
+156 157 Clean Acc: 90.0300 - Best: 90.4900 | Bd Acc: 92.7500 - Best: 98.0300 | Cross: 85.6800
+Epoch 69:
+ Train:
+cifar10
+0 743 CE Loss: 0.0028 | Clean Acc: 91.3044 | Bd Acc: 83.3333 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0028 | Clean Acc: 94.7144 | Bd Acc: 95.7516 | Cross Acc: 89.8693
+100 743 CE Loss: 0.0029 | Clean Acc: 94.7051 | Bd Acc: 96.0396 | Cross Acc: 88.8614
+150 743 CE Loss: 0.0028 | Clean Acc: 94.8316 | Bd Acc: 95.4746 | Cross Acc: 89.6799
+200 743 CE Loss: 0.0028 | Clean Acc: 94.8626 | Bd Acc: 95.2736 | Cross Acc: 89.7181
+250 743 CE Loss: 0.0029 | Clean Acc: 94.7168 | Bd Acc: 95.6839 | Cross Acc: 89.0438
+300 743 CE Loss: 0.0029 | Clean Acc: 94.6844 | Bd Acc: 95.7918 | Cross Acc: 88.9535
+350 743 CE Loss: 0.0029 | Clean Acc: 94.6612 | Bd Acc: 95.8689 | Cross Acc: 89.3875
+400 743 CE Loss: 0.0028 | Clean Acc: 94.7360 | Bd Acc: 95.9684 | Cross Acc: 89.7340
+450 743 CE Loss: 0.0028 | Clean Acc: 94.7653 | Bd Acc: 96.0828 | Cross Acc: 90.0591
+500 743 CE Loss: 0.0028 | Clean Acc: 94.7626 | Bd Acc: 96.2741 | Cross Acc: 90.1697
+550 743 CE Loss: 0.0028 | Clean Acc: 94.7723 | Bd Acc: 96.2795 | Cross Acc: 90.0484
+600 743 CE Loss: 0.0028 | Clean Acc: 94.7226 | Bd Acc: 96.3117 | Cross Acc: 90.0998
+650 743 CE Loss: 0.0028 | Clean Acc: 94.6470 | Bd Acc: 96.4158 | Cross Acc: 90.0026
+700 743 CE Loss: 0.0028 | Clean Acc: 94.5668 | Bd Acc: 96.3148 | Cross Acc: 89.9667
+ Eval:
+156 157 Clean Acc: 90.6100 - Best: 90.4900 | Bd Acc: 95.5700 - Best: 98.0300 | Cross: 86.9500
+ Saving...
+Epoch 70:
+ Train:
+cifar10
+0 743 CE Loss: 0.0027 | Clean Acc: 89.1304 | Bd Acc: 83.3333 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0024 | Clean Acc: 95.0980 | Bd Acc: 96.4052 | Cross Acc: 92.4837
+100 743 CE Loss: 0.0025 | Clean Acc: 94.8558 | Bd Acc: 96.6997 | Cross Acc: 92.1617
+150 743 CE Loss: 0.0026 | Clean Acc: 94.7884 | Bd Acc: 96.5784 | Cross Acc: 91.3907
+200 743 CE Loss: 0.0027 | Clean Acc: 94.7653 | Bd Acc: 96.0199 | Cross Acc: 91.2521
+250 743 CE Loss: 0.0027 | Clean Acc: 94.6735 | Bd Acc: 95.6175 | Cross Acc: 90.8035
+300 743 CE Loss: 0.0027 | Clean Acc: 94.5833 | Bd Acc: 95.7364 | Cross Acc: 91.2237
+350 743 CE Loss: 0.0027 | Clean Acc: 94.7046 | Bd Acc: 95.9164 | Cross Acc: 91.2393
+400 743 CE Loss: 0.0027 | Clean Acc: 94.6330 | Bd Acc: 96.0515 | Cross Acc: 90.9809
+450 743 CE Loss: 0.0028 | Clean Acc: 94.5194 | Bd Acc: 95.9350 | Cross Acc: 90.8352
+500 743 CE Loss: 0.0028 | Clean Acc: 94.4936 | Bd Acc: 95.9414 | Cross Acc: 90.9847
+550 743 CE Loss: 0.0028 | Clean Acc: 94.4173 | Bd Acc: 96.0980 | Cross Acc: 90.7441
+600 743 CE Loss: 0.0028 | Clean Acc: 94.3970 | Bd Acc: 95.9789 | Cross Acc: 90.6129
+650 743 CE Loss: 0.0028 | Clean Acc: 94.3932 | Bd Acc: 95.8781 | Cross Acc: 90.5274
+700 743 CE Loss: 0.0029 | Clean Acc: 94.3745 | Bd Acc: 95.8393 | Cross Acc: 90.5373
+ Eval:
+156 157 Clean Acc: 89.5600 - Best: 90.6100 | Bd Acc: 97.7400 - Best: 95.5700 | Cross: 85.7300
+Epoch 71:
+ Train:
+cifar10
+0 743 CE Loss: 0.0015 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0026 | Clean Acc: 95.0980 | Bd Acc: 94.4444 | Cross Acc: 91.1765
+100 743 CE Loss: 0.0027 | Clean Acc: 94.9849 | Bd Acc: 95.7096 | Cross Acc: 90.4290
+150 743 CE Loss: 0.0027 | Clean Acc: 94.7308 | Bd Acc: 96.2472 | Cross Acc: 90.6733
+200 743 CE Loss: 0.0028 | Clean Acc: 94.5165 | Bd Acc: 96.3516 | Cross Acc: 90.7546
+250 743 CE Loss: 0.0028 | Clean Acc: 94.3963 | Bd Acc: 96.2815 | Cross Acc: 90.5711
+300 743 CE Loss: 0.0028 | Clean Acc: 94.4244 | Bd Acc: 96.1794 | Cross Acc: 90.5039
+350 743 CE Loss: 0.0029 | Clean Acc: 94.4073 | Bd Acc: 96.2013 | Cross Acc: 90.5271
+400 743 CE Loss: 0.0029 | Clean Acc: 94.2643 | Bd Acc: 95.7606 | Cross Acc: 90.5029
+450 743 CE Loss: 0.0029 | Clean Acc: 94.3025 | Bd Acc: 95.7132 | Cross Acc: 90.4287
+500 743 CE Loss: 0.0029 | Clean Acc: 94.2853 | Bd Acc: 95.7751 | Cross Acc: 90.5522
+550 743 CE Loss: 0.0029 | Clean Acc: 94.3068 | Bd Acc: 95.9468 | Cross Acc: 90.4114
+600 743 CE Loss: 0.0029 | Clean Acc: 94.2523 | Bd Acc: 95.9512 | Cross Acc: 90.5019
+650 743 CE Loss: 0.0029 | Clean Acc: 94.2764 | Bd Acc: 96.0317 | Cross Acc: 90.2458
+700 743 CE Loss: 0.0029 | Clean Acc: 94.3373 | Bd Acc: 96.0770 | Cross Acc: 90.3115
+ Eval:
+156 157 Clean Acc: 88.6900 - Best: 90.6100 | Bd Acc: 97.0700 - Best: 95.5700 | Cross: 84.9200
+Epoch 72:
+ Train:
+cifar10
+0 743 CE Loss: 0.0026 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0028 | Clean Acc: 94.5439 | Bd Acc: 96.0784 | Cross Acc: 89.2157
+100 743 CE Loss: 0.0027 | Clean Acc: 94.7051 | Bd Acc: 96.2046 | Cross Acc: 89.8515
+150 743 CE Loss: 0.0027 | Clean Acc: 94.9467 | Bd Acc: 95.8057 | Cross Acc: 89.4592
+200 743 CE Loss: 0.0027 | Clean Acc: 94.8735 | Bd Acc: 95.6053 | Cross Acc: 90.2156
+250 743 CE Loss: 0.0027 | Clean Acc: 94.8900 | Bd Acc: 95.7503 | Cross Acc: 90.1062
+300 743 CE Loss: 0.0027 | Clean Acc: 94.8144 | Bd Acc: 95.6811 | Cross Acc: 90.6423
+350 743 CE Loss: 0.0027 | Clean Acc: 94.8037 | Bd Acc: 95.5840 | Cross Acc: 90.3609
+400 743 CE Loss: 0.0027 | Clean Acc: 94.8498 | Bd Acc: 95.5112 | Cross Acc: 90.2535
+450 743 CE Loss: 0.0028 | Clean Acc: 94.7701 | Bd Acc: 95.5285 | Cross Acc: 90.2069
+500 743 CE Loss: 0.0028 | Clean Acc: 94.7453 | Bd Acc: 95.4424 | Cross Acc: 90.1031
+550 743 CE Loss: 0.0028 | Clean Acc: 94.6816 | Bd Acc: 95.3720 | Cross Acc: 90.0484
+600 743 CE Loss: 0.0028 | Clean Acc: 94.5670 | Bd Acc: 95.2579 | Cross Acc: 90.0166
+650 743 CE Loss: 0.0028 | Clean Acc: 94.5802 | Bd Acc: 95.4173 | Cross Acc: 89.9642
+700 743 CE Loss: 0.0029 | Clean Acc: 94.5761 | Bd Acc: 95.4826 | Cross Acc: 89.9667
+ Eval:
+156 157 Clean Acc: 89.7500 - Best: 90.6100 | Bd Acc: 97.4600 - Best: 95.5700 | Cross: 85.9600
+Epoch 73:
+ Train:
+cifar10
+0 743 CE Loss: 0.0043 | Clean Acc: 86.9565 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0027 | Clean Acc: 94.8849 | Bd Acc: 95.7516 | Cross Acc: 89.7059
+100 743 CE Loss: 0.0026 | Clean Acc: 95.0495 | Bd Acc: 95.7096 | Cross Acc: 90.3465
+150 743 CE Loss: 0.0026 | Clean Acc: 94.9035 | Bd Acc: 95.9161 | Cross Acc: 90.8389
+200 743 CE Loss: 0.0027 | Clean Acc: 94.7869 | Bd Acc: 95.4395 | Cross Acc: 90.3814
+250 743 CE Loss: 0.0027 | Clean Acc: 94.5869 | Bd Acc: 95.2855 | Cross Acc: 90.3055
+300 743 CE Loss: 0.0027 | Clean Acc: 94.6988 | Bd Acc: 95.3488 | Cross Acc: 90.5039
+350 743 CE Loss: 0.0027 | Clean Acc: 94.7789 | Bd Acc: 95.4891 | Cross Acc: 90.6458
+400 743 CE Loss: 0.0027 | Clean Acc: 94.6926 | Bd Acc: 95.5112 | Cross Acc: 90.3990
+450 743 CE Loss: 0.0027 | Clean Acc: 94.6930 | Bd Acc: 95.7502 | Cross Acc: 90.6319
+500 743 CE Loss: 0.0027 | Clean Acc: 94.6368 | Bd Acc: 95.6753 | Cross Acc: 90.5023
+550 743 CE Loss: 0.0028 | Clean Acc: 94.6343 | Bd Acc: 95.6443 | Cross Acc: 90.1845
+600 743 CE Loss: 0.0028 | Clean Acc: 94.5996 | Bd Acc: 95.8125 | Cross Acc: 90.2524
+650 743 CE Loss: 0.0028 | Clean Acc: 94.5736 | Bd Acc: 95.8269 | Cross Acc: 90.2842
+700 743 CE Loss: 0.0028 | Clean Acc: 94.5233 | Bd Acc: 95.7917 | Cross Acc: 90.2164
+ Eval:
+156 157 Clean Acc: 89.0000 - Best: 90.6100 | Bd Acc: 97.2600 - Best: 95.5700 | Cross: 84.9200
+Epoch 74:
+ Train:
+cifar10
+0 743 CE Loss: 0.0016 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0029 | Clean Acc: 94.8849 | Bd Acc: 96.4052 | Cross Acc: 91.8301
+100 743 CE Loss: 0.0028 | Clean Acc: 95.0926 | Bd Acc: 95.5446 | Cross Acc: 90.8416
+150 743 CE Loss: 0.0028 | Clean Acc: 95.0187 | Bd Acc: 95.5850 | Cross Acc: 91.1148
+200 743 CE Loss: 0.0029 | Clean Acc: 94.7004 | Bd Acc: 95.7711 | Cross Acc: 91.0862
+250 743 CE Loss: 0.0028 | Clean Acc: 94.7428 | Bd Acc: 95.8831 | Cross Acc: 90.8699
+300 743 CE Loss: 0.0029 | Clean Acc: 94.6266 | Bd Acc: 96.0687 | Cross Acc: 90.6700
+350 743 CE Loss: 0.0029 | Clean Acc: 94.5126 | Bd Acc: 96.2013 | Cross Acc: 90.4558
+400 743 CE Loss: 0.0029 | Clean Acc: 94.5571 | Bd Acc: 96.0100 | Cross Acc: 90.3159
+450 743 CE Loss: 0.0029 | Clean Acc: 94.3845 | Bd Acc: 95.8980 | Cross Acc: 90.4102
+500 743 CE Loss: 0.0029 | Clean Acc: 94.3114 | Bd Acc: 95.7086 | Cross Acc: 90.3194
+550 743 CE Loss: 0.0030 | Clean Acc: 94.2792 | Bd Acc: 95.7955 | Cross Acc: 90.0333
+600 743 CE Loss: 0.0030 | Clean Acc: 94.2704 | Bd Acc: 95.7571 | Cross Acc: 90.0305
+650 743 CE Loss: 0.0030 | Clean Acc: 94.2730 | Bd Acc: 95.7501 | Cross Acc: 89.9258
+700 743 CE Loss: 0.0030 | Clean Acc: 94.2256 | Bd Acc: 95.8155 | Cross Acc: 89.8954
+ Eval:
+156 157 Clean Acc: 90.8500 - Best: 90.6100 | Bd Acc: 96.7300 - Best: 95.5700 | Cross: 87.5000
+ Saving...
+Epoch 75:
+ Train:
+cifar10
+0 743 CE Loss: 0.0029 | Clean Acc: 97.8261 | Bd Acc: 83.3333 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0027 | Clean Acc: 95.1833 | Bd Acc: 95.7516 | Cross Acc: 91.1765
+100 743 CE Loss: 0.0026 | Clean Acc: 95.2432 | Bd Acc: 96.0396 | Cross Acc: 91.1716
+150 743 CE Loss: 0.0027 | Clean Acc: 95.1771 | Bd Acc: 95.9161 | Cross Acc: 90.2318
+200 743 CE Loss: 0.0027 | Clean Acc: 94.9167 | Bd Acc: 95.5224 | Cross Acc: 90.5887
+250 743 CE Loss: 0.0027 | Clean Acc: 94.6821 | Bd Acc: 95.6839 | Cross Acc: 90.7039
+300 743 CE Loss: 0.0028 | Clean Acc: 94.6988 | Bd Acc: 95.6811 | Cross Acc: 90.5869
+350 743 CE Loss: 0.0028 | Clean Acc: 94.5188 | Bd Acc: 95.3466 | Cross Acc: 90.4321
+400 743 CE Loss: 0.0028 | Clean Acc: 94.4595 | Bd Acc: 95.4697 | Cross Acc: 90.4613
+450 743 CE Loss: 0.0028 | Clean Acc: 94.4568 | Bd Acc: 95.6024 | Cross Acc: 90.6319
+500 743 CE Loss: 0.0028 | Clean Acc: 94.4546 | Bd Acc: 95.5755 | Cross Acc: 90.5522
+550 743 CE Loss: 0.0029 | Clean Acc: 94.3581 | Bd Acc: 95.6443 | Cross Acc: 90.4567
+600 743 CE Loss: 0.0029 | Clean Acc: 94.3138 | Bd Acc: 95.7016 | Cross Acc: 90.3633
+650 743 CE Loss: 0.0029 | Clean Acc: 94.3465 | Bd Acc: 95.8013 | Cross Acc: 90.3226
+700 743 CE Loss: 0.0028 | Clean Acc: 94.3621 | Bd Acc: 95.8631 | Cross Acc: 90.2877
+ Eval:
+156 157 Clean Acc: 90.1800 - Best: 90.8500 | Bd Acc: 95.9000 - Best: 96.7300 | Cross: 85.4500
+Epoch 76:
+ Train:
+cifar10
+0 743 CE Loss: 0.0017 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0027 | Clean Acc: 95.6096 | Bd Acc: 95.7516 | Cross Acc: 89.2157
+100 743 CE Loss: 0.0027 | Clean Acc: 94.8988 | Bd Acc: 95.5446 | Cross Acc: 90.0990
+150 743 CE Loss: 0.0027 | Clean Acc: 94.8748 | Bd Acc: 95.2539 | Cross Acc: 90.3422
+200 743 CE Loss: 0.0027 | Clean Acc: 94.7545 | Bd Acc: 95.2736 | Cross Acc: 91.3764
+250 743 CE Loss: 0.0027 | Clean Acc: 94.8121 | Bd Acc: 95.4183 | Cross Acc: 91.5671
+300 743 CE Loss: 0.0027 | Clean Acc: 94.7855 | Bd Acc: 95.5703 | Cross Acc: 91.2514
+350 743 CE Loss: 0.0027 | Clean Acc: 94.8099 | Bd Acc: 95.5366 | Cross Acc: 91.4055
+400 743 CE Loss: 0.0027 | Clean Acc: 94.8010 | Bd Acc: 95.3450 | Cross Acc: 91.3965
+450 743 CE Loss: 0.0027 | Clean Acc: 94.7990 | Bd Acc: 95.4545 | Cross Acc: 91.2786
+500 743 CE Loss: 0.0027 | Clean Acc: 94.8017 | Bd Acc: 95.6088 | Cross Acc: 91.0013
+550 743 CE Loss: 0.0027 | Clean Acc: 94.8276 | Bd Acc: 95.4930 | Cross Acc: 91.0315
+600 743 CE Loss: 0.0027 | Clean Acc: 94.8058 | Bd Acc: 95.6461 | Cross Acc: 90.9595
+650 743 CE Loss: 0.0027 | Clean Acc: 94.8040 | Bd Acc: 95.8269 | Cross Acc: 90.9370
+700 743 CE Loss: 0.0027 | Clean Acc: 94.7962 | Bd Acc: 95.8393 | Cross Acc: 90.9296
+ Eval:
+156 157 Clean Acc: 89.7900 - Best: 90.8500 | Bd Acc: 99.4600 - Best: 96.7300 | Cross: 86.5300
+Epoch 77:
+ Train:
+cifar10
+0 743 CE Loss: 0.0040 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0026 | Clean Acc: 95.0554 | Bd Acc: 96.4052 | Cross Acc: 89.5425
+100 743 CE Loss: 0.0028 | Clean Acc: 94.6621 | Bd Acc: 94.8845 | Cross Acc: 90.2640
+150 743 CE Loss: 0.0028 | Clean Acc: 94.6300 | Bd Acc: 95.0331 | Cross Acc: 90.6181
+200 743 CE Loss: 0.0027 | Clean Acc: 94.6355 | Bd Acc: 94.9420 | Cross Acc: 90.4229
+250 743 CE Loss: 0.0027 | Clean Acc: 94.8121 | Bd Acc: 94.9535 | Cross Acc: 90.3718
+300 743 CE Loss: 0.0027 | Clean Acc: 94.7638 | Bd Acc: 95.1274 | Cross Acc: 90.4208
+350 743 CE Loss: 0.0027 | Clean Acc: 94.7108 | Bd Acc: 95.2042 | Cross Acc: 90.7170
+400 743 CE Loss: 0.0027 | Clean Acc: 94.7468 | Bd Acc: 95.2618 | Cross Acc: 90.6899
+450 743 CE Loss: 0.0027 | Clean Acc: 94.7556 | Bd Acc: 95.4545 | Cross Acc: 90.3917
+500 743 CE Loss: 0.0027 | Clean Acc: 94.8017 | Bd Acc: 95.4757 | Cross Acc: 90.4691
+550 743 CE Loss: 0.0028 | Clean Acc: 94.6540 | Bd Acc: 95.3720 | Cross Acc: 90.4114
+600 743 CE Loss: 0.0028 | Clean Acc: 94.6972 | Bd Acc: 95.4243 | Cross Acc: 90.0860
+650 743 CE Loss: 0.0028 | Clean Acc: 94.7005 | Bd Acc: 95.5453 | Cross Acc: 90.2074
+700 743 CE Loss: 0.0028 | Clean Acc: 94.6412 | Bd Acc: 95.6253 | Cross Acc: 90.2401
+ Eval:
+156 157 Clean Acc: 89.4200 - Best: 90.8500 | Bd Acc: 95.7500 - Best: 96.7300 | Cross: 84.7700
+Epoch 78:
+ Train:
+cifar10
+0 743 CE Loss: 0.0020 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0028 | Clean Acc: 94.5439 | Bd Acc: 92.4837 | Cross Acc: 90.1961
+100 743 CE Loss: 0.0026 | Clean Acc: 95.0065 | Bd Acc: 94.5545 | Cross Acc: 90.7591
+150 743 CE Loss: 0.0025 | Clean Acc: 95.4362 | Bd Acc: 94.9227 | Cross Acc: 90.8389
+200 743 CE Loss: 0.0026 | Clean Acc: 95.0573 | Bd Acc: 95.2736 | Cross Acc: 91.0862
+250 743 CE Loss: 0.0026 | Clean Acc: 94.9853 | Bd Acc: 95.6839 | Cross Acc: 90.9031
+300 743 CE Loss: 0.0026 | Clean Acc: 95.0383 | Bd Acc: 95.9025 | Cross Acc: 90.5039
+350 743 CE Loss: 0.0026 | Clean Acc: 95.0080 | Bd Acc: 96.1538 | Cross Acc: 90.5271
+400 743 CE Loss: 0.0026 | Clean Acc: 94.9962 | Bd Acc: 96.1762 | Cross Acc: 90.6068
+450 743 CE Loss: 0.0026 | Clean Acc: 94.9677 | Bd Acc: 96.0828 | Cross Acc: 90.5580
+500 743 CE Loss: 0.0026 | Clean Acc: 94.9406 | Bd Acc: 96.2741 | Cross Acc: 90.6354
+550 743 CE Loss: 0.0026 | Clean Acc: 94.8276 | Bd Acc: 96.3400 | Cross Acc: 90.4719
+600 743 CE Loss: 0.0026 | Clean Acc: 94.7732 | Bd Acc: 96.2285 | Cross Acc: 90.4881
+650 743 CE Loss: 0.0027 | Clean Acc: 94.7172 | Bd Acc: 96.0829 | Cross Acc: 90.5018
+700 743 CE Loss: 0.0027 | Clean Acc: 94.6846 | Bd Acc: 96.0533 | Cross Acc: 90.3947
+ Eval:
+156 157 Clean Acc: 90.2900 - Best: 90.8500 | Bd Acc: 99.0900 - Best: 96.7300 | Cross: 86.5300
+Epoch 79:
+ Train:
+cifar10
+0 743 CE Loss: 0.0010 | Clean Acc: 100.0000 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0029 | Clean Acc: 94.5013 | Bd Acc: 93.7908 | Cross Acc: 90.8497
+100 743 CE Loss: 0.0027 | Clean Acc: 94.5760 | Bd Acc: 95.3795 | Cross Acc: 91.1716
+150 743 CE Loss: 0.0027 | Clean Acc: 94.8748 | Bd Acc: 95.3642 | Cross Acc: 91.4459
+200 743 CE Loss: 0.0027 | Clean Acc: 94.8302 | Bd Acc: 95.5224 | Cross Acc: 91.5837
+250 743 CE Loss: 0.0027 | Clean Acc: 94.6735 | Bd Acc: 95.4183 | Cross Acc: 91.2683
+300 743 CE Loss: 0.0027 | Clean Acc: 94.6988 | Bd Acc: 95.0166 | Cross Acc: 91.1683
+350 743 CE Loss: 0.0027 | Clean Acc: 94.7232 | Bd Acc: 95.1567 | Cross Acc: 91.0731
+400 743 CE Loss: 0.0028 | Clean Acc: 94.6221 | Bd Acc: 95.2203 | Cross Acc: 90.7939
+450 743 CE Loss: 0.0028 | Clean Acc: 94.6014 | Bd Acc: 95.1589 | Cross Acc: 90.7797
+500 743 CE Loss: 0.0028 | Clean Acc: 94.5587 | Bd Acc: 95.2428 | Cross Acc: 90.8017
+550 743 CE Loss: 0.0028 | Clean Acc: 94.5593 | Bd Acc: 95.3116 | Cross Acc: 90.6685
+600 743 CE Loss: 0.0029 | Clean Acc: 94.3862 | Bd Acc: 95.3134 | Cross Acc: 90.6129
+650 743 CE Loss: 0.0029 | Clean Acc: 94.3699 | Bd Acc: 95.3149 | Cross Acc: 90.6170
+700 743 CE Loss: 0.0029 | Clean Acc: 94.3993 | Bd Acc: 95.4113 | Cross Acc: 90.4422
+ Eval:
+156 157 Clean Acc: 90.8900 - Best: 90.8500 | Bd Acc: 95.9000 - Best: 96.7300 | Cross: 87.1000
+ Saving...
+Epoch 80:
+ Train:
+cifar10
+0 743 CE Loss: 0.0013 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0025 | Clean Acc: 94.7997 | Bd Acc: 97.3856 | Cross Acc: 91.6667
+100 743 CE Loss: 0.0025 | Clean Acc: 94.9849 | Bd Acc: 95.8746 | Cross Acc: 92.0792
+150 743 CE Loss: 0.0025 | Clean Acc: 94.9611 | Bd Acc: 96.1369 | Cross Acc: 91.7770
+200 743 CE Loss: 0.0025 | Clean Acc: 95.1655 | Bd Acc: 95.7711 | Cross Acc: 91.7910
+250 743 CE Loss: 0.0025 | Clean Acc: 95.1065 | Bd Acc: 96.1487 | Cross Acc: 91.8327
+300 743 CE Loss: 0.0025 | Clean Acc: 95.0888 | Bd Acc: 96.1794 | Cross Acc: 91.2514
+350 743 CE Loss: 0.0026 | Clean Acc: 94.9399 | Bd Acc: 96.0589 | Cross Acc: 91.0019
+400 743 CE Loss: 0.0026 | Clean Acc: 94.8932 | Bd Acc: 96.1347 | Cross Acc: 91.1679
+450 743 CE Loss: 0.0026 | Clean Acc: 94.8231 | Bd Acc: 96.2306 | Cross Acc: 90.9645
+500 743 CE Loss: 0.0026 | Clean Acc: 94.8147 | Bd Acc: 96.1743 | Cross Acc: 90.9514
+550 743 CE Loss: 0.0026 | Clean Acc: 94.8434 | Bd Acc: 96.1283 | Cross Acc: 90.9105
+600 743 CE Loss: 0.0027 | Clean Acc: 94.7841 | Bd Acc: 95.8957 | Cross Acc: 90.6267
+650 743 CE Loss: 0.0027 | Clean Acc: 94.7806 | Bd Acc: 95.9037 | Cross Acc: 90.7322
+700 743 CE Loss: 0.0027 | Clean Acc: 94.7621 | Bd Acc: 95.9582 | Cross Acc: 90.6919
+ Eval:
+156 157 Clean Acc: 90.6900 - Best: 90.8900 | Bd Acc: 97.7200 - Best: 95.9000 | Cross: 87.4700
+Epoch 81:
+ Train:
+cifar10
+0 743 CE Loss: 0.0018 | Clean Acc: 100.0000 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0026 | Clean Acc: 95.3112 | Bd Acc: 97.0588 | Cross Acc: 91.3399
+100 743 CE Loss: 0.0027 | Clean Acc: 95.0280 | Bd Acc: 96.8647 | Cross Acc: 90.6766
+150 743 CE Loss: 0.0027 | Clean Acc: 94.9035 | Bd Acc: 96.3576 | Cross Acc: 90.3974
+200 743 CE Loss: 0.0027 | Clean Acc: 95.0681 | Bd Acc: 96.1028 | Cross Acc: 90.8375
+250 743 CE Loss: 0.0026 | Clean Acc: 95.1239 | Bd Acc: 95.8167 | Cross Acc: 91.4011
+300 743 CE Loss: 0.0026 | Clean Acc: 95.1827 | Bd Acc: 95.9579 | Cross Acc: 91.3068
+350 743 CE Loss: 0.0026 | Clean Acc: 95.2186 | Bd Acc: 96.1064 | Cross Acc: 91.0969
+400 743 CE Loss: 0.0026 | Clean Acc: 95.1968 | Bd Acc: 96.4256 | Cross Acc: 90.7315
+450 743 CE Loss: 0.0026 | Clean Acc: 95.1412 | Bd Acc: 96.1197 | Cross Acc: 90.7058
+500 743 CE Loss: 0.0026 | Clean Acc: 95.0317 | Bd Acc: 96.0745 | Cross Acc: 90.6021
+550 743 CE Loss: 0.0026 | Clean Acc: 95.0051 | Bd Acc: 96.0980 | Cross Acc: 90.5324
+600 743 CE Loss: 0.0027 | Clean Acc: 94.9251 | Bd Acc: 96.0899 | Cross Acc: 90.4326
+650 743 CE Loss: 0.0027 | Clean Acc: 94.8641 | Bd Acc: 96.1342 | Cross Acc: 90.2970
+700 743 CE Loss: 0.0027 | Clean Acc: 94.7869 | Bd Acc: 96.1484 | Cross Acc: 90.3352
+ Eval:
+156 157 Clean Acc: 90.8900 - Best: 90.8900 | Bd Acc: 95.5600 - Best: 95.9000 | Cross: 86.8700
+Epoch 82:
+ Train:
+cifar10
+0 743 CE Loss: 0.0011 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0025 | Clean Acc: 95.1833 | Bd Acc: 96.4052 | Cross Acc: 91.1765
+100 743 CE Loss: 0.0025 | Clean Acc: 95.4585 | Bd Acc: 96.3696 | Cross Acc: 90.0990
+150 743 CE Loss: 0.0027 | Clean Acc: 94.9323 | Bd Acc: 95.6954 | Cross Acc: 90.3974
+200 743 CE Loss: 0.0027 | Clean Acc: 94.9708 | Bd Acc: 95.6882 | Cross Acc: 90.5473
+250 743 CE Loss: 0.0027 | Clean Acc: 95.0286 | Bd Acc: 95.2855 | Cross Acc: 90.4051
+300 743 CE Loss: 0.0027 | Clean Acc: 95.0455 | Bd Acc: 95.4596 | Cross Acc: 90.2547
+350 743 CE Loss: 0.0027 | Clean Acc: 95.0700 | Bd Acc: 95.6315 | Cross Acc: 90.6458
+400 743 CE Loss: 0.0027 | Clean Acc: 95.0938 | Bd Acc: 95.5944 | Cross Acc: 90.8562
+450 743 CE Loss: 0.0026 | Clean Acc: 95.1460 | Bd Acc: 95.8241 | Cross Acc: 91.0015
+500 743 CE Loss: 0.0026 | Clean Acc: 95.0664 | Bd Acc: 95.8416 | Cross Acc: 91.1510
+550 743 CE Loss: 0.0026 | Clean Acc: 95.0564 | Bd Acc: 95.7955 | Cross Acc: 91.1373
+600 743 CE Loss: 0.0026 | Clean Acc: 95.0879 | Bd Acc: 95.8403 | Cross Acc: 91.0011
+650 743 CE Loss: 0.0027 | Clean Acc: 94.9643 | Bd Acc: 95.9037 | Cross Acc: 90.9242
+700 743 CE Loss: 0.0027 | Clean Acc: 94.9606 | Bd Acc: 95.8393 | Cross Acc: 90.9177
+ Eval:
+156 157 Clean Acc: 90.4500 - Best: 90.8900 | Bd Acc: 98.2800 - Best: 95.9000 | Cross: 86.3900
+Epoch 83:
+ Train:
+cifar10
+0 743 CE Loss: 0.0047 | Clean Acc: 89.1304 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0026 | Clean Acc: 95.0554 | Bd Acc: 95.4248 | Cross Acc: 90.5229
+100 743 CE Loss: 0.0026 | Clean Acc: 95.1141 | Bd Acc: 96.2046 | Cross Acc: 90.3465
+150 743 CE Loss: 0.0026 | Clean Acc: 95.1483 | Bd Acc: 96.1369 | Cross Acc: 90.5077
+200 743 CE Loss: 0.0026 | Clean Acc: 95.1655 | Bd Acc: 96.1857 | Cross Acc: 90.9204
+250 743 CE Loss: 0.0026 | Clean Acc: 95.1672 | Bd Acc: 96.1487 | Cross Acc: 90.7371
+300 743 CE Loss: 0.0027 | Clean Acc: 95.0816 | Bd Acc: 95.8472 | Cross Acc: 90.7530
+350 743 CE Loss: 0.0027 | Clean Acc: 95.0762 | Bd Acc: 95.8689 | Cross Acc: 90.5271
+400 743 CE Loss: 0.0026 | Clean Acc: 95.0884 | Bd Acc: 95.6775 | Cross Acc: 90.3990
+450 743 CE Loss: 0.0026 | Clean Acc: 95.0255 | Bd Acc: 95.8241 | Cross Acc: 90.4841
+500 743 CE Loss: 0.0027 | Clean Acc: 94.9622 | Bd Acc: 95.9082 | Cross Acc: 90.3693
+550 743 CE Loss: 0.0027 | Clean Acc: 94.8394 | Bd Acc: 95.8863 | Cross Acc: 90.3962
+600 743 CE Loss: 0.0027 | Clean Acc: 94.7804 | Bd Acc: 95.8957 | Cross Acc: 90.4187
+650 743 CE Loss: 0.0027 | Clean Acc: 94.7272 | Bd Acc: 95.7757 | Cross Acc: 90.4250
+700 743 CE Loss: 0.0027 | Clean Acc: 94.7280 | Bd Acc: 95.7680 | Cross Acc: 90.2520
+ Eval:
+156 157 Clean Acc: 91.1200 - Best: 90.8900 | Bd Acc: 97.0900 - Best: 95.9000 | Cross: 87.0500
+ Saving...
+Epoch 84:
+ Train:
+cifar10
+0 743 CE Loss: 0.0018 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0027 | Clean Acc: 94.8849 | Bd Acc: 94.4444 | Cross Acc: 89.3791
+100 743 CE Loss: 0.0026 | Clean Acc: 95.4154 | Bd Acc: 96.0396 | Cross Acc: 88.9439
+150 743 CE Loss: 0.0026 | Clean Acc: 95.2203 | Bd Acc: 95.0331 | Cross Acc: 89.7903
+200 743 CE Loss: 0.0026 | Clean Acc: 95.2736 | Bd Acc: 95.0249 | Cross Acc: 90.0083
+250 743 CE Loss: 0.0026 | Clean Acc: 95.1412 | Bd Acc: 95.1527 | Cross Acc: 90.1394
+300 743 CE Loss: 0.0026 | Clean Acc: 95.2261 | Bd Acc: 95.1827 | Cross Acc: 90.0609
+350 743 CE Loss: 0.0026 | Clean Acc: 95.2248 | Bd Acc: 95.4891 | Cross Acc: 90.3371
+400 743 CE Loss: 0.0026 | Clean Acc: 95.2076 | Bd Acc: 95.6775 | Cross Acc: 90.3367
+450 743 CE Loss: 0.0026 | Clean Acc: 95.1412 | Bd Acc: 95.5285 | Cross Acc: 90.4472
+500 743 CE Loss: 0.0026 | Clean Acc: 95.1228 | Bd Acc: 95.6753 | Cross Acc: 90.2362
+550 743 CE Loss: 0.0027 | Clean Acc: 95.0959 | Bd Acc: 95.7350 | Cross Acc: 90.2148
+600 743 CE Loss: 0.0027 | Clean Acc: 95.0662 | Bd Acc: 95.7293 | Cross Acc: 90.2662
+650 743 CE Loss: 0.0027 | Clean Acc: 94.9476 | Bd Acc: 95.8013 | Cross Acc: 90.2586
+700 743 CE Loss: 0.0027 | Clean Acc: 94.9172 | Bd Acc: 95.8393 | Cross Acc: 90.2401
+ Eval:
+156 157 Clean Acc: 90.0100 - Best: 91.1200 | Bd Acc: 97.3500 - Best: 97.0900 | Cross: 86.0500
+Epoch 85:
+ Train:
+cifar10
+0 743 CE Loss: 0.0014 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0027 | Clean Acc: 94.9702 | Bd Acc: 96.4052 | Cross Acc: 91.5033
+100 743 CE Loss: 0.0027 | Clean Acc: 95.0710 | Bd Acc: 95.7096 | Cross Acc: 91.1716
+150 743 CE Loss: 0.0026 | Clean Acc: 95.1915 | Bd Acc: 95.8057 | Cross Acc: 90.9492
+200 743 CE Loss: 0.0026 | Clean Acc: 95.2304 | Bd Acc: 95.6882 | Cross Acc: 90.5887
+250 743 CE Loss: 0.0026 | Clean Acc: 95.1845 | Bd Acc: 95.8831 | Cross Acc: 90.8035
+300 743 CE Loss: 0.0026 | Clean Acc: 95.2261 | Bd Acc: 96.0133 | Cross Acc: 90.7530
+350 743 CE Loss: 0.0026 | Clean Acc: 95.0328 | Bd Acc: 96.0589 | Cross Acc: 90.5745
+400 743 CE Loss: 0.0026 | Clean Acc: 95.0504 | Bd Acc: 96.1762 | Cross Acc: 90.5653
+450 743 CE Loss: 0.0026 | Clean Acc: 94.9966 | Bd Acc: 96.0828 | Cross Acc: 90.5026
+500 743 CE Loss: 0.0026 | Clean Acc: 94.9753 | Bd Acc: 96.1410 | Cross Acc: 90.5190
+550 743 CE Loss: 0.0026 | Clean Acc: 95.0485 | Bd Acc: 96.1585 | Cross Acc: 90.4719
+600 743 CE Loss: 0.0026 | Clean Acc: 94.9902 | Bd Acc: 96.1730 | Cross Acc: 90.5435
+650 743 CE Loss: 0.0027 | Clean Acc: 94.9175 | Bd Acc: 95.9805 | Cross Acc: 90.5018
+700 743 CE Loss: 0.0027 | Clean Acc: 94.8304 | Bd Acc: 95.9582 | Cross Acc: 90.4303
+ Eval:
+156 157 Clean Acc: 90.8700 - Best: 91.1200 | Bd Acc: 97.7700 - Best: 97.0900 | Cross: 87.2400
+Epoch 86:
+ Train:
+cifar10
+0 743 CE Loss: 0.0028 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0024 | Clean Acc: 96.3342 | Bd Acc: 96.7320 | Cross Acc: 90.0327
+100 743 CE Loss: 0.0024 | Clean Acc: 95.8459 | Bd Acc: 97.1947 | Cross Acc: 90.0165
+150 743 CE Loss: 0.0025 | Clean Acc: 95.5370 | Bd Acc: 97.0199 | Cross Acc: 89.9007
+200 743 CE Loss: 0.0025 | Clean Acc: 95.4142 | Bd Acc: 96.6833 | Cross Acc: 90.1327
+250 743 CE Loss: 0.0026 | Clean Acc: 95.3577 | Bd Acc: 96.8792 | Cross Acc: 90.4051
+300 743 CE Loss: 0.0026 | Clean Acc: 95.1755 | Bd Acc: 96.2901 | Cross Acc: 90.7530
+350 743 CE Loss: 0.0026 | Clean Acc: 94.9957 | Bd Acc: 96.4862 | Cross Acc: 90.7882
+400 743 CE Loss: 0.0026 | Clean Acc: 95.0016 | Bd Acc: 96.3840 | Cross Acc: 90.8562
+450 743 CE Loss: 0.0026 | Clean Acc: 94.9629 | Bd Acc: 96.5262 | Cross Acc: 90.6874
+500 743 CE Loss: 0.0026 | Clean Acc: 94.9926 | Bd Acc: 96.7066 | Cross Acc: 90.7352
+550 743 CE Loss: 0.0026 | Clean Acc: 94.9183 | Bd Acc: 96.5820 | Cross Acc: 90.7743
+600 743 CE Loss: 0.0027 | Clean Acc: 94.8926 | Bd Acc: 96.6445 | Cross Acc: 90.6129
+650 743 CE Loss: 0.0027 | Clean Acc: 94.8107 | Bd Acc: 96.6206 | Cross Acc: 90.5786
+700 743 CE Loss: 0.0027 | Clean Acc: 94.8459 | Bd Acc: 96.5050 | Cross Acc: 90.6324
+ Eval:
+156 157 Clean Acc: 90.7700 - Best: 91.1200 | Bd Acc: 97.2100 - Best: 97.0900 | Cross: 86.9600
+Epoch 87:
+ Train:
+cifar10
+0 743 CE Loss: 0.0006 | Clean Acc: 100.0000 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0022 | Clean Acc: 96.1637 | Bd Acc: 96.0784 | Cross Acc: 92.6471
+100 743 CE Loss: 0.0023 | Clean Acc: 95.5661 | Bd Acc: 96.0396 | Cross Acc: 92.4092
+150 743 CE Loss: 0.0023 | Clean Acc: 95.3642 | Bd Acc: 96.5784 | Cross Acc: 92.3841
+200 743 CE Loss: 0.0023 | Clean Acc: 95.6630 | Bd Acc: 96.7662 | Cross Acc: 92.2886
+250 743 CE Loss: 0.0024 | Clean Acc: 95.4616 | Bd Acc: 96.5471 | Cross Acc: 91.6003
+300 743 CE Loss: 0.0025 | Clean Acc: 95.3127 | Bd Acc: 96.4009 | Cross Acc: 91.2791
+350 743 CE Loss: 0.0025 | Clean Acc: 95.3115 | Bd Acc: 96.4387 | Cross Acc: 90.9544
+400 743 CE Loss: 0.0025 | Clean Acc: 95.2781 | Bd Acc: 96.4672 | Cross Acc: 90.8354
+450 743 CE Loss: 0.0025 | Clean Acc: 95.2232 | Bd Acc: 96.4523 | Cross Acc: 90.8906
+500 743 CE Loss: 0.0025 | Clean Acc: 95.2660 | Bd Acc: 96.6068 | Cross Acc: 90.7352
+550 743 CE Loss: 0.0025 | Clean Acc: 95.1945 | Bd Acc: 96.3702 | Cross Acc: 90.7441
+600 743 CE Loss: 0.0026 | Clean Acc: 95.1168 | Bd Acc: 96.3117 | Cross Acc: 90.6267
+650 743 CE Loss: 0.0026 | Clean Acc: 95.1513 | Bd Acc: 96.2622 | Cross Acc: 90.5786
+700 743 CE Loss: 0.0026 | Clean Acc: 95.1684 | Bd Acc: 96.2910 | Cross Acc: 90.5492
+ Eval:
+156 157 Clean Acc: 90.1200 - Best: 91.1200 | Bd Acc: 95.4700 - Best: 97.0900 | Cross: 86.0000
+Epoch 88:
+ Train:
+cifar10
+0 743 CE Loss: 0.0011 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0024 | Clean Acc: 95.6096 | Bd Acc: 96.7320 | Cross Acc: 92.3203
+100 743 CE Loss: 0.0024 | Clean Acc: 95.6307 | Bd Acc: 95.5446 | Cross Acc: 91.6667
+150 743 CE Loss: 0.0024 | Clean Acc: 95.6090 | Bd Acc: 95.8057 | Cross Acc: 91.9978
+200 743 CE Loss: 0.0025 | Clean Acc: 95.4467 | Bd Acc: 96.1028 | Cross Acc: 91.3764
+250 743 CE Loss: 0.0025 | Clean Acc: 95.2191 | Bd Acc: 95.7503 | Cross Acc: 91.4011
+300 743 CE Loss: 0.0026 | Clean Acc: 95.1177 | Bd Acc: 96.0687 | Cross Acc: 91.2514
+350 743 CE Loss: 0.0026 | Clean Acc: 95.0576 | Bd Acc: 96.1538 | Cross Acc: 91.3818
+400 743 CE Loss: 0.0026 | Clean Acc: 95.0233 | Bd Acc: 96.0515 | Cross Acc: 91.2303
+450 743 CE Loss: 0.0026 | Clean Acc: 95.1027 | Bd Acc: 96.0828 | Cross Acc: 91.2232
+500 743 CE Loss: 0.0026 | Clean Acc: 95.0273 | Bd Acc: 95.8749 | Cross Acc: 90.9182
+550 743 CE Loss: 0.0026 | Clean Acc: 95.0367 | Bd Acc: 95.8258 | Cross Acc: 90.8953
+600 743 CE Loss: 0.0026 | Clean Acc: 95.0119 | Bd Acc: 95.7848 | Cross Acc: 90.7793
+650 743 CE Loss: 0.0026 | Clean Acc: 95.0010 | Bd Acc: 95.7757 | Cross Acc: 90.8346
+700 743 CE Loss: 0.0026 | Clean Acc: 94.9761 | Bd Acc: 95.6966 | Cross Acc: 90.8702
+ Eval:
+156 157 Clean Acc: 91.0400 - Best: 91.1200 | Bd Acc: 93.5100 - Best: 97.0900 | Cross: 87.2200
+Epoch 89:
+ Train:
+cifar10
+0 743 CE Loss: 0.0023 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0027 | Clean Acc: 94.6292 | Bd Acc: 96.7320 | Cross Acc: 91.6667
+100 743 CE Loss: 0.0027 | Clean Acc: 94.7266 | Bd Acc: 96.3696 | Cross Acc: 91.2541
+150 743 CE Loss: 0.0026 | Clean Acc: 95.1483 | Bd Acc: 96.5784 | Cross Acc: 91.3907
+200 743 CE Loss: 0.0026 | Clean Acc: 95.1763 | Bd Acc: 96.5174 | Cross Acc: 91.6252
+250 743 CE Loss: 0.0026 | Clean Acc: 95.1672 | Bd Acc: 96.5471 | Cross Acc: 91.3347
+300 743 CE Loss: 0.0026 | Clean Acc: 95.0238 | Bd Acc: 96.1794 | Cross Acc: 91.1960
+350 743 CE Loss: 0.0026 | Clean Acc: 94.9771 | Bd Acc: 96.0589 | Cross Acc: 90.9069
+400 743 CE Loss: 0.0026 | Clean Acc: 95.0125 | Bd Acc: 95.9684 | Cross Acc: 90.8562
+450 743 CE Loss: 0.0026 | Clean Acc: 94.9870 | Bd Acc: 96.0089 | Cross Acc: 90.9460
+500 743 CE Loss: 0.0027 | Clean Acc: 94.9362 | Bd Acc: 96.0412 | Cross Acc: 91.1178
+550 743 CE Loss: 0.0027 | Clean Acc: 94.8473 | Bd Acc: 95.8863 | Cross Acc: 91.0768
+600 743 CE Loss: 0.0027 | Clean Acc: 94.8058 | Bd Acc: 95.8403 | Cross Acc: 91.1398
+650 743 CE Loss: 0.0027 | Clean Acc: 94.7672 | Bd Acc: 95.8525 | Cross Acc: 91.2058
+700 743 CE Loss: 0.0027 | Clean Acc: 94.6784 | Bd Acc: 95.8868 | Cross Acc: 91.1198
+ Eval:
+156 157 Clean Acc: 90.4000 - Best: 91.1200 | Bd Acc: 98.0700 - Best: 97.0900 | Cross: 87.2900
+Epoch 90:
+ Train:
+cifar10
+0 743 CE Loss: 0.0046 | Clean Acc: 93.4783 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0024 | Clean Acc: 95.0128 | Bd Acc: 95.4248 | Cross Acc: 92.1569
+100 743 CE Loss: 0.0026 | Clean Acc: 94.8773 | Bd Acc: 95.7096 | Cross Acc: 91.7492
+150 743 CE Loss: 0.0025 | Clean Acc: 95.0475 | Bd Acc: 96.0265 | Cross Acc: 91.2252
+200 743 CE Loss: 0.0026 | Clean Acc: 95.0465 | Bd Acc: 95.8541 | Cross Acc: 90.9204
+250 743 CE Loss: 0.0025 | Clean Acc: 95.2105 | Bd Acc: 95.8167 | Cross Acc: 91.0691
+300 743 CE Loss: 0.0025 | Clean Acc: 95.2477 | Bd Acc: 96.1240 | Cross Acc: 91.1960
+350 743 CE Loss: 0.0025 | Clean Acc: 95.2744 | Bd Acc: 96.2488 | Cross Acc: 91.1918
+400 743 CE Loss: 0.0025 | Clean Acc: 95.2618 | Bd Acc: 96.4672 | Cross Acc: 90.9601
+450 743 CE Loss: 0.0025 | Clean Acc: 95.1460 | Bd Acc: 96.2676 | Cross Acc: 91.1493
+500 743 CE Loss: 0.0025 | Clean Acc: 95.1271 | Bd Acc: 96.4072 | Cross Acc: 90.9847
+550 743 CE Loss: 0.0025 | Clean Acc: 95.1353 | Bd Acc: 96.4912 | Cross Acc: 91.0315
+600 743 CE Loss: 0.0025 | Clean Acc: 95.1530 | Bd Acc: 96.3672 | Cross Acc: 90.9595
+650 743 CE Loss: 0.0025 | Clean Acc: 95.1379 | Bd Acc: 96.3134 | Cross Acc: 90.8986
+700 743 CE Loss: 0.0025 | Clean Acc: 95.0816 | Bd Acc: 96.3148 | Cross Acc: 91.0247
+ Eval:
+156 157 Clean Acc: 90.6300 - Best: 91.1200 | Bd Acc: 98.5600 - Best: 97.0900 | Cross: 87.3200
+Epoch 91:
+ Train:
+cifar10
+0 743 CE Loss: 0.0021 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0026 | Clean Acc: 94.6292 | Bd Acc: 95.4248 | Cross Acc: 91.1765
+100 743 CE Loss: 0.0028 | Clean Acc: 94.5760 | Bd Acc: 95.7096 | Cross Acc: 90.7591
+150 743 CE Loss: 0.0027 | Clean Acc: 94.8172 | Bd Acc: 96.1369 | Cross Acc: 91.0044
+200 743 CE Loss: 0.0028 | Clean Acc: 94.6788 | Bd Acc: 96.0199 | Cross Acc: 90.0912
+250 743 CE Loss: 0.0028 | Clean Acc: 94.6388 | Bd Acc: 95.8831 | Cross Acc: 90.4382
+300 743 CE Loss: 0.0027 | Clean Acc: 94.9444 | Bd Acc: 96.1240 | Cross Acc: 90.6423
+350 743 CE Loss: 0.0026 | Clean Acc: 94.9151 | Bd Acc: 96.1538 | Cross Acc: 90.7407
+400 743 CE Loss: 0.0026 | Clean Acc: 94.9095 | Bd Acc: 96.2178 | Cross Acc: 90.6276
+450 743 CE Loss: 0.0027 | Clean Acc: 94.8568 | Bd Acc: 96.0089 | Cross Acc: 90.5950
+500 743 CE Loss: 0.0027 | Clean Acc: 94.7453 | Bd Acc: 96.0080 | Cross Acc: 90.4192
+550 743 CE Loss: 0.0027 | Clean Acc: 94.7763 | Bd Acc: 96.1585 | Cross Acc: 90.3206
+600 743 CE Loss: 0.0027 | Clean Acc: 94.7768 | Bd Acc: 96.1453 | Cross Acc: 90.1830
+650 743 CE Loss: 0.0027 | Clean Acc: 94.7606 | Bd Acc: 96.2110 | Cross Acc: 90.2330
+700 743 CE Loss: 0.0027 | Clean Acc: 94.8087 | Bd Acc: 96.0057 | Cross Acc: 90.2520
+ Eval:
+156 157 Clean Acc: 90.8500 - Best: 91.1200 | Bd Acc: 99.0600 - Best: 97.0900 | Cross: 87.9800
+Epoch 92:
+ Train:
+cifar10
+0 743 CE Loss: 0.0016 | Clean Acc: 100.0000 | Bd Acc: 83.3333 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0026 | Clean Acc: 95.0128 | Bd Acc: 94.7712 | Cross Acc: 91.1765
+100 743 CE Loss: 0.0025 | Clean Acc: 94.7912 | Bd Acc: 95.5446 | Cross Acc: 92.0792
+150 743 CE Loss: 0.0024 | Clean Acc: 95.2779 | Bd Acc: 96.4680 | Cross Acc: 92.0530
+200 743 CE Loss: 0.0025 | Clean Acc: 95.2953 | Bd Acc: 96.0199 | Cross Acc: 91.4594
+250 743 CE Loss: 0.0024 | Clean Acc: 95.4356 | Bd Acc: 96.0823 | Cross Acc: 91.8327
+300 743 CE Loss: 0.0024 | Clean Acc: 95.4644 | Bd Acc: 96.0687 | Cross Acc: 91.8605
+350 743 CE Loss: 0.0024 | Clean Acc: 95.4292 | Bd Acc: 96.1064 | Cross Acc: 91.5717
+400 743 CE Loss: 0.0024 | Clean Acc: 95.4299 | Bd Acc: 96.1347 | Cross Acc: 91.6875
+450 743 CE Loss: 0.0024 | Clean Acc: 95.4401 | Bd Acc: 96.1567 | Cross Acc: 91.6297
+500 743 CE Loss: 0.0024 | Clean Acc: 95.3658 | Bd Acc: 96.1743 | Cross Acc: 91.4671
+550 743 CE Loss: 0.0025 | Clean Acc: 95.2616 | Bd Acc: 96.1585 | Cross Acc: 91.2583
+600 743 CE Loss: 0.0025 | Clean Acc: 95.2290 | Bd Acc: 95.9512 | Cross Acc: 91.0704
+650 743 CE Loss: 0.0025 | Clean Acc: 95.1613 | Bd Acc: 95.9293 | Cross Acc: 91.1802
+700 743 CE Loss: 0.0025 | Clean Acc: 95.1436 | Bd Acc: 95.8631 | Cross Acc: 91.1436
+ Eval:
+156 157 Clean Acc: 90.6800 - Best: 91.1200 | Bd Acc: 96.1700 - Best: 97.0900 | Cross: 86.5600
+Epoch 93:
+ Train:
+cifar10
+0 743 CE Loss: 0.0016 | Clean Acc: 95.6522 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0024 | Clean Acc: 95.0980 | Bd Acc: 95.0980 | Cross Acc: 93.6274
+100 743 CE Loss: 0.0024 | Clean Acc: 94.9204 | Bd Acc: 95.7096 | Cross Acc: 93.0693
+150 743 CE Loss: 0.0023 | Clean Acc: 95.3211 | Bd Acc: 96.2472 | Cross Acc: 92.6600
+200 743 CE Loss: 0.0023 | Clean Acc: 95.1763 | Bd Acc: 96.6003 | Cross Acc: 92.4544
+250 743 CE Loss: 0.0024 | Clean Acc: 95.1065 | Bd Acc: 96.8128 | Cross Acc: 92.1979
+300 743 CE Loss: 0.0023 | Clean Acc: 95.2188 | Bd Acc: 97.0100 | Cross Acc: 91.9712
+350 743 CE Loss: 0.0024 | Clean Acc: 95.1505 | Bd Acc: 97.0560 | Cross Acc: 91.7616
+400 743 CE Loss: 0.0024 | Clean Acc: 95.1588 | Bd Acc: 97.0906 | Cross Acc: 91.6667
+450 743 CE Loss: 0.0024 | Clean Acc: 95.1557 | Bd Acc: 97.1914 | Cross Acc: 91.4819
+500 743 CE Loss: 0.0025 | Clean Acc: 95.0707 | Bd Acc: 97.0393 | Cross Acc: 91.2841
+550 743 CE Loss: 0.0025 | Clean Acc: 95.0485 | Bd Acc: 96.9449 | Cross Acc: 91.2432
+600 743 CE Loss: 0.0025 | Clean Acc: 95.0373 | Bd Acc: 96.8386 | Cross Acc: 91.2091
+650 743 CE Loss: 0.0025 | Clean Acc: 94.9609 | Bd Acc: 96.7998 | Cross Acc: 91.1802
+700 743 CE Loss: 0.0025 | Clean Acc: 94.9637 | Bd Acc: 96.8854 | Cross Acc: 91.1793
+ Eval:
+156 157 Clean Acc: 89.2300 - Best: 91.1200 | Bd Acc: 96.2000 - Best: 97.0900 | Cross: 84.9000
+Epoch 94:
+ Train:
+cifar10
+0 743 CE Loss: 0.0030 | Clean Acc: 97.8261 | Bd Acc: 83.3333 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0027 | Clean Acc: 94.3308 | Bd Acc: 96.0784 | Cross Acc: 89.5425
+100 743 CE Loss: 0.0028 | Clean Acc: 94.7266 | Bd Acc: 95.7096 | Cross Acc: 89.5215
+150 743 CE Loss: 0.0027 | Clean Acc: 94.9035 | Bd Acc: 95.5850 | Cross Acc: 89.8455
+200 743 CE Loss: 0.0027 | Clean Acc: 95.0681 | Bd Acc: 95.6053 | Cross Acc: 89.8839
+250 743 CE Loss: 0.0026 | Clean Acc: 95.0546 | Bd Acc: 95.8831 | Cross Acc: 90.3386
+300 743 CE Loss: 0.0026 | Clean Acc: 95.0672 | Bd Acc: 95.9025 | Cross Acc: 90.5869
+350 743 CE Loss: 0.0026 | Clean Acc: 95.0886 | Bd Acc: 96.1064 | Cross Acc: 90.4084
+400 743 CE Loss: 0.0026 | Clean Acc: 95.0884 | Bd Acc: 96.2594 | Cross Acc: 90.4406
+450 743 CE Loss: 0.0026 | Clean Acc: 95.1075 | Bd Acc: 96.2306 | Cross Acc: 90.5950
+500 743 CE Loss: 0.0026 | Clean Acc: 95.1315 | Bd Acc: 96.1743 | Cross Acc: 90.3526
+550 743 CE Loss: 0.0026 | Clean Acc: 95.0564 | Bd Acc: 96.2190 | Cross Acc: 90.5021
+600 743 CE Loss: 0.0026 | Clean Acc: 95.0553 | Bd Acc: 96.3117 | Cross Acc: 90.3494
+650 743 CE Loss: 0.0026 | Clean Acc: 95.0578 | Bd Acc: 96.4414 | Cross Acc: 90.4250
+700 743 CE Loss: 0.0026 | Clean Acc: 95.1033 | Bd Acc: 96.5525 | Cross Acc: 90.4541
+ Eval:
+156 157 Clean Acc: 89.9400 - Best: 91.1200 | Bd Acc: 98.2200 - Best: 97.0900 | Cross: 85.8000
+Epoch 95:
+ Train:
+cifar10
+0 743 CE Loss: 0.0027 | Clean Acc: 93.4783 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0026 | Clean Acc: 94.2455 | Bd Acc: 97.3856 | Cross Acc: 90.8497
+100 743 CE Loss: 0.0025 | Clean Acc: 94.9634 | Bd Acc: 97.1947 | Cross Acc: 91.5842
+150 743 CE Loss: 0.0025 | Clean Acc: 95.0619 | Bd Acc: 97.0199 | Cross Acc: 90.8940
+200 743 CE Loss: 0.0025 | Clean Acc: 95.1871 | Bd Acc: 96.6833 | Cross Acc: 90.7131
+250 743 CE Loss: 0.0025 | Clean Acc: 95.0372 | Bd Acc: 96.5471 | Cross Acc: 91.1355
+300 743 CE Loss: 0.0025 | Clean Acc: 95.1105 | Bd Acc: 96.3455 | Cross Acc: 91.0299
+350 743 CE Loss: 0.0025 | Clean Acc: 95.1257 | Bd Acc: 95.9639 | Cross Acc: 91.1918
+400 743 CE Loss: 0.0025 | Clean Acc: 95.1155 | Bd Acc: 95.7606 | Cross Acc: 91.3965
+450 743 CE Loss: 0.0026 | Clean Acc: 95.1460 | Bd Acc: 95.7502 | Cross Acc: 91.2232
+500 743 CE Loss: 0.0026 | Clean Acc: 95.1358 | Bd Acc: 95.8084 | Cross Acc: 91.0679
+550 743 CE Loss: 0.0026 | Clean Acc: 95.0327 | Bd Acc: 95.7955 | Cross Acc: 91.1222
+600 743 CE Loss: 0.0026 | Clean Acc: 94.9504 | Bd Acc: 95.8403 | Cross Acc: 91.0843
+650 743 CE Loss: 0.0026 | Clean Acc: 94.8741 | Bd Acc: 95.9549 | Cross Acc: 91.1290
+700 743 CE Loss: 0.0026 | Clean Acc: 94.8862 | Bd Acc: 96.0533 | Cross Acc: 91.1912
+ Eval:
+156 157 Clean Acc: 90.5400 - Best: 91.1200 | Bd Acc: 97.7600 - Best: 97.0900 | Cross: 86.9600
+Epoch 96:
+ Train:
+cifar10
+0 743 CE Loss: 0.0022 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0025 | Clean Acc: 95.4390 | Bd Acc: 96.7320 | Cross Acc: 89.3791
+100 743 CE Loss: 0.0024 | Clean Acc: 95.5661 | Bd Acc: 96.6997 | Cross Acc: 89.9340
+150 743 CE Loss: 0.0024 | Clean Acc: 95.7530 | Bd Acc: 95.9161 | Cross Acc: 90.5629
+200 743 CE Loss: 0.0025 | Clean Acc: 95.6197 | Bd Acc: 95.8541 | Cross Acc: 90.3400
+250 743 CE Loss: 0.0025 | Clean Acc: 95.5396 | Bd Acc: 95.3519 | Cross Acc: 90.3386
+300 743 CE Loss: 0.0025 | Clean Acc: 95.5872 | Bd Acc: 95.7364 | Cross Acc: 90.5316
+350 743 CE Loss: 0.0024 | Clean Acc: 95.6893 | Bd Acc: 95.6790 | Cross Acc: 90.6220
+400 743 CE Loss: 0.0024 | Clean Acc: 95.6739 | Bd Acc: 96.0100 | Cross Acc: 90.8146
+450 743 CE Loss: 0.0024 | Clean Acc: 95.5461 | Bd Acc: 95.9719 | Cross Acc: 90.8721
+500 743 CE Loss: 0.0024 | Clean Acc: 95.5697 | Bd Acc: 96.2076 | Cross Acc: 90.9514
+550 743 CE Loss: 0.0024 | Clean Acc: 95.5378 | Bd Acc: 96.1283 | Cross Acc: 90.9558
+600 743 CE Loss: 0.0025 | Clean Acc: 95.4207 | Bd Acc: 96.1730 | Cross Acc: 90.8070
+650 743 CE Loss: 0.0025 | Clean Acc: 95.3583 | Bd Acc: 96.1598 | Cross Acc: 90.6298
+700 743 CE Loss: 0.0025 | Clean Acc: 95.3172 | Bd Acc: 96.2435 | Cross Acc: 90.6324
+ Eval:
+156 157 Clean Acc: 90.0100 - Best: 91.1200 | Bd Acc: 96.0500 - Best: 97.0900 | Cross: 86.2900
+Epoch 97:
+ Train:
+cifar10
+0 743 CE Loss: 0.0013 | Clean Acc: 100.0000 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0031 | Clean Acc: 94.2029 | Bd Acc: 93.7908 | Cross Acc: 88.8889
+100 743 CE Loss: 0.0028 | Clean Acc: 94.8127 | Bd Acc: 94.8845 | Cross Acc: 90.3465
+150 743 CE Loss: 0.0026 | Clean Acc: 95.2059 | Bd Acc: 95.3642 | Cross Acc: 91.0596
+200 743 CE Loss: 0.0025 | Clean Acc: 95.3169 | Bd Acc: 95.9370 | Cross Acc: 91.1692
+250 743 CE Loss: 0.0024 | Clean Acc: 95.4443 | Bd Acc: 95.9495 | Cross Acc: 91.7331
+300 743 CE Loss: 0.0024 | Clean Acc: 95.5799 | Bd Acc: 96.0687 | Cross Acc: 91.5559
+350 743 CE Loss: 0.0025 | Clean Acc: 95.4911 | Bd Acc: 95.9164 | Cross Acc: 91.0731
+400 743 CE Loss: 0.0025 | Clean Acc: 95.3865 | Bd Acc: 95.9268 | Cross Acc: 91.0848
+450 743 CE Loss: 0.0025 | Clean Acc: 95.3051 | Bd Acc: 95.9719 | Cross Acc: 90.9645
+500 743 CE Loss: 0.0025 | Clean Acc: 95.2486 | Bd Acc: 95.8749 | Cross Acc: 90.9182
+550 743 CE Loss: 0.0025 | Clean Acc: 95.1787 | Bd Acc: 95.8258 | Cross Acc: 90.9256
+600 743 CE Loss: 0.0025 | Clean Acc: 95.1675 | Bd Acc: 95.8125 | Cross Acc: 91.0427
+650 743 CE Loss: 0.0026 | Clean Acc: 95.1413 | Bd Acc: 95.8781 | Cross Acc: 90.9370
+700 743 CE Loss: 0.0026 | Clean Acc: 95.1095 | Bd Acc: 95.8631 | Cross Acc: 90.9059
+ Eval:
+156 157 Clean Acc: 89.5800 - Best: 91.1200 | Bd Acc: 96.5500 - Best: 97.0900 | Cross: 85.9600
+Epoch 98:
+ Train:
+cifar10
+0 743 CE Loss: 0.0019 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 83.3333
+50 743 CE Loss: 0.0022 | Clean Acc: 95.5243 | Bd Acc: 95.4248 | Cross Acc: 93.3007
+100 743 CE Loss: 0.0024 | Clean Acc: 95.3508 | Bd Acc: 95.8746 | Cross Acc: 92.2442
+150 743 CE Loss: 0.0024 | Clean Acc: 95.5226 | Bd Acc: 96.5784 | Cross Acc: 90.7837
+200 743 CE Loss: 0.0024 | Clean Acc: 95.3926 | Bd Acc: 97.0149 | Cross Acc: 91.1692
+250 743 CE Loss: 0.0024 | Clean Acc: 95.3231 | Bd Acc: 96.8128 | Cross Acc: 91.3347
+300 743 CE Loss: 0.0024 | Clean Acc: 95.5222 | Bd Acc: 96.5670 | Cross Acc: 91.5006
+350 743 CE Loss: 0.0024 | Clean Acc: 95.4788 | Bd Acc: 96.5812 | Cross Acc: 91.5005
+400 743 CE Loss: 0.0024 | Clean Acc: 95.3540 | Bd Acc: 96.5087 | Cross Acc: 91.3134
+450 743 CE Loss: 0.0024 | Clean Acc: 95.3630 | Bd Acc: 96.5262 | Cross Acc: 91.0939
+500 743 CE Loss: 0.0024 | Clean Acc: 95.3701 | Bd Acc: 96.5070 | Cross Acc: 91.0180
+550 743 CE Loss: 0.0025 | Clean Acc: 95.3287 | Bd Acc: 96.4912 | Cross Acc: 91.0919
+600 743 CE Loss: 0.0025 | Clean Acc: 95.2905 | Bd Acc: 96.3949 | Cross Acc: 91.1120
+650 743 CE Loss: 0.0025 | Clean Acc: 95.2381 | Bd Acc: 96.2878 | Cross Acc: 91.0266
+700 743 CE Loss: 0.0025 | Clean Acc: 95.1839 | Bd Acc: 96.2435 | Cross Acc: 90.9296
+ Eval:
+156 157 Clean Acc: 91.0300 - Best: 91.1200 | Bd Acc: 93.7500 - Best: 97.0900 | Cross: 87.6400
+Epoch 99:
+ Train:
+cifar10
+0 743 CE Loss: 0.0025 | Clean Acc: 91.3044 | Bd Acc: 100.0000 | Cross Acc: 100.0000
+50 743 CE Loss: 0.0024 | Clean Acc: 95.8227 | Bd Acc: 95.4248 | Cross Acc: 92.6471
+100 743 CE Loss: 0.0022 | Clean Acc: 96.1472 | Bd Acc: 95.8746 | Cross Acc: 92.9043
+150 743 CE Loss: 0.0023 | Clean Acc: 95.7386 | Bd Acc: 95.3642 | Cross Acc: 92.1634
+200 743 CE Loss: 0.0023 | Clean Acc: 95.6305 | Bd Acc: 95.4395 | Cross Acc: 92.9104
+250 743 CE Loss: 0.0023 | Clean Acc: 95.5742 | Bd Acc: 95.8167 | Cross Acc: 92.4635
+300 743 CE Loss: 0.0024 | Clean Acc: 95.4572 | Bd Acc: 95.7364 | Cross Acc: 92.6080
+350 743 CE Loss: 0.0024 | Clean Acc: 95.3487 | Bd Acc: 95.6790 | Cross Acc: 92.1652
+400 743 CE Loss: 0.0025 | Clean Acc: 95.3648 | Bd Acc: 95.6775 | Cross Acc: 91.9368
+450 743 CE Loss: 0.0025 | Clean Acc: 95.3003 | Bd Acc: 95.6763 | Cross Acc: 91.7591
+500 743 CE Loss: 0.0025 | Clean Acc: 95.2573 | Bd Acc: 95.9082 | Cross Acc: 91.5502
+550 743 CE Loss: 0.0025 | Clean Acc: 95.2261 | Bd Acc: 95.8863 | Cross Acc: 91.4701
+600 743 CE Loss: 0.0025 | Clean Acc: 95.2326 | Bd Acc: 95.8680 | Cross Acc: 91.4864
+650 743 CE Loss: 0.0025 | Clean Acc: 95.1479 | Bd Acc: 95.8525 | Cross Acc: 91.3850
+700 743 CE Loss: 0.0025 | Clean Acc: 95.1529 | Bd Acc: 95.8868 | Cross Acc: 91.3576
+ Eval:
+156 157 Clean Acc: 91.2800 - Best: 91.1200 | Bd Acc: 96.9600 - Best: 97.0900 | Cross: 87.4600
+ Saving...
+Epoch 100:
+ Train:
+cifar10
+0 743 CE Loss: 0.0014 | Clean Acc: 97.8261 | Bd Acc: 100.0000 | Cross Acc: 91.6667
+50 743 CE Loss: 0.0026 | Clean Acc: 94.5013 | Bd Acc: 95.4248 | Cross Acc: 92.1569
+100 743 CE Loss: 0.0023 | Clean Acc: 95.3508 | Bd Acc: 96.3696 | Cross Acc: 93.1518
+150 743 CE Loss: 0.0024 | Clean Acc: 95.4938 | Bd Acc: 96.0265 | Cross Acc: 92.1082
+200 743 CE Loss: 0.0024 | Clean Acc: 95.6522 | Bd Acc: 95.5224 | Cross Acc: 91.9569
+250 743 CE Loss: 0.0023 | Clean Acc: 95.6868 | Bd Acc: 95.6839 | Cross Acc: 92.0983
+300 743 CE Loss: 0.0023 | Clean Acc: 95.7027 | Bd Acc: 95.7918 | Cross Acc: 91.7774
+350 743 CE Loss: 0.0024 | Clean Acc: 95.5902 | Bd Acc: 95.9164 | Cross Acc: 91.7854
+400 743 CE Loss: 0.0024 | Clean Acc: 95.5980 | Bd Acc: 95.7606 | Cross Acc: 91.7498
+450 743 CE Loss: 0.0024 | Clean Acc: 95.4304 | Bd Acc: 95.5654 | Cross Acc: 91.5373
+500 743 CE Loss: 0.0024 | Clean Acc: 95.3658 | Bd Acc: 95.6088 | Cross Acc: 91.4338
+550 743 CE Loss: 0.0025 | Clean Acc: 95.2931 | Bd Acc: 95.7048 | Cross Acc: 91.2432
+600 743 CE Loss: 0.0025 | Clean Acc: 95.2507 | Bd Acc: 95.6739 | Cross Acc: 91.1536
+650 743 CE Loss: 0.0025 | Clean Acc: 95.2381 | Bd Acc: 95.6221 | Cross Acc: 91.1162
+700 743 CE Loss: 0.0025 | Clean Acc: 95.2335 | Bd Acc: 95.7442 | Cross Acc: 91.2149
+ Eval:
+156 157 Clean Acc: 89.0500 - Best: 91.2800 | Bd Acc: 94.2500 - Best: 96.9600 | Cross: 84.5800
