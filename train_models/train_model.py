@@ -230,7 +230,7 @@ def train(train_transform, netC, optimizerC, schedulerC, train_dl, noise_grid, i
                 residual = inputs_bd - inputs[:num_bd]
                 batch_img = torch.cat([inputs[:num_bd], inputs_bd, total_inputs[:num_bd], residual], dim=2)
                 batch_img = denormalizer(batch_img)
-                batch_img = F.upsample(batch_img, scale_factor=(4, 4))
+                batch_img = F.interpolate(batch_img, scale_factor=(4, 4))
                 grid = torchvision.utils.make_grid(batch_img, normalize=True)
                 path = os.path.join(opt.temps, "batch_img.png")
                 torchvision.utils.save_image(batch_img, path, normalize=True)
@@ -423,7 +423,7 @@ def main():
         ins = torch.rand(1, 2, opt.k, opt.k) * 2 - 1
         ins = ins / torch.mean(torch.abs(ins))
         noise_grid = (
-            F.upsample(ins, size=opt.input_height, mode="bicubic", align_corners=True)
+            F.interpolate(ins, size=opt.input_height, mode="bicubic", align_corners=True)
             .permute(0, 2, 3, 1)
             .to(opt.device)
         )
